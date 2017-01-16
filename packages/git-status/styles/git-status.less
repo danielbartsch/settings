@@ -1,0 +1,79 @@
+@import "ui-variables";
+
+#package-git-status {
+    padding: 0.5em 1em;
+    max-height: 12.5em;
+    overflow-y: auto;
+    font-family: monospace;
+
+    .path {
+        float: right;
+    }
+
+    .git-status-empty {
+        font-size: 1.2em;
+    }
+
+    .git-status-item:hover {
+      /* margin: 0.35em 0; */
+      opacity: 0.7;
+    }
+
+    .git-status-item:first-child {
+      margin-top: 0;
+    }
+
+    .git-status-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .git-status-item:hover:not(.deleted) {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .git-status-item.untracked {
+      /* color: @text-color-subtle; */
+      background-color: rgb(0, 255, 255);
+      color: black;
+    }
+
+    .git-status-item.added {
+      /* color: @text-color-success; */
+      background-color: rgb(255, 165, 0);
+      color: black;
+    }
+
+    .git-status-item.modified {
+      /* color: @text-color-warning; */
+      background-color: rgb(144, 238, 144);
+      color: black;
+    }
+
+    .git-status-item.deleted {
+      /* color: @text-color-error; */
+      background-color: rgb(255, 0, 0);
+      color: white;
+    }
+
+    .git-status-item.addedDeleted {
+      background-color: rgb(255, 87, 0);
+      color: white;
+    }
+
+    .git-status-item.modifiedDeleted {
+      background-color: rgb(200,238,144);
+      color: white;
+    }
+
+    .git-status-item.addedModified {
+      background-color: rgb(200, 202, 144);
+      color: white;
+    }
+
+    .git-status-item.doubleModified {
+      background-color: rgb(96, 159, 96);
+      color: white;
+    }
+
+}

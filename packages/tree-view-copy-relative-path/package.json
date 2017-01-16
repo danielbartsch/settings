@@ -1,0 +1,71 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-1161116-14283-je91yo/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+        "spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-1161116-14283-fzlnt8"
+    ]
+  ],
+  "_from": "../d-1161116-14283-je91yo/package.tgz",
+  "_id": "tree-view-copy-relative-path@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tree-view-copy-relative-path",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-1161116-14283-je91yo/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+    "spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-1161116-14283-je91yo/package.tgz",
+  "_shasum": "cbf8d5e7119b661d907de30fb9bddc8cd29edd35",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+  "_where": "/tmp/apm-install-dir-1161116-14283-fzlnt8",
+  "activationCommands": {
+    "atom-workspace": "tree-view-copy-relative-path:copy-path"
+  },
+  "bugs": {
+    "url": "https://github.com/vladimir-tikhonov/tree-view-copy-relative-path/issues"
+  },
+  "dependencies": {
+    "relative": "^3.0.2"
+  },
+  "description": "Allows you to copy relative path to current file from tree view.",
+  "devDependencies": {
+    "coffeelint": "^1.14.2"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/vladimir-tikhonov/tree-view-copy-relative-path#readme",
+  "keywords": [
+    "tree-view",
+    "relative path"
+  ],
+  "license": "MIT",
+  "main": "./lib/tree-view-copy-relative-path",
+  "name": "tree-view-copy-relative-path",
+  "optionalDependencies": {},
+  "readme": "# tree-view-copy-relative-path package\n\nAllows you to copy relative path to file from tree view.\n\n![Demo gif](https://cloud.githubusercontent.com/assets/4998556/12075222/85e019da-b18a-11e5-8cd6-6d007435734e.gif)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimir-tikhonov/tree-view-copy-relative-path.git"
+  },
+  "version": "1.0.1"
+}
