@@ -75,6 +75,37 @@ function to {
 }
 function unstage { git reset HEAD "$@"; clear; git status; }
 
+#work in progress
+#function to {
+#  branchList=($(git branch --list --no-color))
+#  echo "${branchList[*]}"
+#  for (( index=0; index<${#branchList[@]}; index++ ));
+#  do
+#    branchList[index]="${branchList[index]/\*/''}";
+#  done
+#  filteredBranches=($($branchList | grep --no-filename $@));
+#  resultCount=$($filteredBranches | grep --no-filename -c $@);
+#  echo "length: $resultCount";
+#  if [ -z $filteredBranches ];
+#  then
+#    echo "no branches found";
+#  else
+#    if [ $resultCount -eq 1 ];
+#    then
+#      fixedBranchName="${${filteredBranches[0]}/\*/''}";
+#      git checkout ${fixedBranchName};
+#      git pull;
+#    else
+#      echo "found branches:";
+#      for (( index=0; index<$resultCount; index++ ));
+#      do
+#        fixedBranchName="${${filteredBranches[index]}/\*/''}";
+#        echo "$index: ${fixedBranchName}";
+#      done;
+#    fi;
+#  fi;
+#}
+
 alias ll='ls -al'
 alias l='less'
 alias mv='mv -i'
