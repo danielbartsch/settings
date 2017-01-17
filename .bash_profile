@@ -37,35 +37,60 @@ alias .....="cd ../../../..; gs"
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias adverity="cd /home/adv/adverity;"
-
-# Shortcuts
 alias js="cd /home/adv/adverity/web-app/js; clear; git status;"
 alias dot="cd ~/.atom; clear; git status;"
-alias bashconf="nano ~/.atom/.bash_profile"
-alias branches="git branch"
-alias g="git"
-alias gcdf="clear; git diff --staged"
-alias gcn="clear; git status; git commit -nm"
-alias gd="git checkout develop; git pull"
-alias gdf="clear; git diff"
-alias gitconf="nano ~/.gitconfig"
-alias gp="git push; clear; git status"
-alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
-alias gs="clear; git status"
+
+# Shortcuts
+function bashconf {
+  if [ -z $@ ]; then
+    nano ~/.atom/.bash_profile;
+  else
+    $($@) ~/.atom/.bash_profile;
+  fi
+}
 alias loadbash="source ~/.atom/.bash_profile"
-alias new="clear; git flow feature start"
-alias npmi="cd /home/adv/adverity/web-app/; npm i"
+
+alias g="git"
+alias gd="git checkout develop; git pull"
+
+alias gdf="clear; git diff"
+alias gcdf="clear; git diff --staged"
+function gdfn { clear; git diff HEAD~"$@" HEAD; }
+
+alias gcn="clear; git status; git commit -nm"
+alias gs="clear; git status"
+alias qgs="gs"
+function gadd { git add "$@"; clear; git status; }
+function gc { git commit -m "$@"; clear; git status; }
+function discard { git checkout -- "$@"; clear; git status; }
+function to {
+    branches=$(git branch --no-color | grep "$@")
+    git checkout ${branches[0]};
+    git pull;
+}
+function unstage { git reset HEAD "$@"; clear; git status; }
+
+alias branches="git branch"
+
+alias gp="git push; clear; git status"
+alias gitconf="nano ~/.gitconfig"
+
+alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
 alias npmstart="cd /home/adv/adverity/web-app/; node server.js"
-alias pop="git stash pop; clear; git status"
+alias npmi="cd /home/adv/adverity/web-app/; npm i"
+alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
+alias test="cd /home/adv/adverity/web-app/; npm run test:watch"
+
+alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
 alias fetch="git fetch"
-alias qgs="gs"
+
 alias sh="history | grep"
+
+alias pop="git stash pop; clear; git status"
 alias stash="git stash; clear; git status"
 alias stashlist="clear; git status; git stash list"
-alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
-alias test="cd /home/adv/adverity/web-app/; npm run test:watch"
 function viewstash {
   if [ -z $@ ]; then
     git stash show -p;
@@ -73,16 +98,14 @@ function viewstash {
     git stash show -p stash@{"$@"};
   fi
 }
-function discard { git checkout -- "$@"; clear; git status; }
-function gadd { git add "$@"; clear; git status; }
-function gc { git commit -m "$@"; clear; git status; }
-function gdfn { clear; git diff HEAD~"$@" HEAD; }
-function to {
-  branches=$(git branch --no-color | grep "$@")
-  git checkout ${branches[0]};
-  git pull;
+function dropstash {
+  if [ -z $@ ]; then
+    git stash drop stash@{"$@"};
+  else
+    git stash drop
+  fi
 }
-function unstage { git reset HEAD "$@"; clear; git status; }
+
 
 #work in progress
 #function to {
