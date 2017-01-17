@@ -66,6 +66,13 @@ alias stash="git stash; clear; git status"
 alias stashlist="clear; git status; git stash list"
 alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
 alias test="cd /home/adv/adverity/web-app/; npm run test:watch"
+function viewstash {
+  if [ -z $@ ]; then
+    git stash show -p;
+  else
+    git stash show -p stash@{"$@"};
+  fi
+}
 function discard { git checkout -- "$@"; clear; git status; }
 function gadd { git add "$@"; clear; git status; }
 function gc { git commit -m "$@"; clear; git status; }
