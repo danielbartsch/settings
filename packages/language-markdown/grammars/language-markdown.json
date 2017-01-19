@@ -88,6 +88,9 @@
           "include": "#line-breaks"
         },
         {
+          "include": "#todo"
+        },
+        {
           "include": "#references"
         },
         {
@@ -111,6 +114,9 @@
         },
         {
           "include": "#pandoc"
+        },
+        {
+          "include": "#ia-writer"
         }
       ]
     },
@@ -136,6 +142,9 @@
         },
         {
           "include": "#emphasis"
+        },
+        {
+          "include": "#todo"
         },
         {
           "include": "#references"
@@ -170,6 +179,9 @@
         },
         {
           "include": "#emphasis"
+        },
+        {
+          "include": "#todo"
         },
         {
           "include": "#references"
@@ -1062,6 +1074,50 @@
               "name": "punctuation.md"
             },
             "3": {
+              "name": "punctuation.md"
+            }
+          }
+        }
+      ]
+    },
+    "ia-writer": {
+      "patterns": [
+        {
+          "match": "(?x) ^\\s{0,3}( (/)([^'\"()]*?) (\\.[a-z0-9]+) (\\s*?) ((\"|')[^'\"]*?(\\7))? )$",
+          "captures": {
+            "1": {
+              "name": "block.content.link.markup.md"
+            },
+            "2": {
+              "name": "punctuation.md"
+            },
+            "6": {
+              "name": "title.string.markup.md"
+            },
+            "7": {
+              "name": "punctuation.md"
+            },
+            "8": {
+              "name": "punctuation.md"
+            }
+          }
+        },
+        {
+          "match": "(?x) ^\\s{0,3}( (/)([^'\"()]*?) (\\.[a-z0-9]+) (\\s*?) ((\\()[^()]*?(\\)))? )$",
+          "captures": {
+            "1": {
+              "name": "block.content.link.markup.md"
+            },
+            "2": {
+              "name": "punctuation.md"
+            },
+            "6": {
+              "name": "title.string.markup.md"
+            },
+            "7": {
+              "name": "punctuation.md"
+            },
+            "8": {
               "name": "punctuation.md"
             }
           }
@@ -2195,6 +2251,14 @@
             }
           },
           "name": "reference.variable.md"
+        }
+      ]
+    },
+    "todo": {
+      "patterns": [
+        {
+          "match": "(?<!\\w)@?(TODO|FIXME|CHANGED|XXX|IDEA|HACK|NOTE|REVIEW|NB|BUG|QUESTION|COMBAK|TEMP)\\b",
+          "name": "storage.type.class.${1:/downcase}.md"
         }
       ]
     },
@@ -3717,46 +3781,6 @@
           "patterns": [
             {
               "include": "text.xml"
-            }
-          ]
-        },
-        {
-          "begin": "^\\s*([`~]{3,})\\s*(\\{?)((?:\\.?)(?:yaml|yml))(?=( |$|{))\\s*(\\{?)([^`\\{\\}]*)(\\}?)$",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.md"
-            },
-            "2": {
-              "name": "punctuation.md"
-            },
-            "3": {
-              "name": "language.constant.md"
-            },
-            "5": {
-              "name": "punctuation.md"
-            },
-            "6": {
-              "patterns": [
-                {
-                  "include": "#special-attribute-elements"
-                }
-              ]
-            },
-            "7": {
-              "name": "punctuation.md"
-            }
-          },
-          "end": "^\\s*(\\1)$",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.md"
-            }
-          },
-          "name": "fenced.code.md",
-          "contentName": "embedded.source.yaml",
-          "patterns": [
-            {
-              "include": "source.yaml"
             }
           ]
         },
