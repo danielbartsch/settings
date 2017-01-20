@@ -57,11 +57,11 @@ alias gdf="clear; git diff"
 alias gcdf="clear; git diff --staged"
 function gdfn { clear; git diff HEAD~"$@" HEAD; }
 
-alias gcn="clear; git status; git commit -nm"
 alias gs="clear; git status"
 alias qgs="gs"
 function gadd { git add "$@"; clear; git status; }
 function gc { git commit -m "$@"; clear; git status; }
+function gcn { git commit -mn "$@"; clear; git status; }
 function discard { git checkout -- "$@"; clear; git status; }
 function to {
     branches=$(git branch --no-color | grep "$@")
