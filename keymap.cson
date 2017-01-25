@@ -32,4 +32,10 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 'atom-text-editor':
-    'ctrl-alt': 'es-identifier-highlight:jumpToDefinition'
+    'ctrl-shift-x': 'es-identifier-highlight:jumpToDefinition'
+    'ctrl-shift-r': 'es-identifier-highlight:renameIdentifier'
+    'ctrl-shift-up': 'es-identifier-highlight:prevIdentifier'
+    'ctrl-shift-down': 'es-identifier-highlight:nextIdentifier'
+
+'atom-text-editor atom-workspace atom-text-editor':
+    'ctrl-shift-m': 'markdown-preview-plus:toggle'
