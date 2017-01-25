@@ -33,6 +33,8 @@
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "highlight-selected"
+      "es-identifier-highlight"
+      "markdown-preview-plus"
     ]
     telemetryConsent: "no"
   editor:
@@ -42,6 +44,8 @@
     scrollPastEnd: true
     tabLength: 4
     undoGroupingInterval: 200
+  "es-identifier-highlight":
+    minimapLine: false
   "exception-reporting":
     userId: "14290ab0-5dc1-86ae-5dd5-ed0be4044d11"
   "git-blame":
@@ -49,6 +53,7 @@
     dateFormatString: "DD.MM.YY"
   "git-diff": {}
   "highlight-column":
+    lineMode: true
     opacity: 0.05
   "highlight-selected": {}
   linter:
