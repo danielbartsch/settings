@@ -340,4 +340,9 @@ if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
 
+# Puts date in front of history of commands
 HISTTIMEFORMAT="%d.%m.%Y %T "
+
+# Saves a file with the number of commands used the day before
+history | grep -c "$(date +%d.%m.%Y -d 'yesterday')" > /home/adv/commandsPerDay/"$(date +%Y-%m-%d -d 'yesterday')"
+
