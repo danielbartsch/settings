@@ -28,7 +28,7 @@ export default class GitStatusView {
 
     let notFoundNode = document.createElement("div");
     notFoundNode.classList.add("git-status-empty");
-    notFoundNode.textContent = "couldn't found any repository in current project";
+    notFoundNode.textContent = "couldn't find any repository in current project";
     this.element.appendChild(notFoundNode);
   }
 
@@ -51,7 +51,6 @@ export default class GitStatusView {
   renderList(list) {
     this.empty();
     const groupedList = this.groupBy(list, 'status')
-    console.log('groupedList', groupedList);
     const sortedList = (groupedList['A '] || []).concat((groupedList['AD'] || []),
         (groupedList['MD'] || []),
         (groupedList[' D'] || []),
