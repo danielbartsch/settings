@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117031-6974-yb006o/package.tgz",
+        "raw": "/tmp/d-117116-11461-dvi05/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117031-6974-yb006o/package.tgz",
-        "spec": "/tmp/d-117031-6974-yb006o/package.tgz",
+        "rawSpec": "/tmp/d-117116-11461-dvi05/package.tgz",
+        "spec": "/tmp/d-117116-11461-dvi05/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117031-6974-1m6pwzx"
+      "/tmp/apm-install-dir-117116-11461-1pqd01f"
     ]
   ],
-  "_from": "../d-117031-6974-yb006o/package.tgz",
-  "_id": "linter-eslint@8.1.0",
+  "_from": "../d-117116-11461-dvi05/package.tgz",
+  "_id": "linter-eslint@8.1.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117031-6974-yb006o/package.tgz",
+    "raw": "/tmp/d-117116-11461-dvi05/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117031-6974-yb006o/package.tgz",
-    "spec": "/tmp/d-117031-6974-yb006o/package.tgz",
+    "rawSpec": "/tmp/d-117116-11461-dvi05/package.tgz",
+    "spec": "/tmp/d-117116-11461-dvi05/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117031-6974-yb006o/package.tgz",
-  "_shasum": "51e7f72e41419244f947c4db7735c33a5b533506",
+  "_resolved": "file:../d-117116-11461-dvi05/package.tgz",
+  "_shasum": "ab3e87ed5019d7af57d790e62f8f4a1c6e45b71f",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117031-6974-yb006o/package.tgz",
-  "_where": "/tmp/apm-install-dir-117031-6974-1m6pwzx",
+  "_spec": "/tmp/d-117116-11461-dvi05/package.tgz",
+  "_where": "/tmp/apm-install-dir-117116-11461-1pqd01f",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
@@ -137,7 +137,7 @@
     }
   },
   "dependencies": {
-    "atom-linter": "^8.0.0",
+    "atom-linter": "^9.0.0",
     "atom-package-deps": "^4.0.1",
     "consistent-path": "^2.0.1",
     "escape-html": "^1.0.3",
@@ -221,5 +221,5 @@
     "test": "apm test",
     "watch": "npm run compile -- -w"
   },
-  "version": "8.1.0"
+  "version": "8.1.2"
 }
