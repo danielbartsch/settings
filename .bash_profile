@@ -30,18 +30,17 @@ export MANPAGER="less -X"
 ##############################################################################
 
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd ..; gs"
-alias ...="cd ../..; gs"
-alias ....="cd ../../..; gs"
-alias .....="cd ../../../..; gs"
-alias ~="cd ~" # `cd` is probably faster to type though
+alias ..="cd ..; clear; git status"
+alias ...="cd ../..; clear; git status"
+alias ....="cd ../../..; clear; git status"
+alias .....="cd ../../../..; clear; git status"
 alias -- -="cd -"
 alias adverity="cd /home/adv/adverity;"
 alias js="cd /home/adv/adverity/web-app/js; clear; git status;"
 alias dot="cd ~/.atom; clear; git status;"
 
 # Shortcuts
-alias bashconf="~/.atom/.bash_profile"
+alias bashconf="nano ~/.atom/.bash_profile"
 alias loadbash="source ~/.atom/.bash_profile"
 
 alias g="git"
@@ -51,8 +50,17 @@ alias gdf="clear; git diff"
 alias gcdf="clear; git diff --staged"
 function gdfn { clear; git diff HEAD~"$@" HEAD; }
 
-alias gs="clear; git status"
-alias qgs="gs"
+function gs {
+    clear;
+    git status;
+    rm -f ~/.bash_history;
+    touch ~/.bash_history;
+    printf "Amount of Commands: " > /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep -c "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+    printf "\nCommands: \n" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+}
+alias qgs="clear; git status"
 function gadd { git add "$@"; clear; git status; }
 function gc { git commit -m "$@"; clear; git status; }
 function gcn { git commit -mn "$@"; clear; git status; }
@@ -79,6 +87,18 @@ alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
 alias fetch="git fetch"
+function cms { # last n commit messages
+    clear;
+    git status;
+    printf "\n"
+    if [ -z $@ ]; then
+        #git log -1 --pretty=format:"%h %an %s";
+        git log -1 --pretty=format:"%h %s";
+    else
+        #git log -"$@" --pretty=format:"%h %an %s";
+        git log -"$@" --pretty=format:"%h %s";
+    fi
+}
 
 alias sh="history | grep"
 
@@ -342,7 +362,3 @@ fi
 
 # Puts date in front of history of commands
 HISTTIMEFORMAT="%d.%m.%Y %T "
-
-# Saves a file with the number of commands used the day before
-history | grep -c "$(date +%d.%m.%Y -d 'yesterday')" > /home/adv/commandsPerDay/"$(date +%Y-%m-%d -d 'yesterday')"
-
