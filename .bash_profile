@@ -53,15 +53,22 @@ function gdfn { clear; git diff HEAD~"$@" HEAD; }
 function gs {
     clear;
     git status;
-    rm -f ~/.bash_history;
-    touch ~/.bash_history;
     printf "Amount of Commands: " > /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
     history | grep -c "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
     printf "\nCommands: \n" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
     history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
 }
 alias qgs="clear; git status"
-function gadd { git add "$@"; clear; git status; }
+function gadd {
+  if [ -z $@ ]; then
+    git add /home/adv/adverity/;
+  else
+    git add "$@";
+  fi
+  
+  clear;
+  git status;
+}
 function gc { git commit -m "$@"; clear; git status; }
 function gcn { git commit -mn "$@"; clear; git status; }
 function discard { git checkout -- "$@"; clear; git status; }
@@ -102,7 +109,15 @@ function cms { # last n commit messages
 
 alias sh="history | grep"
 
-alias pop="git stash pop; clear; git status"
+function pop {
+  if [ -z $@ ]; then
+    git stash pop;
+  else
+    git stash pop stash@{"$@"};
+  fi
+  clear;
+  git status;
+}
 alias stash="git stash; clear; git status"
 alias stashlist="clear; git status; git stash list"
 function viewstash {
