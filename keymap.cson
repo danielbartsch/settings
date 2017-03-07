@@ -39,3 +39,7 @@
 
 'atom-text-editor atom-workspace atom-text-editor':
     'ctrl-shift-m': 'markdown-preview-plus:toggle'
+
+'atom-text-editor:not([mini])':
+  'ctrl-shift-[': 'editor:fold-current-row'
+  'ctrl-shift-]': 'editor:unfold-current-row'
