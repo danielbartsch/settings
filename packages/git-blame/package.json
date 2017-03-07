@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
+        "raw": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
-        "spec": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
+        "rawSpec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+        "spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161021-16736-1t4vbv7"
+      "/tmp/apm-install-dir-11727-10279-4hkox6"
     ]
   ],
-  "_from": "../d-1161021-16736-l4gb7l/package.tgz",
-  "_id": "git-blame@0.4.11",
+  "_from": "../d-11727-10279-1n7d7wi/package.tgz",
+  "_id": "git-blame@0.4.12",
   "_inCache": true,
   "_installable": true,
   "_location": "/git-blame",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
+    "raw": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
-    "spec": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
+    "rawSpec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+    "spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161021-16736-l4gb7l/package.tgz",
-  "_shasum": "94f6bcd92e5c8f369c4a08808807cd0326805674",
+  "_resolved": "file:../d-11727-10279-1n7d7wi/package.tgz",
+  "_shasum": "d58b07493a8dab01e23aaf92e7624f1c34c478cd",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161021-16736-l4gb7l/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161021-16736-1t4vbv7",
+  "_spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+  "_where": "/tmp/apm-install-dir-11727-10279-4hkox6",
   "activationCommands": {
     "atom-text-editor": [
       "git-blame:toggle"
@@ -71,5 +71,5 @@
     "type": "git",
     "url": "git+https://github.com/alexcorre/git-blame.git"
   },
-  "version": "0.4.11"
+  "version": "0.4.12"
 }
