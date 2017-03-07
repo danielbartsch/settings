@@ -1,7 +1,6 @@
 'use babel';
 
 import { CompositeDisposable } from 'atom'
-// import Moment from 'moment'
 
 export default class AtomClockView {
 
@@ -40,12 +39,12 @@ export default class AtomClockView {
       this.setConfigValues()
       this.setIcon(this.showIcon)
     }))
+
   }
 
   drawElement() {
     this.element = document.createElement('div')
-    this.element.id = 'atom-clock'
-    this.element.className = 'inline-block'
+    this.element.className = 'atom-clock'
     this.element.appendChild(document.createElement('span'))
 
     this.statusBar.addRightTile({
@@ -84,9 +83,8 @@ export default class AtomClockView {
   }
 
   getDate(locale, format) {
-    if (!this.Moment) {
+    if (!this.Moment)
       this.Moment = require('moment')
-    }
 
     return this.Moment().locale(locale).format(format)
   }
@@ -99,7 +97,7 @@ export default class AtomClockView {
   }
 
   toggle() {
-    style = this.element.style.display
+    var style = this.element.style.display
     this.element.style.display = style === 'none' ? '' : 'none'
   }
 
