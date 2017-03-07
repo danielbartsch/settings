@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-11721-6982-302pnd/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-11721-6982-302pnd/package.tgz",
+        "spec": "/tmp/d-11721-6982-302pnd/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-11721-6982-1uq6bml"
+    ]
+  ],
+  "_from": "../d-11721-6982-302pnd/package.tgz",
+  "_id": "remember-folds@0.3.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/remember-folds",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-11721-6982-302pnd/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-11721-6982-302pnd/package.tgz",
+    "spec": "/tmp/d-11721-6982-302pnd/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11721-6982-302pnd/package.tgz",
+  "_shasum": "81185d5c99505148219efb195446b9e6f831caf6",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-11721-6982-302pnd/package.tgz",
+  "_where": "/tmp/apm-install-dir-11721-6982-1uq6bml",
+  "bugs": {
+    "url": "https://github.com/forivall/atom-remember-folds/issues"
+  },
+  "dependencies": {
+    "debug": "^2.3.2"
+  },
+  "description": "Remembers and automatically re-folds folds in your text editors",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/forivall/atom-remember-folds#readme",
+  "keywords": [
+    "fold"
+  ],
+  "license": "MIT",
+  "main": "./lib/remember-folds",
+  "name": "remember-folds",
+  "optionalDependencies": {},
+  "readme": "# remember-folds package\n\nRemembers and automatically re-folds folds in your text editors\n\n![A screenshot of your package](http://i.imgur.com/WZCBjsZ.gif)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forivall/atom-remember-folds.git"
+  },
+  "version": "0.3.0"
+}
