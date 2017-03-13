@@ -2,45 +2,45 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-116924-6474-w3538p/package.tgz",
+        "raw": "/tmp/d-117213-11298-1229muv/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-116924-6474-w3538p/package.tgz",
-        "spec": "/tmp/d-116924-6474-w3538p/package.tgz",
+        "rawSpec": "/tmp/d-117213-11298-1229muv/package.tgz",
+        "spec": "/tmp/d-117213-11298-1229muv/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-116924-6474-5gjd9j"
+      "/tmp/apm-install-dir-117213-11298-1af7bld"
     ]
   ],
-  "_from": "../d-116924-6474-w3538p/package.tgz",
-  "_id": "autocomplete-modules@1.6.7",
+  "_from": "../d-117213-11298-1229muv/package.tgz",
+  "_id": "autocomplete-modules@1.6.8",
   "_inCache": true,
   "_installable": true,
   "_location": "/autocomplete-modules",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-116924-6474-w3538p/package.tgz",
+    "raw": "/tmp/d-117213-11298-1229muv/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-116924-6474-w3538p/package.tgz",
-    "spec": "/tmp/d-116924-6474-w3538p/package.tgz",
+    "rawSpec": "/tmp/d-117213-11298-1229muv/package.tgz",
+    "spec": "/tmp/d-117213-11298-1229muv/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116924-6474-w3538p/package.tgz",
-  "_shasum": "b5c26719bed7c167b773503dc82e633ae38450ca",
+  "_resolved": "file:../d-117213-11298-1229muv/package.tgz",
+  "_shasum": "aa836e9daba9efbc8fd9e73745aa0bd2b71c917e",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-116924-6474-w3538p/package.tgz",
-  "_where": "/tmp/apm-install-dir-116924-6474-5gjd9j",
+  "_spec": "/tmp/d-117213-11298-1229muv/package.tgz",
+  "_where": "/tmp/apm-install-dir-117213-11298-1af7bld",
   "bugs": {
     "url": "https://github.com/nkt/atom-autocomplete-modules/issues"
   },
   "dependencies": {
-    "bluebird": "3.4.6",
+    "bluebird": "3.5.0",
     "find-babel-config": "1.0.1",
     "fuzzaldrin": "2.1.0",
     "lodash.escaperegexp": "4.1.2",
@@ -85,5 +85,5 @@
     "pretest": "eslint src/",
     "test": "exit 0"
   },
-  "version": "1.6.7"
+  "version": "1.6.8"
 }
