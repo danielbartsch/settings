@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161116-14283-je91yo/package.tgz",
+        "raw": "/tmp/d-117210-6530-1t69pd0/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161116-14283-je91yo/package.tgz",
-        "spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+        "rawSpec": "/tmp/d-117210-6530-1t69pd0/package.tgz",
+        "spec": "/tmp/d-117210-6530-1t69pd0/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161116-14283-fzlnt8"
+      "/tmp/apm-install-dir-117210-6530-12pnkbd"
     ]
   ],
-  "_from": "../d-1161116-14283-je91yo/package.tgz",
-  "_id": "tree-view-copy-relative-path@1.0.1",
+  "_from": "../d-117210-6530-1t69pd0/package.tgz",
+  "_id": "tree-view-copy-relative-path@1.1.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/tree-view-copy-relative-path",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161116-14283-je91yo/package.tgz",
+    "raw": "/tmp/d-117210-6530-1t69pd0/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161116-14283-je91yo/package.tgz",
-    "spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
+    "rawSpec": "/tmp/d-117210-6530-1t69pd0/package.tgz",
+    "spec": "/tmp/d-117210-6530-1t69pd0/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161116-14283-je91yo/package.tgz",
-  "_shasum": "cbf8d5e7119b661d907de30fb9bddc8cd29edd35",
+  "_resolved": "file:../d-117210-6530-1t69pd0/package.tgz",
+  "_shasum": "21ef9a7d914625048169a047466fc3f711baf1a6",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161116-14283-je91yo/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161116-14283-fzlnt8",
+  "_spec": "/tmp/d-117210-6530-1t69pd0/package.tgz",
+  "_where": "/tmp/apm-install-dir-117210-6530-12pnkbd",
   "activationCommands": {
     "atom-workspace": "tree-view-copy-relative-path:copy-path"
   },
@@ -67,5 +67,5 @@
     "type": "git",
     "url": "git+https://github.com/vladimir-tikhonov/tree-view-copy-relative-path.git"
   },
-  "version": "1.0.1"
+  "version": "1.1.0"
 }
