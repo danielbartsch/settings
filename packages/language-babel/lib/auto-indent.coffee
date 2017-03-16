@@ -2,7 +2,7 @@
 fs = require 'fs-plus'
 path = require 'path'
 autoCompleteJSX = require './auto-complete-jsx'
-InsertNl = require './insert-nl'
+DidInsertText = require './did-insert-text'
 stripJsonComments = require 'strip-json-comments'
 YAML = require 'js-yaml'
 
@@ -28,6 +28,8 @@ SWITCH_DEFAULT          = 17      # switch default statement
 JS_RETURN               = 18      # JS return
 PAREN_OPEN              = 19      # paren open (
 PAREN_CLOSE             = 20      # paren close )
+TEMPLATE_START          = 21      # ` back-tick start
+TEMPLATE_END            = 22      # ` back-tick end
 
 # eslint property values
 TAGALIGNED    = 'tag-aligned'
@@ -38,14 +40,16 @@ PROPSALIGNED  = 'props-aligned'
 module.exports =
 class AutoIndent
   constructor: (@editor) ->
-    @InsertNl = new InsertNl(@editor)
+    @DidInsertText = new DidInsertText(@editor)
     @autoJsx = atom.config.get('language-babel').autoIndentJSX
     # regex to search for tag open/close tag and close tag
-    @JSXREGEXP = /(<)([$_A-Za-z](?:[$_.:\-A-Za-z0-9])*)|(\/>)|(<\/)([$_A-Za-z](?:[$._:\-A-Za-z0-9])*)(>)|(>)|({)|(})|(\?)|(:)|(if)|(else)|(case)|(default)|(return)|(\()|(\))/g
+    @JSXREGEXP = /(<)([$_A-Za-z](?:[$_.:\-A-Za-z0-9])*)|(\/>)|(<\/)([$_A-Za-z](?:[$._:\-A-Za-z0-9])*)(>)|(>)|({)|(})|(\?)|(:)|(if)|(else)|(case)|(default)|(return)|(\()|(\))|(`)/g
     @mouseUp = true
     @multipleCursorTrigger = 1
     @disposables = new CompositeDisposable()
     @eslintIndentOptions = @getIndentOptions()
+    @templateDepth = 0 # track depth of any embedded back-tick templates
+
 
     @disposables.add atom.commands.add 'atom-text-editor',
       'language-babel:auto-indent-jsx-on': (event) =>
@@ -163,6 +167,7 @@ class AutoIndent
     indent =  0
     isFirstTagOfBlock = true
     @JSXREGEXP.lastIndex = 0
+    @templateDepth = 0
 
     for row in [range.start.row..range.end.row]
       isFirstTokenOfLine = true
@@ -403,9 +408,10 @@ class AutoIndent
             if parentTokenIdx >=0 then tokenStack[parentTokenIdx].termsThisTagIdx = idxOfToken
             idxOfToken++
 
-          # Javascript brace Start { or switch brace start { or paren (
-          when BRACE_OPEN, SWITCH_BRACE_OPEN, PAREN_OPEN
+          # Javascript brace Start { or switch brace start { or paren ( or back-tick `start
+          when BRACE_OPEN, SWITCH_BRACE_OPEN, PAREN_OPEN, TEMPLATE_START
             tokenOnThisLine = true
+            if token is TEMPLATE_START then @templateDepth++
             if isFirstTokenOfLine
               stackOfTokensStillOpen.push parentTokenIdx = stackOfTokensStillOpen.pop()
               if isFirstTagOfBlock and
@@ -441,8 +447,8 @@ class AutoIndent
             stackOfTokensStillOpen.push idxOfToken
             idxOfToken++
 
-          # Javascript brace End } or switch brace end } or paren close )
-          when BRACE_CLOSE, SWITCH_BRACE_CLOSE, PAREN_CLOSE
+          # Javascript brace End } or switch brace end } or paren close ) or back-tick ` end
+          when BRACE_CLOSE, SWITCH_BRACE_CLOSE, PAREN_CLOSE, TEMPLATE_END
 
             if token is SWITCH_BRACE_CLOSE
               stackOfTokensStillOpen.push parentTokenIdx = stackOfTokensStillOpen.pop()
@@ -474,6 +480,8 @@ class AutoIndent
                 parentTokenIdx: parentTokenIdx         # ptr to <tag
               if parentTokenIdx >=0 then tokenStack[parentTokenIdx].termsThisTagIdx = idxOfToken
               idxOfToken++
+
+            if token is TEMPLATE_END then @templateDepth--
 
           # case, default statement of switch
           when SWITCH_CASE, SWITCH_DEFAULT
@@ -542,7 +550,7 @@ class AutoIndent
           @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndentProps: 1 })
         else @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
       when JSXBRACE_OPEN
-        @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
+        @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1, allowAdditionalIndents: true })
       when BRACE_OPEN, SWITCH_BRACE_OPEN, PAREN_OPEN
         @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1, allowAdditionalIndents: true })
       when JSXTAG_SELFCLOSE_END, JSXBRACE_CLOSE, JSXTAG_CLOSE_ATTRS
@@ -551,6 +559,8 @@ class AutoIndent
         @indentRow({row: row, blockIndent: tokenStack[token.parentTokenIdx].firstCharIndentation, jsxIndent: 1, allowAdditionalIndents: true })
       when SWITCH_CASE, SWITCH_DEFAULT
         @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
+      when TEMPLATE_START, TEMPLATE_END
+        return; # don't touch templates
 
   # get the token at the given match position or return truthy false
   getToken: (bufferRow, match) ->
@@ -567,15 +577,17 @@ class AutoIndent
         return JSXBRACE_OPEN
       else if 'meta.brace.curly.switchStart.js' is scope
         return SWITCH_BRACE_OPEN
-      else if 'meta.brace.curly.js' is scope
-        return BRACE_OPEN
+      else if 'meta.brace.curly.js' is scope or
+        'meta.brace.curly.litobj.js' is scope
+          return BRACE_OPEN
     else if match[9]?
       if 'punctuation.section.embedded.end.jsx' is scope
         return JSXBRACE_CLOSE
       else if 'meta.brace.curly.switchEnd.js' is scope
         return SWITCH_BRACE_CLOSE
-      else if 'meta.brace.curly.js' is scope
-        return BRACE_CLOSE
+      else if 'meta.brace.curly.js' is scope or
+        'meta.brace.curly.litobj.js' is scope
+          return BRACE_CLOSE
     else if match[10]?
       if 'keyword.operator.ternary.js' is scope
         return TERNARY_IF
@@ -607,6 +619,12 @@ class AutoIndent
        'meta.brace.round.graphql' is scope or
        'meta.brace.round.directive.graphql' is scope
           return PAREN_CLOSE
+    else if match[19]?
+      if 'punctuation.definition.quasi.begin.js' is scope
+        return TEMPLATE_START
+      if 'punctuation.definition.quasi.end.js' is scope
+        return TEMPLATE_END
+
     return NO_TOKEN
 
 
@@ -760,6 +778,7 @@ class AutoIndent
   # option contains row to indent and allowAdditionalIndents flag
   indentRow: (options) ->
     { row, allowAdditionalIndents, blockIndent, jsxIndent, jsxIndentProps } = options
+    if @templateDepth > 0 then return false # don't indent inside a template
     # calc overall indent
     if jsxIndent
       if @eslintIndentOptions.jsxIndent[0]
