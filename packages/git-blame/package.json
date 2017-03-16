@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+        "raw": "/tmp/d-11727-2408-1kb97ph/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
-        "spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+        "rawSpec": "/tmp/d-11727-2408-1kb97ph/package.tgz",
+        "spec": "/tmp/d-11727-2408-1kb97ph/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11727-10279-4hkox6"
+      "/tmp/apm-install-dir-11727-2408-8ta029"
     ]
   ],
-  "_from": "../d-11727-10279-1n7d7wi/package.tgz",
+  "_from": "../d-11727-2408-1kb97ph/package.tgz",
   "_id": "git-blame@0.4.12",
   "_inCache": true,
   "_installable": true,
   "_location": "/git-blame",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+    "raw": "/tmp/d-11727-2408-1kb97ph/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
-    "spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
+    "rawSpec": "/tmp/d-11727-2408-1kb97ph/package.tgz",
+    "spec": "/tmp/d-11727-2408-1kb97ph/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11727-10279-1n7d7wi/package.tgz",
+  "_resolved": "file:../d-11727-2408-1kb97ph/package.tgz",
   "_shasum": "d58b07493a8dab01e23aaf92e7624f1c34c478cd",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11727-10279-1n7d7wi/package.tgz",
-  "_where": "/tmp/apm-install-dir-11727-10279-4hkox6",
+  "_spec": "/tmp/d-11727-2408-1kb97ph/package.tgz",
+  "_where": "/tmp/apm-install-dir-11727-2408-8ta029",
   "activationCommands": {
     "atom-text-editor": [
       "git-blame:toggle"
