@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
+        "raw": "/tmp/d-117213-893-fngjbb/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
-        "spec": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
+        "rawSpec": "/tmp/d-117213-893-fngjbb/package.tgz",
+        "spec": "/tmp/d-117213-893-fngjbb/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161018-9249-1wj4171"
+      "/tmp/apm-install-dir-117213-893-1sc9q68"
     ]
   ],
-  "_from": "../d-1161018-9249-1i3puqd/package.tgz",
-  "_id": "git-change-marker@0.11.0",
+  "_from": "../d-117213-893-fngjbb/package.tgz",
+  "_id": "git-change-marker@0.13.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/git-change-marker",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
+    "raw": "/tmp/d-117213-893-fngjbb/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
-    "spec": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
+    "rawSpec": "/tmp/d-117213-893-fngjbb/package.tgz",
+    "spec": "/tmp/d-117213-893-fngjbb/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161018-9249-1i3puqd/package.tgz",
-  "_shasum": "792f4b91b6d281898d6c886e9035f2c8182f6353",
+  "_resolved": "file:../d-117213-893-fngjbb/package.tgz",
+  "_shasum": "66a3766eb5008a779f979f94612161b238b2d7d6",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161018-9249-1i3puqd/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161018-9249-1wj4171",
+  "_spec": "/tmp/d-117213-893-fngjbb/package.tgz",
+  "_where": "/tmp/apm-install-dir-117213-893-1sc9q68",
   "bugs": {
     "url": "https://github.com/qzchenwl/git-change-marker/issues"
   },
@@ -46,7 +46,7 @@
   "description": "Click on line-number to show git change marker toolbar. You can go prev/next change, revert change, copy here.",
   "devDependencies": {},
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "homepage": "https://github.com/qzchenwl/git-change-marker#readme",
   "keywords": [],
@@ -60,5 +60,5 @@
     "type": "git",
     "url": "git+https://github.com/qzchenwl/git-change-marker.git"
   },
-  "version": "0.11.0"
+  "version": "0.13.0"
 }
