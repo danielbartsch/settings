@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117213-916-azhiel/package.tgz",
+        "raw": "/tmp/d-117221-9448-1xet7tp/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117213-916-azhiel/package.tgz",
-        "spec": "/tmp/d-117213-916-azhiel/package.tgz",
+        "rawSpec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+        "spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117213-916-10khiir"
+      "/tmp/apm-install-dir-117221-9448-1k3i12u"
     ]
   ],
-  "_from": "../d-117213-916-azhiel/package.tgz",
-  "_id": "language-babel@2.56.2",
+  "_from": "../d-117221-9448-1xet7tp/package.tgz",
+  "_id": "language-babel@2.57.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-babel",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117213-916-azhiel/package.tgz",
+    "raw": "/tmp/d-117221-9448-1xet7tp/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117213-916-azhiel/package.tgz",
-    "spec": "/tmp/d-117213-916-azhiel/package.tgz",
+    "rawSpec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+    "spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117213-916-azhiel/package.tgz",
-  "_shasum": "17d42d6a86a2e2272e20bb1e26ee028990ace0ca",
+  "_resolved": "file:../d-117221-9448-1xet7tp/package.tgz",
+  "_shasum": "b45eb8640c969bb656e80c62c813198d60f5d4d9",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117213-916-azhiel/package.tgz",
-  "_where": "/tmp/apm-install-dir-117213-916-10khiir",
+  "_spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+  "_where": "/tmp/apm-install-dir-117221-9448-1k3i12u",
   "activationCommands": [],
   "bugs": {
     "url": "https://github.com/gandm/language-babel/issues"
@@ -194,5 +194,5 @@
     "type": "git",
     "url": "git+https://github.com/gandm/language-babel.git"
   },
-  "version": "2.56.2"
+  "version": "2.57.0"
 }
