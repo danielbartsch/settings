@@ -31,6 +31,15 @@ atom-text-editor::shadow .cursor {
   // border-color: red;
 }
 
-atom-text-editor::shadow  .bracket-matcher .region {
+atom-text-editor::shadow .bracket-matcher .region {
     border-bottom: 2px solid white;
+}
+
+atom-panel.modal {
+    &:after {
+      background-color: transparent !important;
+    }
+    box-shadow: 0px 0px 200px black;
+    display: block;
+    margin-top: 100px;
 }
