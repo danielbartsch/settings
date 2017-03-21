@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+        "spec": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117220-9973-z6hb19"
+    ]
+  ],
+  "_from": "../d-117220-9973-l7mxvf/package.tgz",
+  "_id": "tabs-closer@0.14.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tabs-closer",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+    "spec": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117220-9973-l7mxvf/package.tgz",
+  "_shasum": "c7b3a8084568dee221b371d6e6e9cf65bc84cc1c",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117220-9973-l7mxvf/package.tgz",
+  "_where": "/tmp/apm-install-dir-117220-9973-z6hb19",
+  "activationCommands": {
+    "atom-workspace": [
+      "tabs-closer:close-unmodified-tabs"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/gschrader/tabs-closer/issues"
+  },
+  "dependencies": {},
+  "description": "Adds more context menus for closing tabs",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/gschrader/tabs-closer#readme",
+  "keywords": [
+    "tabs",
+    "git",
+    "ui"
+  ],
+  "license": "MIT",
+  "main": "./lib/tabs-closer",
+  "name": "tabs-closer",
+  "optionalDependencies": {},
+  "readme": "# tabs-closer package for Atom\n\nAdds more context menus for closing tabs.\n\n![tabs-closer screenshot](https://github.com/gschrader/tabs-closer/blob/master/screenshot.gif?raw=true\")\n\n* Close Unmodified - closes all tabs that are unmodified in a git sense\n* ~~Close Saved - closes all tabs that don't have changes~~ *(added to core tabs package)*\n* ~~Close All - closes all tabs~~ *(added to core tabs package)*\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gschrader/tabs-closer.git"
+  },
+  "version": "0.14.0"
+}
