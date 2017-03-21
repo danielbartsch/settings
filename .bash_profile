@@ -69,13 +69,30 @@ function gadd {
   clear;
   git status;
 }
-function gc { git commit -m "$@"; clear; git status; }
-function gcn { git commit -mn "$@"; clear; git status; }
-function discard { git checkout -- "$@"; clear; git status; }
+function gc { clear; git commit -m "$@"; git status; }
+function gcn { clear; git commit -mn "$@"; git status; }
+function discard {
+  if [ -z $@ ]; then
+    git checkout -- /home/adv/adverity/;
+  else
+    git checkout -- "$@";
+  fi
+  
+  clear;
+  git status;
+}
 function to {
-    branches=$(git branch --no-color | grep "$@")
-    git checkout ${branches[0]};
-    git pull;
+  branches=$(git branch --no-color | grep "$@")
+  git checkout ${branches[0]};
+  git pull;
+}
+function pb {
+  if [ -z $@ ]; then
+    git checkout @{-1}
+  else
+    git checkout @{-$@}
+  fi
+  git pull;
 }
 function unstage { git reset HEAD "$@"; clear; git status; }
 
