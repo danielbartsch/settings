@@ -14,7 +14,7 @@ const defaultFlowFile = Path.resolve(__dirname, '..', 'vendor', '.flowconfig')
 export default {
   activate() {
     // eslint-disable-next-line global-require
-    require('atom-package-deps').install('flow-ide')
+    require('atom-package-deps').install('flow-ide', true)
 
     this.subscriptions = new CompositeDisposable()
     this.subscriptions.add(atom.config.observe('flow-ide.executablePath', (executablePath) => {
@@ -39,6 +39,7 @@ export default {
       const executable = findCached(rootDirectory, 'node_modules/.bin/flow') || this.executablePath || 'flow'
       exec(executable, ['stop'], {
         cwd: rootDirectory,
+        timeout: 60 * 1000,
         detached: true,
         ignoreExitCode: true,
       }).catch(() => null) // <-- ignore all errors
@@ -48,9 +49,9 @@ export default {
   provideLinter(): Object {
     const linter = {
       name: 'Flow IDE',
-      grammarScopes: ['source.js', 'source.js.jsx'],
       scope: 'project',
-      lintOnFly: false,
+      grammarScopes: ['source.js', 'source.js.jsx'],
+      lintsOnChange: false,
       // eslint-disable-next-line arrow-parens
       lint: async (textEditor) => {
         let configFile
@@ -70,7 +71,7 @@ export default {
 
         let result
         try {
-          result = await exec(executable, ['status', '--json'], { cwd: fileDirectory, ignoreExitCode: true })
+          result = await exec(executable, ['status', '--json'], { cwd: fileDirectory, ignoreExitCode: true, timeout: 60 * 1000 })
         } catch (error) {
           if (error.message.indexOf(INIT_MESSAGE) !== -1 && configFile) {
             spawnedServers.add(Path.dirname(configFile))
@@ -128,7 +129,7 @@ export default {
 
         let result
         try {
-          result = await exec(await this.getExecutablePath(fileDirectory), flowOptions, { cwd: fileDirectory, stdin: fileContents })
+          result = await exec(await this.getExecutablePath(fileDirectory), flowOptions, { cwd: fileDirectory, stdin: fileContents, timeout: 60 * 1000 })
         } catch (error) {
           if (error.message.indexOf(INIT_MESSAGE) !== -1 && configFile) {
             spawnedServers.add(Path.dirname(configFile))
@@ -172,7 +173,7 @@ export default {
 
     const executable: string = await this.getExecutablePath(fileDirectory)
     try {
-      const result: string = await exec(executable, ['coverage', filePath, '--json'], { cwd: fileDirectory, ignoreExitCode: true })
+      const result: string = await exec(executable, ['coverage', filePath, '--json'], { cwd: fileDirectory, ignoreExitCode: true, timeout: 60 * 1000 })
         .catch(() => {})
 
       if (result) {

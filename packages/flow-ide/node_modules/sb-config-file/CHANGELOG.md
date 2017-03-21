@@ -1,3 +1,7 @@
+### 3.0.2
+
+- Fix a bug where reading would throw if a file did not exist and `createIfNonExistent` was set to false
+
 ### 3.0.1
 
 - Fix some critical typos

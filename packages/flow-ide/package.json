@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
+        "raw": "/tmp/d-117221-9437-1y1oonj/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
-        "spec": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
+        "rawSpec": "/tmp/d-117221-9437-1y1oonj/package.tgz",
+        "spec": "/tmp/d-117221-9437-1y1oonj/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117115-4878-3rcgdy"
+      "/tmp/apm-install-dir-117221-9437-ie5jbh"
     ]
   ],
-  "_from": "../d-117115-4878-1u2jl0d/package.tgz",
-  "_id": "flow-ide@1.3.0",
+  "_from": "../d-117221-9437-1y1oonj/package.tgz",
+  "_id": "flow-ide@1.4.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/flow-ide",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
+    "raw": "/tmp/d-117221-9437-1y1oonj/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
-    "spec": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
+    "rawSpec": "/tmp/d-117221-9437-1y1oonj/package.tgz",
+    "spec": "/tmp/d-117221-9437-1y1oonj/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117115-4878-1u2jl0d/package.tgz",
-  "_shasum": "22c5ecd4f439349947c137146e8f11dad8d2b2b1",
+  "_resolved": "file:../d-117221-9437-1y1oonj/package.tgz",
+  "_shasum": "5269c78f3fdfb2a66f8e3743228a7419f79a2f82",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117115-4878-1u2jl0d/package.tgz",
-  "_where": "/tmp/apm-install-dir-117115-4878-3rcgdy",
+  "_spec": "/tmp/d-117221-9437-1y1oonj/package.tgz",
+  "_where": "/tmp/apm-install-dir-117221-9437-ie5jbh",
   "author": {
     "name": "steelbrain"
   },
@@ -63,14 +63,14 @@
   },
   "dependencies": {
     "atom-autocomplete": "^1.0.0",
-    "atom-linter": "^8.0.0",
-    "atom-package-deps": "^4.3.1",
+    "atom-linter": "^9.0.1",
+    "atom-package-deps": "^4.4.1",
     "sb-string_score": "^0.1.20"
   },
   "description": "Flowtype support in Atom without any bloatware",
   "devDependencies": {
     "eslint-config-steelbrain": "^2.0.0",
-    "flow-bin": "^0.32.0"
+    "flow-bin": "^0.42.0"
   },
   "engines": {
     "atom": ">=1.4.0 <2.0.0"
@@ -93,7 +93,7 @@
   "providedServices": {
     "linter": {
       "versions": {
-        "1.0.0": "provideLinter"
+        "2.0.0": "provideLinter"
       }
     },
     "autocomplete.provider": {
@@ -112,5 +112,5 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "1.3.0"
+  "version": "1.4.1"
 }
