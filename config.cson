@@ -29,6 +29,7 @@
     disabledPackages: [
       "symbols-view"
       "language-gfm"
+      "auto-reveal-in-sidebar"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -39,7 +40,7 @@
     telemetryConsent: "no"
   editor:
     invisibles: {}
-    lineHeight: 1.2
+    lineHeight: 1.05
     preferredLineLength: 120
     scrollPastEnd: true
     tabLength: 4
@@ -48,19 +49,42 @@
     minimapLine: false
   "exception-reporting":
     userId: "14290ab0-5dc1-86ae-5dd5-ed0be4044d11"
+  "flow-ide":
+    executablePath: "flow"
+  "foldername-tabs": {}
+  "fuzzy-finder":
+    preserveLastSearch: true
   "git-blame":
-    columnWidth: 200
-    dateFormatString: "DD.MM.YY"
+    columnWidth: 300
+    ignoreWhiteSpaceDiffs: true
   "git-diff": {}
+  "git-log": {}
   "highlight-column":
     lineMode: true
     opacity: 0.05
   "highlight-selected": {}
+  hyperclick:
+    linuxTriggerKeys: "shiftKey,ctrlKey"
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".jsx"
+      ".json"
+      ".node"
+    ]
+    jumpToImport: true
   linter:
-    errorPanelHeight: 88
-    lintOnFlyInterval: 1000
+    errorPanelHeight: 63
+    gutterPosition: "Left"
+    inlineTooltipInterval: 100
+    lintOnFlyInterval: 0
   "linter-eslint":
     fixOnSave: true
+  "linter-ui-default":
+    decorateOnTreeView: "Files and Directories"
+    showPanel: true
+    showProviderName: true
+    tooltipFollows: "Keyboard"
   "markdown-preview-plus":
     breakOnSingleNewline: true
     useGitHubStyle: true
@@ -76,6 +100,10 @@
     scrollAnimation: true
     scrollAnimationDuration: 100
     textOpacity: 1
+  "minimap-git-diff":
+    useGutterDecoration: true
+  "nav-panel":
+    sort: false
   nuclide:
     "nuclide-blame-provider-hg": {}
     "nuclide-buck":
@@ -117,6 +145,7 @@
     "nuclide-vcs-log":
       showDifferentialRevision: false
     use:
+      hyperclick: false
       "nuclide-adb-logcat": false
       "nuclide-arcanist": false
       "nuclide-blame": false
@@ -192,6 +221,7 @@
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
   "terminal-plus":
     core:
@@ -203,6 +233,7 @@
     visible: false
   "tree-view":
     alwaysOpenExisting: true
+    autoReveal: true
     squashDirectoryNames: true
   "tree-view-autoresize":
     animationMilliseconds: 0
