@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117223-10702-3jfggs/package.tgz",
+        "raw": "/tmp/d-117224-13246-qztkp/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117223-10702-3jfggs/package.tgz",
-        "spec": "/tmp/d-117223-10702-3jfggs/package.tgz",
+        "rawSpec": "/tmp/d-117224-13246-qztkp/package.tgz",
+        "spec": "/tmp/d-117224-13246-qztkp/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117223-10702-m5beon"
+      "/tmp/apm-install-dir-117224-13246-pd0ive"
     ]
   ],
-  "_from": "../d-117223-10702-3jfggs/package.tgz",
-  "_id": "linter@2.1.1",
+  "_from": "../d-117224-13246-qztkp/package.tgz",
+  "_id": "linter@2.1.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117223-10702-3jfggs/package.tgz",
+    "raw": "/tmp/d-117224-13246-qztkp/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117223-10702-3jfggs/package.tgz",
-    "spec": "/tmp/d-117223-10702-3jfggs/package.tgz",
+    "rawSpec": "/tmp/d-117224-13246-qztkp/package.tgz",
+    "spec": "/tmp/d-117224-13246-qztkp/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117223-10702-3jfggs/package.tgz",
-  "_shasum": "05b505b9671633345ba789e749edb6ca4a90a056",
+  "_resolved": "file:../d-117224-13246-qztkp/package.tgz",
+  "_shasum": "374be92b2034aee5b7fe40f35aeb3dacc5edf3d3",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117223-10702-3jfggs/package.tgz",
-  "_where": "/tmp/apm-install-dir-117223-10702-m5beon",
+  "_spec": "/tmp/d-117224-13246-qztkp/package.tgz",
+  "_where": "/tmp/apm-install-dir-117224-13246-pd0ive",
   "author": {
     "name": "steelbrain"
   },
@@ -97,6 +97,7 @@
     "eslint-config-steelbrain": "^2.0.0",
     "lodash.uniq": "^4.5.0",
     "minimatch": "^3.0.3",
+    "sb-config-file": "^3.0.2",
     "sb-debounce": "^1.0.1"
   },
   "description": "A Base Linter with Cow Powers",
@@ -136,5 +137,5 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "2.1.1"
+  "version": "2.1.2"
 }
