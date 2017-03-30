@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117213-950-qn08rh/package.tgz",
+        "raw": "/tmp/d-117230-1021-em6pss/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117213-950-qn08rh/package.tgz",
-        "spec": "/tmp/d-117213-950-qn08rh/package.tgz",
+        "rawSpec": "/tmp/d-117230-1021-em6pss/package.tgz",
+        "spec": "/tmp/d-117230-1021-em6pss/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117213-950-2svc68"
+      "/tmp/apm-install-dir-117230-1021-4ltrv6"
     ]
   ],
-  "_from": "../d-117213-950-qn08rh/package.tgz",
-  "_id": "minimap@4.26.8",
+  "_from": "../d-117230-1021-em6pss/package.tgz",
+  "_id": "minimap@4.27.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/minimap",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117213-950-qn08rh/package.tgz",
+    "raw": "/tmp/d-117230-1021-em6pss/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117213-950-qn08rh/package.tgz",
-    "spec": "/tmp/d-117213-950-qn08rh/package.tgz",
+    "rawSpec": "/tmp/d-117230-1021-em6pss/package.tgz",
+    "spec": "/tmp/d-117230-1021-em6pss/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117213-950-qn08rh/package.tgz",
-  "_shasum": "cbb062177a33d017c229c7a05c1b0f7c5cc38853",
+  "_resolved": "file:../d-117230-1021-em6pss/package.tgz",
+  "_shasum": "f676b0f36e85628e614e01ecdf6c295b02aedeab",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117213-950-qn08rh/package.tgz",
-  "_where": "/tmp/apm-install-dir-117213-950-2svc68",
+  "_spec": "/tmp/d-117230-1021-em6pss/package.tgz",
+  "_where": "/tmp/apm-install-dir-117230-1021-4ltrv6",
   "author": {
     "name": "Fangdun Cai",
     "email": "cfddream@gmail.com"
@@ -74,6 +74,13 @@
     "useHardwareAcceleration": {
       "type": "boolean",
       "default": true
+    },
+    "redrawDelay": {
+      "type": "number",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 1000,
+      "description": "Controls how often (in ms) the minimap should redraw itself after changing the text editor's contents. Setting this to 100ms or higher could dramatically improve editor responsiveness when working with large files. A value of 0 will cause the minimap to redraw itself immediately on each change."
     },
     "adjustMinimapWidthToSoftWrap": {
       "type": "boolean",
@@ -177,6 +184,7 @@
   "dependencies": {
     "atom-utils": ">=0.9.2",
     "delegato": "1.x",
+    "element-resize-detector": "^1.1.11",
     "fs-plus": "2.x",
     "mixto": "1.x",
     "underscore-plus": "1.x"
@@ -244,10 +252,11 @@
       "devicePixelRatio",
       "requestAnimationFrame",
       "Event",
-      "MouseEvent"
+      "MouseEvent",
+      "IntersectionObserver"
     ]
   },
-  "version": "4.26.8",
+  "version": "4.27.0",
   "viewProviders": [
     "minimapViewProvider"
   ]
