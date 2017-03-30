@@ -77,8 +77,11 @@
     fixOnSave: true
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
+    panelHeight: 96
+    panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
+    statusBarRepresents: "Entire Project"
     tooltipFollows: "Keyboard"
   "markdown-preview-plus":
     breakOnSingleNewline: true
@@ -145,6 +148,9 @@
   "tree-view-git-status": {}
   "tree-view-search-bar":
     autoToggle: false
+  "tree-view-sort":
+    descending: true
+    type: 6
   welcome:
     showOnStartup: false
 ".ansi.text":
