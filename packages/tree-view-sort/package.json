@@ -1,0 +1,132 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117230-11727-14q89yh/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117230-11727-14q89yh/package.tgz",
+        "spec": "/tmp/d-117230-11727-14q89yh/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117230-11727-bp5nzb"
+    ]
+  ],
+  "_from": "../d-117230-11727-14q89yh/package.tgz",
+  "_id": "tree-view-sort@0.7.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tree-view-sort",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117230-11727-14q89yh/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117230-11727-14q89yh/package.tgz",
+    "spec": "/tmp/d-117230-11727-14q89yh/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117230-11727-14q89yh/package.tgz",
+  "_shasum": "8ce06d844465920de999e16d14deda3743e56436",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117230-11727-14q89yh/package.tgz",
+  "_where": "/tmp/apm-install-dir-117230-11727-bp5nzb",
+  "bugs": {
+    "url": "https://github.com/hex-ci/atom-tree-view-sort/issues"
+  },
+  "configSchema": {
+    "type": {
+      "title": "Sort By",
+      "description": "The sorting type of the Atom tree-view package.",
+      "type": "integer",
+      "default": 1,
+      "enum": [
+        {
+          "value": 0,
+          "description": "Default (disable the tree-view-sort package)"
+        },
+        {
+          "value": 1,
+          "description": "File name"
+        },
+        {
+          "value": 2,
+          "description": "File extension name"
+        },
+        {
+          "value": 3,
+          "description": "File size"
+        },
+        {
+          "value": 4,
+          "description": "File access time"
+        },
+        {
+          "value": 5,
+          "description": "File change time"
+        },
+        {
+          "value": 6,
+          "description": "File modify time"
+        },
+        {
+          "value": 7,
+          "description": "File creation time"
+        }
+      ],
+      "order": 1
+    },
+    "descending": {
+      "title": "Descending Sorting",
+      "description": "Use descending sorting, otherwise use ascending sorting. Unavailable when the tree-view-sort package is disabled.",
+      "type": "boolean",
+      "default": false,
+      "order": 2
+    },
+    "caseSensitive": {
+      "title": "Case-Sensitive Sorting",
+      "description": "Use case-sensitive sorting, otherwise use case-insensitive sorting. Unavailable when the tree-view-sort package is disabled.",
+      "type": "boolean",
+      "default": true,
+      "order": 3
+    },
+    "sortFoldersBeforeFiles": {
+      "title": "Sort Folders Before Files",
+      "description": "When listing directory items, list subdirectories before listing files.",
+      "type": "boolean",
+      "default": true,
+      "order": 4
+    }
+  },
+  "dependencies": {
+    "fs-plus": "^3.0.0"
+  },
+  "description": "Add a sorting feature for the Atom tree-view package.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/hex-ci/atom-tree-view-sort#readme",
+  "keywords": [
+    "tree",
+    "tree-view",
+    "sorting",
+    "sort"
+  ],
+  "license": "MIT",
+  "main": "./lib/tree-view-sort",
+  "name": "tree-view-sort",
+  "optionalDependencies": {},
+  "readme": "# tree-view-sort package\n\nAdd a sorting feature for the Atom tree-view package.\n\n## Features\n\n### Sort By\n\n* File name\n* File extension name\n* File size\n* File access time\n* File change time\n* File modify time\n* File creation time\n\n### Descending Sorting\n\nYou can set descending sorting or ascending sorting.\n\n### Case-Sensitive Sorting\n\nYou can set case-sensitive sorting or case-insensitive sorting.\n\n### Sort Folders Before Files\n\nWhen listing directory items, list subdirectories before listing files.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hex-ci/atom-tree-view-sort.git"
+  },
+  "version": "0.7.0"
+}
