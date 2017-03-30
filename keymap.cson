@@ -36,6 +36,7 @@
     'ctrl-shift-r': 'es-identifier-highlight:renameIdentifier'
     'ctrl-shift-up': 'es-identifier-highlight:prevIdentifier'
     'ctrl-shift-down': 'es-identifier-highlight:nextIdentifier'
+    'ctrl-<': 'tree-view:toggle'
 
 'atom-text-editor atom-workspace atom-text-editor':
     'ctrl-shift-m': 'markdown-preview-plus:toggle'

@@ -27,11 +27,12 @@ atom-text-editor {
 }
 
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
-atom-text-editor::shadow .cursor {
-  // border-color: red;
+atom-text-editor.editor .cursor {
+  border-left-style: double;
+  border-left-width: 3px
 }
 
-atom-text-editor::shadow .bracket-matcher .region {
+atom-text-editor.editor .bracket-matcher .region {
     border-bottom: 2px solid white;
 }
 
