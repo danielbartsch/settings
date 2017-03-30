@@ -51,34 +51,41 @@ alias gcdf="clear; git diff --staged"
 function gdfn { clear; git diff HEAD~"$@" HEAD; }
 
 function gs {
-    clear;
-    git status;
-    printf "Amount of Commands: " > /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-    history | grep -c "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-    printf "\nCommands: \n" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-    history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+  clear;
+  git status;
+  printf "Amount of Commands: " > /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+  history | grep -c "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+  printf "\nCommands: \n" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+  history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
 }
 alias qgs="clear; git status"
 function gadd {
+  clear;
   if [ -z $@ ]; then
     git add /home/adv/adverity/;
   else
     git add "$@";
   fi
-  
-  clear;
   git status;
 }
 function gc { clear; git commit -m "$@"; git status; }
 function gcn { clear; git commit -mn "$@"; git status; }
 function discard {
+  clear;
   if [ -z $@ ]; then
     git checkout -- /home/adv/adverity/;
   else
     git checkout -- "$@";
   fi
-  
+  git status;
+}
+function cts {
   clear;
+  if [ -z $@ ]; then
+    git reset --soft HEAD~1
+  else
+    git reset --soft HEAD~$@
+  fi
   git status;
 }
 function to {
@@ -94,7 +101,11 @@ function pb {
   fi
   git pull;
 }
-function unstage { git reset HEAD "$@"; clear; git status; }
+function unstage {
+  clear;
+  git reset HEAD "$@";
+  git status;
+}
 
 alias branches="git branch"
 
@@ -127,13 +138,12 @@ function cms { # last n commit messages
 alias sh="history | grep"
 
 function pop {
+  clear;
   if [ -z $@ ]; then
     git stash pop;
   else
     git stash pop stash@{"$@"};
   fi
-  clear;
-  git status;
 }
 alias stash="git stash; clear; git status"
 alias stashlist="clear; git status; git stash list"
