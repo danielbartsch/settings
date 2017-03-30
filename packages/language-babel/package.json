@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+        "raw": "/tmp/d-117224-13235-jl8h86/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
-        "spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+        "rawSpec": "/tmp/d-117224-13235-jl8h86/package.tgz",
+        "spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117221-9448-1k3i12u"
+      "/tmp/apm-install-dir-117224-13235-13us67k"
     ]
   ],
-  "_from": "../d-117221-9448-1xet7tp/package.tgz",
-  "_id": "language-babel@2.57.0",
+  "_from": "../d-117224-13235-jl8h86/package.tgz",
+  "_id": "language-babel@2.57.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-babel",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+    "raw": "/tmp/d-117224-13235-jl8h86/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
-    "spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
+    "rawSpec": "/tmp/d-117224-13235-jl8h86/package.tgz",
+    "spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117221-9448-1xet7tp/package.tgz",
-  "_shasum": "b45eb8640c969bb656e80c62c813198d60f5d4d9",
+  "_resolved": "file:../d-117224-13235-jl8h86/package.tgz",
+  "_shasum": "bb47856ac9ae1c26e4377cab4390e9066ab958b1",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117221-9448-1xet7tp/package.tgz",
-  "_where": "/tmp/apm-install-dir-117221-9448-1k3i12u",
+  "_spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
+  "_where": "/tmp/apm-install-dir-117224-13235-13us67k",
   "activationCommands": [],
   "bugs": {
     "url": "https://github.com/gandm/language-babel/issues"
@@ -194,5 +194,5 @@
     "type": "git",
     "url": "git+https://github.com/gandm/language-babel.git"
   },
-  "version": "2.57.0"
+  "version": "2.57.1"
 }
