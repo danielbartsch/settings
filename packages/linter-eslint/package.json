@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117215-14600-1s839x3/package.tgz",
+        "raw": "/tmp/d-117314-6546-t7sc7f/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117215-14600-1s839x3/package.tgz",
-        "spec": "/tmp/d-117215-14600-1s839x3/package.tgz",
+        "rawSpec": "/tmp/d-117314-6546-t7sc7f/package.tgz",
+        "spec": "/tmp/d-117314-6546-t7sc7f/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117215-14600-vj2mpy"
+      "/tmp/apm-install-dir-117314-6546-9fvytw"
     ]
   ],
-  "_from": "../d-117215-14600-1s839x3/package.tgz",
-  "_id": "linter-eslint@8.1.4",
+  "_from": "../d-117314-6546-t7sc7f/package.tgz",
+  "_id": "linter-eslint@8.1.6",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117215-14600-1s839x3/package.tgz",
+    "raw": "/tmp/d-117314-6546-t7sc7f/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117215-14600-1s839x3/package.tgz",
-    "spec": "/tmp/d-117215-14600-1s839x3/package.tgz",
+    "rawSpec": "/tmp/d-117314-6546-t7sc7f/package.tgz",
+    "spec": "/tmp/d-117314-6546-t7sc7f/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117215-14600-1s839x3/package.tgz",
-  "_shasum": "73fad8a3082ebbf00d3b076b8bef5dd69f11099c",
+  "_resolved": "file:../d-117314-6546-t7sc7f/package.tgz",
+  "_shasum": "86c1f2c0c94b772c948c77919d6474035c5a607c",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117215-14600-1s839x3/package.tgz",
-  "_where": "/tmp/apm-install-dir-117215-14600-vj2mpy",
+  "_spec": "/tmp/d-117314-6546-t7sc7f/package.tgz",
+  "_where": "/tmp/apm-install-dir-117314-6546-9fvytw",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
@@ -154,6 +154,7 @@
     "eslint": "^3.17.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "jasmine-fix": "^1.0.1",
     "rimraf": "^2.5.4"
   },
   "engines": {
@@ -190,7 +191,8 @@
       "atom": "true"
     },
     "env": {
-      "node": true
+      "node": true,
+      "browser": true
     }
   },
   "homepage": "https://github.com/AtomLinter/linter-eslint#readme",
@@ -221,5 +223,5 @@
     "test": "apm test",
     "watch": "npm run compile -- -w"
   },
-  "version": "8.1.4"
+  "version": "8.1.6"
 }
