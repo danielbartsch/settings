@@ -2,40 +2,48 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117213-11298-1229muv/package.tgz",
+        "raw": "/tmp/d-11737-8367-1tllel2/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117213-11298-1229muv/package.tgz",
-        "spec": "/tmp/d-117213-11298-1229muv/package.tgz",
+        "rawSpec": "/tmp/d-11737-8367-1tllel2/package.tgz",
+        "spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117213-11298-1af7bld"
+      "/tmp/apm-install-dir-11737-8367-104oe87"
     ]
   ],
-  "_from": "../d-117213-11298-1229muv/package.tgz",
-  "_id": "autocomplete-modules@1.6.8",
+  "_from": "../d-11737-8367-1tllel2/package.tgz",
+  "_id": "autocomplete-modules@1.6.9",
   "_inCache": true,
   "_installable": true,
   "_location": "/autocomplete-modules",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117213-11298-1229muv/package.tgz",
+    "raw": "/tmp/d-11737-8367-1tllel2/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117213-11298-1229muv/package.tgz",
-    "spec": "/tmp/d-117213-11298-1229muv/package.tgz",
+    "rawSpec": "/tmp/d-11737-8367-1tllel2/package.tgz",
+    "spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117213-11298-1229muv/package.tgz",
-  "_shasum": "aa836e9daba9efbc8fd9e73745aa0bd2b71c917e",
+  "_resolved": "file:../d-11737-8367-1tllel2/package.tgz",
+  "_shasum": "547020f6689b5959d550603b7366d26652d944d2",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117213-11298-1229muv/package.tgz",
-  "_where": "/tmp/apm-install-dir-117213-11298-1af7bld",
+  "_spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
+  "_where": "/tmp/apm-install-dir-11737-8367-104oe87",
+  "activationHooks": [
+    "language-javascript:grammar-used",
+    "language-babel:grammar-used",
+    "language-coffee-script:grammar-used",
+    "language-ts:grammar-used",
+    "language-typescript-grammars-only:grammar-used",
+    "atom-typescript:grammar-used"
+  ],
   "bugs": {
     "url": "https://github.com/nkt/atom-autocomplete-modules/issues"
   },
@@ -85,5 +93,5 @@
     "pretest": "eslint src/",
     "test": "exit 0"
   },
-  "version": "1.6.8"
+  "version": "1.6.9"
 }
