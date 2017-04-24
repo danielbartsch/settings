@@ -71,7 +71,15 @@ export default {
 
         let result
         try {
-          result = await exec(executable, ['status', '--json'], { cwd: fileDirectory, ignoreExitCode: true, timeout: 60 * 1000 })
+          result = await exec(executable, ['status', '--json'], {
+            cwd: fileDirectory,
+            ignoreExitCode: true,
+            timeout: 60 * 1000,
+            uniqueKey: 'flow-ide-linter',
+          })
+          if (result === null) {
+            return null
+          }
         } catch (error) {
           if (error.message.indexOf(INIT_MESSAGE) !== -1 && configFile) {
             spawnedServers.add(Path.dirname(configFile))
@@ -129,7 +137,15 @@ export default {
 
         let result
         try {
-          result = await exec(await this.getExecutablePath(fileDirectory), flowOptions, { cwd: fileDirectory, stdin: fileContents, timeout: 60 * 1000 })
+          result = await exec(await this.getExecutablePath(fileDirectory), flowOptions, {
+            cwd: fileDirectory,
+            stdin: fileContents,
+            timeout: 60 * 1000,
+            uniqueKey: 'flow-ide-autocomplete',
+          })
+          if (result === null) {
+            return []
+          }
         } catch (error) {
           if (error.message.indexOf(INIT_MESSAGE) !== -1 && configFile) {
             spawnedServers.add(Path.dirname(configFile))
@@ -173,8 +189,12 @@ export default {
 
     const executable: string = await this.getExecutablePath(fileDirectory)
     try {
-      const result: string = await exec(executable, ['coverage', filePath, '--json'], { cwd: fileDirectory, ignoreExitCode: true, timeout: 60 * 1000 })
-        .catch(() => {})
+      const result: string = await exec(executable, ['coverage', filePath, '--json'], {
+        cwd: fileDirectory,
+        ignoreExitCode: true,
+        timeout: 60 * 1000,
+        uniqueKey: 'flow-ide-coverage',
+      }).catch(() => null)
 
       if (result) {
         const coverage: CoverageObject = JSON.parse(result)
