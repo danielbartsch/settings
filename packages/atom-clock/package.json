@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11726-10270-1dkvt81/package.tgz",
+        "raw": "/tmp/d-117319-13171-1vxc6am/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11726-10270-1dkvt81/package.tgz",
-        "spec": "/tmp/d-11726-10270-1dkvt81/package.tgz",
+        "rawSpec": "/tmp/d-117319-13171-1vxc6am/package.tgz",
+        "spec": "/tmp/d-117319-13171-1vxc6am/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11726-10270-1tqqdn9"
+      "/tmp/apm-install-dir-117319-13171-1tlj7c6"
     ]
   ],
-  "_from": "../d-11726-10270-1dkvt81/package.tgz",
-  "_id": "atom-clock@0.1.6",
+  "_from": "../d-117319-13171-1vxc6am/package.tgz",
+  "_id": "atom-clock@0.1.7",
   "_inCache": true,
   "_installable": true,
   "_location": "/atom-clock",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11726-10270-1dkvt81/package.tgz",
+    "raw": "/tmp/d-117319-13171-1vxc6am/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11726-10270-1dkvt81/package.tgz",
-    "spec": "/tmp/d-11726-10270-1dkvt81/package.tgz",
+    "rawSpec": "/tmp/d-117319-13171-1vxc6am/package.tgz",
+    "spec": "/tmp/d-117319-13171-1vxc6am/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11726-10270-1dkvt81/package.tgz",
-  "_shasum": "c6de7226701bec7b39bf39722b4dc0ed406c3096",
+  "_resolved": "file:../d-117319-13171-1vxc6am/package.tgz",
+  "_shasum": "7f372208b5db181290c887ed0c7e63da598f894f",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11726-10270-1dkvt81/package.tgz",
-  "_where": "/tmp/apm-install-dir-11726-10270-1tqqdn9",
+  "_spec": "/tmp/d-117319-13171-1vxc6am/package.tgz",
+  "_where": "/tmp/apm-install-dir-117319-13171-1tlj7c6",
   "author": {
     "name": "Antonio Bevilacqua",
     "email": "b3by.in.th3.sky@gmail.com",
@@ -55,7 +55,9 @@
     "moment": "^2.17.x"
   },
   "description": "Display a customizable clock in the status bar.",
-  "devDependencies": {},
+  "devDependencies": {
+    "mockdate": "^2.0.1"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
@@ -77,5 +79,5 @@
     "type": "git",
     "url": "git+https://github.com/b3by/atom-clock.git"
   },
-  "version": "0.1.6"
+  "version": "0.1.7"
 }
