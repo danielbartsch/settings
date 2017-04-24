@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117229-29771-kwwhwv/package.tgz",
+        "raw": "/tmp/d-117318-8505-lqpqbt/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117229-29771-kwwhwv/package.tgz",
-        "spec": "/tmp/d-117229-29771-kwwhwv/package.tgz",
+        "rawSpec": "/tmp/d-117318-8505-lqpqbt/package.tgz",
+        "spec": "/tmp/d-117318-8505-lqpqbt/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117229-29771-1ndvrow"
+      "/tmp/apm-install-dir-117318-8505-1wuvcli"
     ]
   ],
-  "_from": "../d-117229-29771-kwwhwv/package.tgz",
-  "_id": "linter-ui-default@1.2.2",
+  "_from": "../d-117318-8505-lqpqbt/package.tgz",
+  "_id": "linter-ui-default@1.2.3",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117229-29771-kwwhwv/package.tgz",
+    "raw": "/tmp/d-117318-8505-lqpqbt/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117229-29771-kwwhwv/package.tgz",
-    "spec": "/tmp/d-117229-29771-kwwhwv/package.tgz",
+    "rawSpec": "/tmp/d-117318-8505-lqpqbt/package.tgz",
+    "spec": "/tmp/d-117318-8505-lqpqbt/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117229-29771-kwwhwv/package.tgz",
-  "_shasum": "9eb05af81c4eeb023391465fa8aec0600bbfe5d8",
+  "_resolved": "file:../d-117318-8505-lqpqbt/package.tgz",
+  "_shasum": "92a6c92019a02ff06eda364918ae9aaa57ae30eb",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117229-29771-kwwhwv/package.tgz",
-  "_where": "/tmp/apm-install-dir-117229-29771-1ndvrow",
+  "_spec": "/tmp/d-117318-8505-lqpqbt/package.tgz",
+  "_where": "/tmp/apm-install-dir-117318-8505-1wuvcli",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -183,13 +183,12 @@
     "react-dom": "^15.3.2",
     "react-resizable-box": "^1.8.1",
     "sb-debounce": "^1.0.1",
-    "sb-event-kit": "^3.0.0",
     "sb-react-table": "^1.0.1"
   },
   "description": "Default UI for the Linter package",
   "devDependencies": {
     "eslint-config-steelbrain": "^3.0.0",
-    "flow-bin": "^0.42.0",
+    "flow-bin": "^0.43.0",
     "jasmine-fix": "^1.0.1",
     "rimraf": "^2.5.4"
   },
@@ -230,5 +229,5 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.2.2"
+  "version": "1.2.3"
 }
