@@ -1,3 +1,11 @@
+## 1.4.0
+
+- Major performance improvements
+- Make the duration view more compact
+- Improve time resolution (now shows ms instead of 0s)
+- Remove `itemsToShowInHistory` config (I don't think anybody was using it)
+- Remove priority from providers (non API breaking) (I don't think anybody was using it)
+
 ## 1.3.0
 
 - Use the Atom native spinner interface
