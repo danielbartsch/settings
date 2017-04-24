@@ -823,10 +823,10 @@ class MinimapElement {
       })
     } else {
       this.applyStyles(this.visibleArea, {
-        width: visibleWidth + 'px',
-        height: minimap.getTextEditorScaledHeight() + 'px',
+        width: Math.round(visibleWidth) + 'px',
+        height: Math.round(minimap.getTextEditorScaledHeight()) + 'px',
         transform: this.makeTranslate(0, visibleAreaTop),
-        'border-left-width': visibleAreaLeft + 'px'
+        'border-left-width': Math.round(visibleAreaLeft) + 'px'
       })
     }
 
@@ -995,11 +995,16 @@ class MinimapElement {
     }
   }
 
-  updateCanvasesSize (canvasWidth = this.getFrontCanvas().width) {
+  updateCanvasesSize (canvasWidth) {
     const devicePixelRatio = this.minimap.getDevicePixelRatio()
     const maxCanvasHeight = this.height + this.minimap.getLineHeight()
     const newHeight = this.absoluteMode && this.adjustAbsoluteModeHeight ? Math.min(this.minimap.getHeight(), maxCanvasHeight) : maxCanvasHeight
     const canvas = this.getFrontCanvas()
+
+    if (canvasWidth == null) {
+      canvasWidth = canvas.width / devicePixelRatio
+    }
+
     if (canvasWidth !== canvas.width || newHeight !== canvas.height) {
       this.setCanvasesSize(
         canvasWidth * devicePixelRatio,
