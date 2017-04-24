@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117224-13235-jl8h86/package.tgz",
+        "raw": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117224-13235-jl8h86/package.tgz",
-        "spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
+        "rawSpec": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
+        "spec": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117224-13235-13us67k"
+      "/tmp/apm-install-dir-117324-10134-1gqe6xf.evvehzolxr"
     ]
   ],
-  "_from": "../d-117224-13235-jl8h86/package.tgz",
-  "_id": "language-babel@2.57.1",
+  "_from": "../d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
+  "_id": "language-babel@2.57.7",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-babel",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117224-13235-jl8h86/package.tgz",
+    "raw": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117224-13235-jl8h86/package.tgz",
-    "spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
+    "rawSpec": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
+    "spec": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117224-13235-jl8h86/package.tgz",
-  "_shasum": "bb47856ac9ae1c26e4377cab4390e9066ab958b1",
+  "_resolved": "file:../d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
+  "_shasum": "90d91c72069efd676ce606b9ecafccbb7fedf197",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117224-13235-jl8h86/package.tgz",
-  "_where": "/tmp/apm-install-dir-117224-13235-13us67k",
+  "_spec": "/tmp/d-117324-10134-xuw76n.zx8acnb3xr/package.tgz",
+  "_where": "/tmp/apm-install-dir-117324-10134-1gqe6xf.evvehzolxr",
   "activationCommands": [],
   "bugs": {
     "url": "https://github.com/gandm/language-babel/issues"
@@ -133,7 +133,7 @@
   },
   "dependencies": {
     "babel-core": "^6.7.6",
-    "fs-plus": "^2.8.2",
+    "fs-plus": "^3.0.0",
     "fuzzaldrin": "^2.1.0",
     "jjv": "^1.0.2",
     "js-yaml": "^3.6.0",
@@ -154,7 +154,7 @@
     "temp": "^0.8.3"
   },
   "engines": {
-    "atom": "^1.13.0"
+    "atom": "^1.15.0"
   },
   "homepage": "https://github.com/gandm/language-babel#readme",
   "keywords": [
@@ -194,5 +194,5 @@
     "type": "git",
     "url": "git+https://github.com/gandm/language-babel.git"
   },
-  "version": "2.57.1"
+  "version": "2.57.7"
 }
