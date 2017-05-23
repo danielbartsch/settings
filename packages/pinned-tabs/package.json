@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11702-15199-90mvef/package.tgz",
+        "raw": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11702-15199-90mvef/package.tgz",
-        "spec": "/tmp/d-11702-15199-90mvef/package.tgz",
+        "rawSpec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+        "spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11702-15199-1xga9wv"
+      "/tmp/apm-install-dir-117422-13072-1no0gsf.pfvod8ia4i"
     ]
   ],
-  "_from": "../d-11702-15199-90mvef/package.tgz",
-  "_id": "pinned-tabs@0.4.2",
+  "_from": "../d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+  "_id": "pinned-tabs@1.0.3",
   "_inCache": true,
   "_installable": true,
   "_location": "/pinned-tabs",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11702-15199-90mvef/package.tgz",
+    "raw": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11702-15199-90mvef/package.tgz",
-    "spec": "/tmp/d-11702-15199-90mvef/package.tgz",
+    "rawSpec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+    "spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11702-15199-90mvef/package.tgz",
-  "_shasum": "610f78c6a7408985c52fa421f762e443204b5f56",
+  "_resolved": "file:../d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+  "_shasum": "54d2c5cae85740b39cd97043d870c44f4f35ad7d",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11702-15199-90mvef/package.tgz",
-  "_where": "/tmp/apm-install-dir-11702-15199-1xga9wv",
+  "_spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+  "_where": "/tmp/apm-install-dir-117422-13072-1no0gsf.pfvod8ia4i",
   "bugs": {
     "url": "https://github.com/ericcornelissen/pinned-tabs-for-atom/issues"
   },
@@ -55,11 +55,11 @@
   "main": "./lib/pinned-tabs",
   "name": "pinned-tabs",
   "optionalDependencies": {},
-  "readme": "# Pinned tabs for Atom\nA simple package for the Atom text editor from GitHub that allows you to pin tabs. Inspired by the pin tab feature from Google Chrome.\n\nFor the best experience of this package, I recommend using it with the [file-icons](https://atom.io/packages/file-icons) package.\n\n![preview gif](http://i.imgur.com/zdzpBnd.gif)\n\n* * *\n\n### Usage\nThere are three ways to pin/unpin a tab using this package.\n- Via the context menu of a tab.\n- Via the keyboard shortcut ```ctrl-alt-p```.\n- Via the command-palette, by typing ```pin```.\n\n* * *\n\n### Installation\nVia the Atom Package Manager (APM)\n```\n$ apm install pinned-tabs\n```\n\nOr via Git clone\n```\n$ cd ~/.atom/packages\n$ git clone https://github.com/ericcornelissen/pinned-tabs-for-atom --depth=1\n```\n\n* * *\n\nCopyright © 2015-2016 Eric Cornelissen | MIT license\n",
+  "readme": "# Pinned tabs for Atom\nA simple package for the Atom text editor from GitHub that allows you to pin tabs. Inspired by the pin tab feature from Google Chrome.\n\nFor the best experience of this package, I recommend using it with the [file-icons](https://atom.io/packages/file-icons) package.\n\n![preview gif](http://i.imgur.com/zdzpBnd.gif)\n\n* * *\n\n### Usage\nThere are three ways to pin/unpin a tab using this package.\n- Via the context menu of a tab.\n- Via the keyboard shortcut <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>p</kbd>.\n- Via the command-palette, by typing `Pin Active`.\n\n* * *\n\n### Installation\nVia the Atom Package Manager (APM)\n```\n$ apm install pinned-tabs\n```\n\nOr via Git clone\n```\n$ cd ~/.atom/packages\n$ git clone https://github.com/ericcornelissen/pinned-tabs-for-atom --depth=1\n```\n\n* * *\n\nCopyright © Eric Cornelissen | MIT license\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ericcornelissen/pinned-tabs-for-atom.git"
   },
-  "version": "0.4.2"
+  "version": "1.0.3"
 }
