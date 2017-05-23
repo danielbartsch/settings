@@ -1,6 +1,6 @@
 "*":
   "atom-clock":
-    dateFormat: "HH:mm:ss"
+    dateFormat: "dddd, Do MMMM YYYY, HH:mm:ss"
     refreshInterval: 1
   "atom-ctags":
     autoBuildTagsWhenActive: true
@@ -8,7 +8,12 @@
     caseInsensitive: false
     guess: false
   "autocomplete-modules":
+    babelPluginModuleResolver: true
+    vendors: [
+      "web-app/node_modules"
+    ]
     webpack: true
+    webpackConfigFilename: "web-app/internals/webpack/webpack.config.development.js"
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
     maxVisibleSuggestions: 30
@@ -30,19 +35,25 @@
       "symbols-view"
       "language-gfm"
       "auto-reveal-in-sidebar"
+      "es-identifier-highlight"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "highlight-selected"
       "es-identifier-highlight"
       "markdown-preview-plus"
+      "clipboard-history"
     ]
+    reopenProjectMenuCount: 45
     telemetryConsent: "no"
+    warnOnLargeFileLimit: 20
+  "double-tag": {}
   editor:
     invisibles: {}
     lineHeight: 1.05
     preferredLineLength: 120
     scrollPastEnd: true
+    showIndentGuide: true
     tabLength: 4
     undoGroupingInterval: 200
   "es-identifier-highlight":
@@ -55,13 +66,15 @@
   "fuzzy-finder":
     preserveLastSearch: true
   "git-blame":
-    columnWidth: 300
+    columnWidth: 311
     ignoreWhiteSpaceDiffs: true
+    showOnlyLastNames: true
   "git-diff": {}
   "git-log": {}
   "highlight-column":
     opacity: 0.05
-  "highlight-selected": {}
+  "highlight-selected":
+    hideHighlightOnSelectedWord: true
   hyperclick:
     linuxTriggerKeys: "shiftKey,ctrlKey"
   "js-hyperclick":
@@ -98,6 +111,9 @@
     scrollAnimation: true
     scrollAnimationDuration: 100
     textOpacity: 1
+  "minimap-codeglance":
+    decorations: false
+    numberOfLines: 10
   "minimap-git-diff":
     useGutterDecoration: true
   "minimap-linter": {}
@@ -126,6 +142,8 @@
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
+  "svg-preview":
+    openPreviewAutomatically: true
   "terminal-plus":
     core:
       workingDirectory: "Active File"
