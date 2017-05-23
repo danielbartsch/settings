@@ -34,8 +34,8 @@
 'atom-text-editor':
     'ctrl-shift-x': 'es-identifier-highlight:jumpToDefinition'
     'ctrl-shift-r': 'es-identifier-highlight:renameIdentifier'
-    'ctrl-shift-up': 'es-identifier-highlight:prevIdentifier'
-    'ctrl-shift-down': 'es-identifier-highlight:nextIdentifier'
+    'ctrl-shift-up': 'find-and-replace:find-previous-selected'
+    'ctrl-shift-down': 'find-and-replace:find-next-selected'
     'ctrl-<': 'tree-view:toggle'
 
 'atom-text-editor atom-workspace atom-text-editor':
@@ -44,3 +44,7 @@
 'atom-text-editor:not([mini])':
   'ctrl-shift-[': 'editor:fold-current-row'
   'ctrl-shift-]': 'editor:unfold-current-row'
+
+'atom-workspace':
+  'ctrl-shift-c': 'clipboard-history:copy'
+  'ctrl-shift-v': 'clipboard-history:paste'
