@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
+        "raw": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
-        "spec": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
+        "rawSpec": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
+        "spec": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117324-10122-4p9tzv.jbgdd6ajor"
+      "/tmp/apm-install-dir-117326-27516-1g7dcoc.6bzx9r7ldi"
     ]
   ],
-  "_from": "../d-117324-10122-14s143u.w7on56d2t9/package.tgz",
-  "_id": "busy-signal@1.4.0",
+  "_from": "../d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
+  "_id": "busy-signal@1.4.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/busy-signal",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
+    "raw": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
-    "spec": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
+    "rawSpec": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
+    "spec": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117324-10122-14s143u.w7on56d2t9/package.tgz",
-  "_shasum": "b2baa58df8d9c55c884f4478f15cb8bc5505f0c1",
+  "_resolved": "file:../d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
+  "_shasum": "bea1229c77d3ea332466bc878e52ab4a2a394590",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117324-10122-14s143u.w7on56d2t9/package.tgz",
-  "_where": "/tmp/apm-install-dir-117324-10122-4p9tzv.jbgdd6ajor",
+  "_spec": "/tmp/d-117326-27516-w64lrl.gh2vpzm2t9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117326-27516-1g7dcoc.6bzx9r7ldi",
   "bugs": {
     "url": "https://github.com/steelbrain/busy-signal/issues"
   },
@@ -49,8 +49,7 @@
   "dependencies": {
     "disposify": "^1.0.0",
     "escape-html": "^1.0.3",
-    "ms": "^1.0.0",
-    "uuid4": "^1.0.0"
+    "ms": "^1.0.0"
   },
   "description": "A package that provides an easy to use API to show your package is performing a task",
   "devDependencies": {
@@ -86,5 +85,5 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "1.4.0"
+  "version": "1.4.1"
 }
