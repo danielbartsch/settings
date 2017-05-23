@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11737-8367-1tllel2/package.tgz",
+        "raw": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11737-8367-1tllel2/package.tgz",
-        "spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
+        "rawSpec": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
+        "spec": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11737-8367-104oe87"
+      "/tmp/apm-install-dir-117422-12821-cmiv9c.d9krorbe29"
     ]
   ],
-  "_from": "../d-11737-8367-1tllel2/package.tgz",
-  "_id": "autocomplete-modules@1.6.9",
+  "_from": "../d-117422-12821-1121vvf.exk05rvn29/package.tgz",
+  "_id": "autocomplete-modules@1.6.10",
   "_inCache": true,
   "_installable": true,
   "_location": "/autocomplete-modules",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11737-8367-1tllel2/package.tgz",
+    "raw": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11737-8367-1tllel2/package.tgz",
-    "spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
+    "rawSpec": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
+    "spec": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11737-8367-1tllel2/package.tgz",
-  "_shasum": "547020f6689b5959d550603b7366d26652d944d2",
+  "_resolved": "file:../d-117422-12821-1121vvf.exk05rvn29/package.tgz",
+  "_shasum": "86b49a8784fd8e0cf6a6b9aefbc63af1d3bed49e",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11737-8367-1tllel2/package.tgz",
-  "_where": "/tmp/apm-install-dir-11737-8367-104oe87",
+  "_spec": "/tmp/d-117422-12821-1121vvf.exk05rvn29/package.tgz",
+  "_where": "/tmp/apm-install-dir-117422-12821-cmiv9c.d9krorbe29",
   "activationHooks": [
     "language-javascript:grammar-used",
     "language-babel:grammar-used",
@@ -93,5 +93,5 @@
     "pretest": "eslint src/",
     "test": "exit 0"
   },
-  "version": "1.6.9"
+  "version": "1.6.10"
 }
