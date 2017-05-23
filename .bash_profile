@@ -145,7 +145,15 @@ function pop {
     git stash pop stash@{"$@"};
   fi
 }
-alias stash="git stash; clear; git status"
+function stash {
+  clear;
+  git status;
+  if [ -z $@ ]; then
+    git stash;
+  else
+    git stash save "$@";
+  fi
+}
 alias stashlist="clear; git status; git stash list"
 function viewstash {
   if [ -z $@ ]; then
@@ -161,7 +169,6 @@ function dropstash {
     git stash drop
   fi
 }
-
 
 #work in progress
 #function to {
@@ -225,16 +232,6 @@ alias week='date +%V'
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
-# Colored up cat!
-# You must install Pygments first - "sudo easy_install Pygments"
-alias c='pygmentize -O style=monokai -f console256 -g'
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
 
 ##############################################################################
 # 03. FUNCTIONS                                                              #
