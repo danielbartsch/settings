@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
+        "raw": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
-        "spec": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
+        "rawSpec": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
+        "spec": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117423-2053-3mehyx.3of3ymbo6r"
+      "/tmp/apm-install-dir-117424-9395-1g0jh6w.rp6pm5z5mi"
     ]
   ],
-  "_from": "../d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
-  "_id": "linter-eslint@8.2.0",
+  "_from": "../d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
+  "_id": "linter-eslint@8.2.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
+    "raw": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
-    "spec": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
+    "rawSpec": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
+    "spec": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
-  "_shasum": "b3109585db5b4061e17be606f67e4cb178c21f77",
+  "_resolved": "file:../d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
+  "_shasum": "1d75e167bb65a79d6958d044f967c3bc61ef5a03",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117423-2053-q0ogaq.7pxv2njyvi/package.tgz",
-  "_where": "/tmp/apm-install-dir-117423-2053-3mehyx.3of3ymbo6r",
+  "_spec": "/tmp/d-117424-9395-1u6mxu6.2tlmwvcxr/package.tgz",
+  "_where": "/tmp/apm-install-dir-117424-9395-1g0jh6w.rp6pm5z5mi",
   "atomTranspilers": [
     {
       "glob": "{src,spec}/*.js",
@@ -45,7 +45,8 @@
           "presets": [
             "node5"
           ],
-          "sourceMaps": "inline"
+          "sourceMaps": "inline",
+          "babelrc": false
         },
         "cacheKeyFiles": [
           "package.json"
@@ -236,7 +237,7 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "8.2.0",
+  "version": "8.2.1",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
