@@ -93,6 +93,8 @@ function to {
   git checkout ${branches[0]};
   git pull;
 }
+
+# previous n branches or direct previous branch
 function pb {
   if [ -z $@ ]; then
     git checkout @{-1}
@@ -101,6 +103,16 @@ function pb {
   fi
   git pull;
 }
+
+# show previous n branches or direct previous branch
+function spb {
+  if [ -z $@ ]; then
+    git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print $3 }' | awk ' !x[$0]++' | head -n1;
+  else
+    git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print $3 }' | awk ' !x[$0]++' | head -n$@;
+  fi
+}
+
 function unstage {
   clear;
   git reset HEAD "$@";
