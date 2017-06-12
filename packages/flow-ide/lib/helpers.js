@@ -1,6 +1,7 @@
 /* @flow */
 
 import score from 'sb-string_score'
+import type { CoverageObject } from './types'
 
 export const INIT_MESSAGE = 'flow server'
 export const RECHECKING_MESSAGE = 'flow is'
@@ -29,7 +30,7 @@ function toLinterReference(messages) {
   return null
 }
 
-export function toLinterMessages(contents: string) {
+export function toStatusLinterMessages(contents: string) {
   const parsed = JSON.parse(contents)
   if (parsed.passed) {
     return []
@@ -54,12 +55,31 @@ export function toLinterMessages(contents: string) {
   })
 }
 
+export function toCoverageLinterMessages(coverage: CoverageObject) {
+  return coverage.expressions.uncovered_locs.map(({ start, end, source }) => ({
+    severity: 'info',
+    location: {
+      file: source,
+      position: [
+        [start.line - 1, start.column - 1],
+        [end.line - 1, end.column],
+      ],
+    },
+    excerpt: 'Uncovered code',
+  }))
+}
+
 export function injectPosition(text: string, editor: Object, bufferPosition: Object) {
   const characterIndex = editor.getBuffer().characterIndexForPosition(bufferPosition)
   return text.slice(0, characterIndex) + 'AUTO332' + text.slice(characterIndex)
 }
 
 export function toAutocompleteSuggestions(contents: string, prefix: string) {
+  if (contents.slice(0, 1) !== '{') {
+    // Invalid server response
+    return []
+  }
+
   const parsed = JSON.parse(contents)
   const hasPrefix = prefix.trim().length
   const suggestions = parsed.result.map(function(suggestion) {
@@ -67,7 +87,7 @@ export function toAutocompleteSuggestions(contents: string, prefix: string) {
     let text = null
     let snippet = null
     let displayText = null
-    let description = null;
+    let description = null
 
     if (isFunction) {
       const functionParams = suggestion.func_details.params
@@ -76,11 +96,11 @@ export function toAutocompleteSuggestions(contents: string, prefix: string) {
         return `\${${i + 1}:${value.name}}`
       }).join(', ')})$${functionParams.length + 1}`
 
-      const params = functionParams.map(param => param.name + (param.type ? `: ${param.type}`: ''));
-      const match = suggestion.type.match(/\(.*?\) => (.*)/);
-      const returnType = match ? `=> ${match[1]}`: '';
+      const params = functionParams.map(param => param.name + (param.type ? `: ${param.type}` : ''))
+      const match = suggestion.type.match(/\(.*?\) => (.*)/)
+      const returnType = match ? `=> ${match[1]}` : ''
 
-      description = `(${params.join(', ')}) ${returnType}`;
+      description = `(${params.join(', ')}) ${returnType}`
     } else {
       text = suggestion.name
     }
@@ -93,7 +113,7 @@ export function toAutocompleteSuggestions(contents: string, prefix: string) {
       leftLabel: isFunction ? 'function' : getType(suggestion),
       displayText,
       replacementPrefix: prefix,
-      description
+      description,
     }
   })
   return suggestions.sort(function(a, b) {
