@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+        "raw": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
-        "spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+        "rawSpec": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
+        "spec": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117422-13072-1no0gsf.pfvod8ia4i"
+      "/tmp/apm-install-dir-117429-14573-40q2cu.6l551dobt9"
     ]
   ],
-  "_from": "../d-117422-13072-i2ic29.fktiysyvi/package.tgz",
-  "_id": "pinned-tabs@1.0.3",
+  "_from": "../d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
+  "_id": "pinned-tabs@1.1.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/pinned-tabs",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+    "raw": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
-    "spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
+    "rawSpec": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
+    "spec": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117422-13072-i2ic29.fktiysyvi/package.tgz",
-  "_shasum": "54d2c5cae85740b39cd97043d870c44f4f35ad7d",
+  "_resolved": "file:../d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
+  "_shasum": "6cf05d3783692621cc4ff8a4dde20e0139a8bcb7",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117422-13072-i2ic29.fktiysyvi/package.tgz",
-  "_where": "/tmp/apm-install-dir-117422-13072-1no0gsf.pfvod8ia4i",
+  "_spec": "/tmp/d-117429-14573-xp7jfm.j3yv81714i/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-14573-40q2cu.6l551dobt9",
   "bugs": {
     "url": "https://github.com/ericcornelissen/pinned-tabs-for-atom/issues"
   },
@@ -61,5 +61,19 @@
     "type": "git",
     "url": "git+https://github.com/ericcornelissen/pinned-tabs-for-atom.git"
   },
-  "version": "1.0.3"
+  "version": "1.1.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/pinned-tabs-state.coffee",
+        "lib/pinned-tabs.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
