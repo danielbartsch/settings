@@ -34,8 +34,7 @@
     disabledPackages: [
       "symbols-view"
       "language-gfm"
-      "auto-reveal-in-sidebar"
-      "es-identifier-highlight"
+      "intentions"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -71,6 +70,7 @@
     showOnlyLastNames: true
   "git-diff": {}
   "git-log": {}
+  "github-issues": {}
   "highlight-column":
     opacity: 0.05
   "highlight-selected":
@@ -90,7 +90,7 @@
     fixOnSave: true
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
-    panelHeight: 96
+    panelHeight: 69
     panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
@@ -126,7 +126,7 @@
   "open-recent": {}
   "pinned-tabs":
     animated: true
-    closeUnpinned: false
+    closeUnpinned: true
   "prettier-atom":
     bracketSpacing: false
     formatOnSave: true
@@ -156,9 +156,15 @@
     alwaysOpenExisting: true
     autoReveal: true
     squashDirectoryNames: true
+  "tree-view-auto-fold":
+    hideAllExceptModifiedFiles: false
+    hideAllExceptOpenFiles: false
+    showAutoFoldedFolderIndicator: false
+    showOpenFileIndicator: false
   "tree-view-autoresize":
     animationMilliseconds: 0
     delayMilliseconds: 0
+    maximumWidth: 300
   "tree-view-camel-case-spaces": {}
   "tree-view-git-branch":
     location: "top"
