@@ -1996,8 +1996,8 @@
           },
           "endCaptures": {
             "1": { "name": "keyword.control.module.js" },
+            "2": { "name": "string.quoted.module.js" },
             "3": { "name": "punctuation.definition.string.begin.js" },
-            "4": { "name": "string.quoted.module.js" },
             "5": { "name": "punctuation.definition.string.end.js" }
           },
           "patterns": [
@@ -2040,8 +2040,8 @@
           },
           "endCaptures": {
             "1": { "name": "keyword.control.module.js" },
+            "2": { "name": "string.quoted.module.js" },
             "3": { "name": "punctuation.definition.string.begin.js" },
-            "4": { "name": "string.quoted.module.js" },
             "5": { "name": "punctuation.definition.string.end.js" }
           },
           "patterns": [
@@ -2793,6 +2793,7 @@
       ]
     },
     "flowtype-parse-objects": {
+      "name": "meta.object.flowtype",
       "comment": "object literal flowtype  preceded by either => : | & ? symbols",
       "begin": "(?<=:|\\||&|\\?|=>|<)\\s*+({)",
       "end": "\\s*(\\})",
@@ -2848,6 +2849,7 @@
           },
           "patterns": [
             {
+              "name": "meta.object.flowtype",
               "begin": "\\s*+({)",
               "end": "\\s*(})",
               "captures": {

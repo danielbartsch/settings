@@ -1,6 +1,17 @@
+### 2.66.0
+  - Add meta scope to flowtype objects to allow additional themeing - Issue #382
+  - Existing editors instantiated using autoIndentJSX should observe the config for changes.
+   
+### 2.65.3
+  - Fix incorrect closing tag position autoIndentJSX  
+  
+### 2.65.2
+  - Fix scope on import/export to allow Atom's toggle quotes to work.
+  - Fix way ternaries inside JSX were auto indented. Fixes [#369](https://github.com/gandm/language-babel/issues/369#issuecomment-308108180)
+
 ### 2.65.1
   - Fix how we handle unexpected flowtypes that changed in 2.64.0 - Issue #376
-  
+
 ### 2.65.0
   - Add support for styled-components styled(Comp).attrs() form of template.
 
