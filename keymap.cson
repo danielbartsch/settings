@@ -37,6 +37,8 @@
     'ctrl-shift-up': 'find-and-replace:find-previous-selected'
     'ctrl-shift-down': 'find-and-replace:find-next-selected'
     'ctrl-<': 'tree-view:toggle'
+    'ctrl-numpad1': 'github:toggle-git-tab'
+    'ctrl-numpad2': 'github:toggle-github-tab'
 
 'atom-text-editor atom-workspace atom-text-editor':
     'ctrl-shift-m': 'markdown-preview-plus:toggle'
