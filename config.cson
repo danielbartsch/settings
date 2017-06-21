@@ -34,7 +34,6 @@
     disabledPackages: [
       "symbols-view"
       "language-gfm"
-      "intentions"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -70,6 +69,10 @@
     showOnlyLastNames: true
   "git-diff": {}
   "git-log": {}
+  github:
+    filesystemEventDiagnostics: true
+    gitDiagnostics: true
+    performanceToConsole: true
   "github-issues": {}
   "highlight-column":
     opacity: 0.05
@@ -90,6 +93,7 @@
     fixOnSave: true
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
+    hidePanelWhenEmpty: true
     panelHeight: 69
     panelRepresents: "Entire Project"
     showPanel: true
