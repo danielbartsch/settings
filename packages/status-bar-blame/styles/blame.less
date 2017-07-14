@@ -1,0 +1,64 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "octicon-mixins";
+
+.status-bar-blame {
+  a, a:hover {
+    color: #9da5b4;
+  }
+}
+
+.status-bar-blame-tooltip {
+  text-align: left;
+
+  max-width: 500px;
+  min-width: 200px;
+
+  .head {
+    padding: 0 0 0 50px;
+    margin: 0;
+    height: 40px;
+
+    position: relative;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .subject {
+      height: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .author {
+      height: 20px;
+      line-height: 20px;
+      font-size: 10px;
+      font-weight: normal;
+    }
+  }
+
+  .body {
+    white-space: pre-wrap;
+    margin-top: 10px;
+
+    line-height: 1.4;
+
+    &:empty { display: none;}
+  }
+}

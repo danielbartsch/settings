@@ -1,0 +1,1376 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+        "spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-11763-7993-178bhd2.fo7pj02j4i"
+    ]
+  ],
+  "_from": "../d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+  "_id": "status-bar-blame@2.0.0",
+  "_inCache": true,
+  "_location": "/status-bar-blame",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+    "spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+  "_shasum": "fc0ee7cf138ed2511738b564a4728b6229cc8783",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+  "_where": "/tmp/apm-install-dir-11763-7993-178bhd2.fo7pj02j4i",
+  "author": {
+    "name": "Baldur Helgason",
+    "email": "baldur.helgason@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/baldurh/atom-status-bar-blame/issues"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {
+    "fs-plus": "^3.0.1",
+    "gravatar": "^1.6.0",
+    "moment": "^2.18.1",
+    "open": "0.0.5",
+    "temp": "^0.8.3"
+  },
+  "description": "Shows git blame in the status bar.",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/baldurh/atom-status-bar-blame#readme",
+  "keywords": [
+    "git",
+    "blame",
+    "statusbar"
+  ],
+  "license": "MIT",
+  "main": "./lib/init",
+  "name": "status-bar-blame",
+  "optionalDependencies": {},
+  "readme": "# Atom Status Bar Blame\n\nShows git blame in Atom’s status bar.\n\n![](https://raw.githubusercontent.com/baldurh/atom-status-bar-blame/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldurh/atom-status-bar-blame.git"
+  },
+  "version": "2.0.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-regex",
+        "version": "2.1.1",
+        "path": "node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "async",
+        "version": "1.5.2",
+        "path": "node_modules/async/lib/async.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "1.0.0",
+        "path": "node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "blueimp-md5",
+        "version": "2.7.0",
+        "path": "node_modules/blueimp-md5/js/md5.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.8",
+        "path": "node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "builtin-modules",
+        "version": "1.1.1",
+        "path": "node_modules/builtin-modules/index.js"
+      },
+      {
+        "name": "camelcase",
+        "version": "3.0.0",
+        "path": "node_modules/camelcase/index.js"
+      },
+      {
+        "name": "cliui",
+        "version": "3.2.0",
+        "path": "node_modules/cliui/index.js"
+      },
+      {
+        "name": "code-point-at",
+        "version": "1.1.0",
+        "path": "node_modules/code-point-at/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/concat-map/index.js"
+      },
+      {
+        "name": "decamelize",
+        "version": "1.2.0",
+        "path": "node_modules/decamelize/index.js"
+      },
+      {
+        "name": "email-validator",
+        "version": "1.0.7",
+        "path": "node_modules/email-validator/index.js"
+      },
+      {
+        "name": "error-ex",
+        "version": "1.3.1",
+        "path": "node_modules/error-ex/index.js"
+      },
+      {
+        "name": "find-up",
+        "version": "1.1.2",
+        "path": "node_modules/find-up/index.js"
+      },
+      {
+        "name": "fs-plus",
+        "version": "3.0.1",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/fs.realpath/index.js"
+      },
+      {
+        "name": "get-caller-file",
+        "version": "1.0.2",
+        "path": "node_modules/get-caller-file/index.js"
+      },
+      {
+        "name": "glob",
+        "version": "7.1.2",
+        "path": "node_modules/glob/glob.js"
+      },
+      {
+        "name": "graceful-fs",
+        "version": "4.1.11",
+        "path": "node_modules/graceful-fs/graceful-fs.js"
+      },
+      {
+        "name": "gravatar",
+        "version": "1.6.0",
+        "path": "node_modules/gravatar/index.js"
+      },
+      {
+        "name": "hosted-git-info",
+        "version": "2.5.0",
+        "path": "node_modules/hosted-git-info/index.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.6",
+        "path": "node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.3",
+        "path": "node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "invert-kv",
+        "version": "1.0.0",
+        "path": "node_modules/invert-kv/index.js"
+      },
+      {
+        "name": "is-arrayish",
+        "version": "0.2.1",
+        "path": "node_modules/is-arrayish/index.js"
+      },
+      {
+        "name": "is-builtin-module",
+        "version": "1.0.0",
+        "path": "node_modules/is-builtin-module/index.js"
+      },
+      {
+        "name": "is-fullwidth-code-point",
+        "version": "1.0.0",
+        "path": "node_modules/is-fullwidth-code-point/index.js"
+      },
+      {
+        "name": "is-utf8",
+        "version": "0.2.1",
+        "path": "node_modules/is-utf8/is-utf8.js"
+      },
+      {
+        "name": "lcid",
+        "version": "1.0.0",
+        "path": "node_modules/lcid/index.js"
+      },
+      {
+        "name": "load-json-file",
+        "version": "1.1.0",
+        "path": "node_modules/load-json-file/index.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.4",
+        "path": "node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.8",
+        "path": "node_modules/minimist/index.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.5.1",
+        "path": "node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "moment",
+        "version": "2.18.1",
+        "path": "node_modules/moment/moment.js"
+      },
+      {
+        "name": "normalize-package-data",
+        "version": "2.4.0",
+        "path": "node_modules/normalize-package-data/lib/normalize.js"
+      },
+      {
+        "name": "number-is-nan",
+        "version": "1.0.1",
+        "path": "node_modules/number-is-nan/index.js"
+      },
+      {
+        "name": "once",
+        "version": "1.4.0",
+        "path": "node_modules/once/once.js"
+      },
+      {
+        "name": "open",
+        "version": "0.0.5",
+        "path": "node_modules/open/lib/open.js"
+      },
+      {
+        "name": "os-locale",
+        "version": "1.4.0",
+        "path": "node_modules/os-locale/index.js"
+      },
+      {
+        "name": "os-tmpdir",
+        "version": "1.0.2",
+        "path": "node_modules/os-tmpdir/index.js"
+      },
+      {
+        "name": "parse-json",
+        "version": "2.2.0",
+        "path": "node_modules/parse-json/index.js"
+      },
+      {
+        "name": "path-exists",
+        "version": "2.1.0",
+        "path": "node_modules/path-exists/index.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.1",
+        "path": "node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "path-type",
+        "version": "1.1.0",
+        "path": "node_modules/path-type/index.js"
+      },
+      {
+        "name": "pify",
+        "version": "2.3.0",
+        "path": "node_modules/pify/index.js"
+      },
+      {
+        "name": "pinkie",
+        "version": "2.0.4",
+        "path": "node_modules/pinkie/index.js"
+      },
+      {
+        "name": "pinkie-promise",
+        "version": "2.0.1",
+        "path": "node_modules/pinkie-promise/index.js"
+      },
+      {
+        "name": "querystring",
+        "version": "0.2.0",
+        "path": "node_modules/querystring/index.js"
+      },
+      {
+        "name": "read-pkg",
+        "version": "1.1.0",
+        "path": "node_modules/read-pkg/index.js"
+      },
+      {
+        "name": "read-pkg-up",
+        "version": "1.0.1",
+        "path": "node_modules/read-pkg-up/index.js"
+      },
+      {
+        "name": "require-directory",
+        "version": "2.1.1",
+        "path": "node_modules/require-directory/index.js"
+      },
+      {
+        "name": "require-main-filename",
+        "version": "1.0.1",
+        "path": "node_modules/require-main-filename/index.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.6.1",
+        "path": "node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "semver",
+        "version": "5.3.0",
+        "path": "node_modules/semver/semver.js"
+      },
+      {
+        "name": "set-blocking",
+        "version": "2.0.0",
+        "path": "node_modules/set-blocking/index.js"
+      },
+      {
+        "name": "spdx-correct",
+        "version": "1.0.2",
+        "path": "node_modules/spdx-correct/index.js"
+      },
+      {
+        "name": "spdx-expression-parse",
+        "version": "1.0.4",
+        "path": "node_modules/spdx-expression-parse/index.js"
+      },
+      {
+        "name": "spdx-license-ids",
+        "version": "1.2.2",
+        "path": "node_modules/spdx-license-ids/spdx-license-ids.json"
+      },
+      {
+        "name": "string-width",
+        "version": "1.0.2",
+        "path": "node_modules/string-width/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "strip-bom",
+        "version": "2.0.0",
+        "path": "node_modules/strip-bom/index.js"
+      },
+      {
+        "name": "temp",
+        "version": "0.8.3",
+        "path": "node_modules/temp/lib/temp.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/temp/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "validate-npm-package-license",
+        "version": "3.0.1",
+        "path": "node_modules/validate-npm-package-license/index.js"
+      },
+      {
+        "name": "which-module",
+        "version": "1.0.0",
+        "path": "node_modules/which-module/index.js"
+      },
+      {
+        "name": "wrap-ansi",
+        "version": "2.1.0",
+        "path": "node_modules/wrap-ansi/index.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "y18n",
+        "version": "3.2.1",
+        "path": "node_modules/y18n/index.js"
+      },
+      {
+        "name": "yargs",
+        "version": "6.6.0",
+        "path": "node_modules/yargs/index.js"
+      },
+      {
+        "name": "yargs-parser",
+        "version": "4.2.1",
+        "path": "node_modules/yargs-parser/index.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "lib/blame-status-bar-view.js",
+        "lib/config/provider.js",
+        "lib/editor-handler.js",
+        "lib/init.js",
+        "lib/utils/blame-file.js",
+        "lib/utils/find-repo.js",
+        "lib/utils/get-commit-link.js",
+        "lib/utils/get-commit.js",
+        "lib/utils/git.js",
+        "lib/utils/index.js",
+        "lib/utils/is-committed.js",
+        "node_modules/ansi-regex/index.js",
+        "node_modules/async/dist/async.js",
+        "node_modules/async/dist/async.min.js",
+        "node_modules/async/lib/async.js",
+        "node_modules/balanced-match/index.js",
+        "node_modules/blueimp-md5/js/md5.js",
+        "node_modules/blueimp-md5/js/md5.min.js",
+        "node_modules/brace-expansion/index.js",
+        "node_modules/builtin-modules/index.js",
+        "node_modules/builtin-modules/static.js",
+        "node_modules/camelcase/index.js",
+        "node_modules/cliui/index.js",
+        "node_modules/code-point-at/index.js",
+        "node_modules/concat-map/example/map.js",
+        "node_modules/concat-map/index.js",
+        "node_modules/decamelize/index.js",
+        "node_modules/email-validator/index.js",
+        "node_modules/email-validator/test.js",
+        "node_modules/error-ex/index.js",
+        "node_modules/find-up/index.js",
+        "node_modules/fs-plus/lib/fs-plus.js",
+        "node_modules/fs.realpath/index.js",
+        "node_modules/fs.realpath/old.js",
+        "node_modules/get-caller-file/index.js",
+        "node_modules/glob/common.js",
+        "node_modules/glob/glob.js",
+        "node_modules/glob/sync.js",
+        "node_modules/graceful-fs/fs.js",
+        "node_modules/graceful-fs/graceful-fs.js",
+        "node_modules/graceful-fs/legacy-streams.js",
+        "node_modules/graceful-fs/polyfills.js",
+        "node_modules/gravatar/cli.js",
+        "node_modules/gravatar/index.js",
+        "node_modules/gravatar/lib/gravatar.js",
+        "node_modules/hosted-git-info/git-host-info.js",
+        "node_modules/hosted-git-info/git-host.js",
+        "node_modules/hosted-git-info/index.js",
+        "node_modules/inflight/inflight.js",
+        "node_modules/inherits/inherits.js",
+        "node_modules/inherits/inherits_browser.js",
+        "node_modules/invert-kv/index.js",
+        "node_modules/is-arrayish/index.js",
+        "node_modules/is-builtin-module/index.js",
+        "node_modules/is-fullwidth-code-point/index.js",
+        "node_modules/is-utf8/is-utf8.js",
+        "node_modules/lcid/index.js",
+        "node_modules/load-json-file/index.js",
+        "node_modules/minimatch/minimatch.js",
+        "node_modules/minimist/example/parse.js",
+        "node_modules/minimist/index.js",
+        "node_modules/mkdirp/bin/cmd.js",
+        "node_modules/mkdirp/examples/pow.js",
+        "node_modules/mkdirp/index.js",
+        "node_modules/moment/ender.js",
+        "node_modules/moment/locale/af.js",
+        "node_modules/moment/locale/ar-dz.js",
+        "node_modules/moment/locale/ar-kw.js",
+        "node_modules/moment/locale/ar-ly.js",
+        "node_modules/moment/locale/ar-ma.js",
+        "node_modules/moment/locale/ar-sa.js",
+        "node_modules/moment/locale/ar-tn.js",
+        "node_modules/moment/locale/ar.js",
+        "node_modules/moment/locale/az.js",
+        "node_modules/moment/locale/be.js",
+        "node_modules/moment/locale/bg.js",
+        "node_modules/moment/locale/bn.js",
+        "node_modules/moment/locale/bo.js",
+        "node_modules/moment/locale/br.js",
+        "node_modules/moment/locale/bs.js",
+        "node_modules/moment/locale/ca.js",
+        "node_modules/moment/locale/cs.js",
+        "node_modules/moment/locale/cv.js",
+        "node_modules/moment/locale/cy.js",
+        "node_modules/moment/locale/da.js",
+        "node_modules/moment/locale/de-at.js",
+        "node_modules/moment/locale/de-ch.js",
+        "node_modules/moment/locale/de.js",
+        "node_modules/moment/locale/dv.js",
+        "node_modules/moment/locale/el.js",
+        "node_modules/moment/locale/en-au.js",
+        "node_modules/moment/locale/en-ca.js",
+        "node_modules/moment/locale/en-gb.js",
+        "node_modules/moment/locale/en-ie.js",
+        "node_modules/moment/locale/en-nz.js",
+        "node_modules/moment/locale/eo.js",
+        "node_modules/moment/locale/es-do.js",
+        "node_modules/moment/locale/es.js",
+        "node_modules/moment/locale/et.js",
+        "node_modules/moment/locale/eu.js",
+        "node_modules/moment/locale/fa.js",
+        "node_modules/moment/locale/fi.js",
+        "node_modules/moment/locale/fo.js",
+        "node_modules/moment/locale/fr-ca.js",
+        "node_modules/moment/locale/fr-ch.js",
+        "node_modules/moment/locale/fr.js",
+        "node_modules/moment/locale/fy.js",
+        "node_modules/moment/locale/gd.js",
+        "node_modules/moment/locale/gl.js",
+        "node_modules/moment/locale/gom-latn.js",
+        "node_modules/moment/locale/he.js",
+        "node_modules/moment/locale/hi.js",
+        "node_modules/moment/locale/hr.js",
+        "node_modules/moment/locale/hu.js",
+        "node_modules/moment/locale/hy-am.js",
+        "node_modules/moment/locale/id.js",
+        "node_modules/moment/locale/is.js",
+        "node_modules/moment/locale/it.js",
+        "node_modules/moment/locale/ja.js",
+        "node_modules/moment/locale/jv.js",
+        "node_modules/moment/locale/ka.js",
+        "node_modules/moment/locale/kk.js",
+        "node_modules/moment/locale/km.js",
+        "node_modules/moment/locale/kn.js",
+        "node_modules/moment/locale/ko.js",
+        "node_modules/moment/locale/ky.js",
+        "node_modules/moment/locale/lb.js",
+        "node_modules/moment/locale/lo.js",
+        "node_modules/moment/locale/lt.js",
+        "node_modules/moment/locale/lv.js",
+        "node_modules/moment/locale/me.js",
+        "node_modules/moment/locale/mi.js",
+        "node_modules/moment/locale/mk.js",
+        "node_modules/moment/locale/ml.js",
+        "node_modules/moment/locale/mr.js",
+        "node_modules/moment/locale/ms-my.js",
+        "node_modules/moment/locale/ms.js",
+        "node_modules/moment/locale/my.js",
+        "node_modules/moment/locale/nb.js",
+        "node_modules/moment/locale/ne.js",
+        "node_modules/moment/locale/nl-be.js",
+        "node_modules/moment/locale/nl.js",
+        "node_modules/moment/locale/nn.js",
+        "node_modules/moment/locale/pa-in.js",
+        "node_modules/moment/locale/pl.js",
+        "node_modules/moment/locale/pt-br.js",
+        "node_modules/moment/locale/pt.js",
+        "node_modules/moment/locale/ro.js",
+        "node_modules/moment/locale/ru.js",
+        "node_modules/moment/locale/sd.js",
+        "node_modules/moment/locale/se.js",
+        "node_modules/moment/locale/si.js",
+        "node_modules/moment/locale/sk.js",
+        "node_modules/moment/locale/sl.js",
+        "node_modules/moment/locale/sq.js",
+        "node_modules/moment/locale/sr-cyrl.js",
+        "node_modules/moment/locale/sr.js",
+        "node_modules/moment/locale/ss.js",
+        "node_modules/moment/locale/sv.js",
+        "node_modules/moment/locale/sw.js",
+        "node_modules/moment/locale/ta.js",
+        "node_modules/moment/locale/te.js",
+        "node_modules/moment/locale/tet.js",
+        "node_modules/moment/locale/th.js",
+        "node_modules/moment/locale/tl-ph.js",
+        "node_modules/moment/locale/tlh.js",
+        "node_modules/moment/locale/tr.js",
+        "node_modules/moment/locale/tzl.js",
+        "node_modules/moment/locale/tzm-latn.js",
+        "node_modules/moment/locale/tzm.js",
+        "node_modules/moment/locale/uk.js",
+        "node_modules/moment/locale/ur.js",
+        "node_modules/moment/locale/uz-latn.js",
+        "node_modules/moment/locale/uz.js",
+        "node_modules/moment/locale/vi.js",
+        "node_modules/moment/locale/x-pseudo.js",
+        "node_modules/moment/locale/yo.js",
+        "node_modules/moment/locale/zh-cn.js",
+        "node_modules/moment/locale/zh-hk.js",
+        "node_modules/moment/locale/zh-tw.js",
+        "node_modules/moment/min/locales.js",
+        "node_modules/moment/min/locales.min.js",
+        "node_modules/moment/min/moment-with-locales.js",
+        "node_modules/moment/min/moment-with-locales.min.js",
+        "node_modules/moment/min/moment.min.js",
+        "node_modules/moment/moment.js",
+        "node_modules/moment/package.js",
+        "node_modules/moment/src/lib/create/check-overflow.js",
+        "node_modules/moment/src/lib/create/date-from-array.js",
+        "node_modules/moment/src/lib/create/from-anything.js",
+        "node_modules/moment/src/lib/create/from-array.js",
+        "node_modules/moment/src/lib/create/from-object.js",
+        "node_modules/moment/src/lib/create/from-string-and-array.js",
+        "node_modules/moment/src/lib/create/from-string-and-format.js",
+        "node_modules/moment/src/lib/create/from-string.js",
+        "node_modules/moment/src/lib/create/local.js",
+        "node_modules/moment/src/lib/create/parsing-flags.js",
+        "node_modules/moment/src/lib/create/utc.js",
+        "node_modules/moment/src/lib/create/valid.js",
+        "node_modules/moment/src/lib/duration/abs.js",
+        "node_modules/moment/src/lib/duration/add-subtract.js",
+        "node_modules/moment/src/lib/duration/as.js",
+        "node_modules/moment/src/lib/duration/bubble.js",
+        "node_modules/moment/src/lib/duration/constructor.js",
+        "node_modules/moment/src/lib/duration/create.js",
+        "node_modules/moment/src/lib/duration/duration.js",
+        "node_modules/moment/src/lib/duration/get.js",
+        "node_modules/moment/src/lib/duration/humanize.js",
+        "node_modules/moment/src/lib/duration/iso-string.js",
+        "node_modules/moment/src/lib/duration/prototype.js",
+        "node_modules/moment/src/lib/duration/valid.js",
+        "node_modules/moment/src/lib/format/format.js",
+        "node_modules/moment/src/lib/locale/base-config.js",
+        "node_modules/moment/src/lib/locale/calendar.js",
+        "node_modules/moment/src/lib/locale/constructor.js",
+        "node_modules/moment/src/lib/locale/en.js",
+        "node_modules/moment/src/lib/locale/formats.js",
+        "node_modules/moment/src/lib/locale/invalid.js",
+        "node_modules/moment/src/lib/locale/lists.js",
+        "node_modules/moment/src/lib/locale/locale.js",
+        "node_modules/moment/src/lib/locale/locales.js",
+        "node_modules/moment/src/lib/locale/ordinal.js",
+        "node_modules/moment/src/lib/locale/pre-post-format.js",
+        "node_modules/moment/src/lib/locale/prototype.js",
+        "node_modules/moment/src/lib/locale/relative.js",
+        "node_modules/moment/src/lib/locale/set.js",
+        "node_modules/moment/src/lib/moment/add-subtract.js",
+        "node_modules/moment/src/lib/moment/calendar.js",
+        "node_modules/moment/src/lib/moment/clone.js",
+        "node_modules/moment/src/lib/moment/compare.js",
+        "node_modules/moment/src/lib/moment/constructor.js",
+        "node_modules/moment/src/lib/moment/creation-data.js",
+        "node_modules/moment/src/lib/moment/diff.js",
+        "node_modules/moment/src/lib/moment/format.js",
+        "node_modules/moment/src/lib/moment/from.js",
+        "node_modules/moment/src/lib/moment/get-set.js",
+        "node_modules/moment/src/lib/moment/locale.js",
+        "node_modules/moment/src/lib/moment/min-max.js",
+        "node_modules/moment/src/lib/moment/moment.js",
+        "node_modules/moment/src/lib/moment/now.js",
+        "node_modules/moment/src/lib/moment/prototype.js",
+        "node_modules/moment/src/lib/moment/start-end-of.js",
+        "node_modules/moment/src/lib/moment/to-type.js",
+        "node_modules/moment/src/lib/moment/to.js",
+        "node_modules/moment/src/lib/moment/valid.js",
+        "node_modules/moment/src/lib/parse/regex.js",
+        "node_modules/moment/src/lib/parse/token.js",
+        "node_modules/moment/src/lib/units/aliases.js",
+        "node_modules/moment/src/lib/units/constants.js",
+        "node_modules/moment/src/lib/units/day-of-month.js",
+        "node_modules/moment/src/lib/units/day-of-week.js",
+        "node_modules/moment/src/lib/units/day-of-year.js",
+        "node_modules/moment/src/lib/units/hour.js",
+        "node_modules/moment/src/lib/units/millisecond.js",
+        "node_modules/moment/src/lib/units/minute.js",
+        "node_modules/moment/src/lib/units/month.js",
+        "node_modules/moment/src/lib/units/offset.js",
+        "node_modules/moment/src/lib/units/priorities.js",
+        "node_modules/moment/src/lib/units/quarter.js",
+        "node_modules/moment/src/lib/units/second.js",
+        "node_modules/moment/src/lib/units/timestamp.js",
+        "node_modules/moment/src/lib/units/timezone.js",
+        "node_modules/moment/src/lib/units/units.js",
+        "node_modules/moment/src/lib/units/week-calendar-utils.js",
+        "node_modules/moment/src/lib/units/week-year.js",
+        "node_modules/moment/src/lib/units/week.js",
+        "node_modules/moment/src/lib/units/year.js",
+        "node_modules/moment/src/lib/utils/abs-ceil.js",
+        "node_modules/moment/src/lib/utils/abs-floor.js",
+        "node_modules/moment/src/lib/utils/abs-round.js",
+        "node_modules/moment/src/lib/utils/compare-arrays.js",
+        "node_modules/moment/src/lib/utils/defaults.js",
+        "node_modules/moment/src/lib/utils/deprecate.js",
+        "node_modules/moment/src/lib/utils/extend.js",
+        "node_modules/moment/src/lib/utils/has-own-prop.js",
+        "node_modules/moment/src/lib/utils/hooks.js",
+        "node_modules/moment/src/lib/utils/index-of.js",
+        "node_modules/moment/src/lib/utils/is-array.js",
+        "node_modules/moment/src/lib/utils/is-date.js",
+        "node_modules/moment/src/lib/utils/is-function.js",
+        "node_modules/moment/src/lib/utils/is-number.js",
+        "node_modules/moment/src/lib/utils/is-object-empty.js",
+        "node_modules/moment/src/lib/utils/is-object.js",
+        "node_modules/moment/src/lib/utils/is-undefined.js",
+        "node_modules/moment/src/lib/utils/keys.js",
+        "node_modules/moment/src/lib/utils/map.js",
+        "node_modules/moment/src/lib/utils/some.js",
+        "node_modules/moment/src/lib/utils/to-int.js",
+        "node_modules/moment/src/lib/utils/zero-fill.js",
+        "node_modules/moment/src/locale/af.js",
+        "node_modules/moment/src/locale/ar-dz.js",
+        "node_modules/moment/src/locale/ar-kw.js",
+        "node_modules/moment/src/locale/ar-ly.js",
+        "node_modules/moment/src/locale/ar-ma.js",
+        "node_modules/moment/src/locale/ar-sa.js",
+        "node_modules/moment/src/locale/ar-tn.js",
+        "node_modules/moment/src/locale/ar.js",
+        "node_modules/moment/src/locale/az.js",
+        "node_modules/moment/src/locale/be.js",
+        "node_modules/moment/src/locale/bg.js",
+        "node_modules/moment/src/locale/bn.js",
+        "node_modules/moment/src/locale/bo.js",
+        "node_modules/moment/src/locale/br.js",
+        "node_modules/moment/src/locale/bs.js",
+        "node_modules/moment/src/locale/ca.js",
+        "node_modules/moment/src/locale/cs.js",
+        "node_modules/moment/src/locale/cv.js",
+        "node_modules/moment/src/locale/cy.js",
+        "node_modules/moment/src/locale/da.js",
+        "node_modules/moment/src/locale/de-at.js",
+        "node_modules/moment/src/locale/de-ch.js",
+        "node_modules/moment/src/locale/de.js",
+        "node_modules/moment/src/locale/dv.js",
+        "node_modules/moment/src/locale/el.js",
+        "node_modules/moment/src/locale/en-au.js",
+        "node_modules/moment/src/locale/en-ca.js",
+        "node_modules/moment/src/locale/en-gb.js",
+        "node_modules/moment/src/locale/en-ie.js",
+        "node_modules/moment/src/locale/en-nz.js",
+        "node_modules/moment/src/locale/eo.js",
+        "node_modules/moment/src/locale/es-do.js",
+        "node_modules/moment/src/locale/es.js",
+        "node_modules/moment/src/locale/et.js",
+        "node_modules/moment/src/locale/eu.js",
+        "node_modules/moment/src/locale/fa.js",
+        "node_modules/moment/src/locale/fi.js",
+        "node_modules/moment/src/locale/fo.js",
+        "node_modules/moment/src/locale/fr-ca.js",
+        "node_modules/moment/src/locale/fr-ch.js",
+        "node_modules/moment/src/locale/fr.js",
+        "node_modules/moment/src/locale/fy.js",
+        "node_modules/moment/src/locale/gd.js",
+        "node_modules/moment/src/locale/gl.js",
+        "node_modules/moment/src/locale/gom-latn.js",
+        "node_modules/moment/src/locale/he.js",
+        "node_modules/moment/src/locale/hi.js",
+        "node_modules/moment/src/locale/hr.js",
+        "node_modules/moment/src/locale/hu.js",
+        "node_modules/moment/src/locale/hy-am.js",
+        "node_modules/moment/src/locale/id.js",
+        "node_modules/moment/src/locale/is.js",
+        "node_modules/moment/src/locale/it.js",
+        "node_modules/moment/src/locale/ja.js",
+        "node_modules/moment/src/locale/jv.js",
+        "node_modules/moment/src/locale/ka.js",
+        "node_modules/moment/src/locale/kk.js",
+        "node_modules/moment/src/locale/km.js",
+        "node_modules/moment/src/locale/kn.js",
+        "node_modules/moment/src/locale/ko.js",
+        "node_modules/moment/src/locale/ky.js",
+        "node_modules/moment/src/locale/lb.js",
+        "node_modules/moment/src/locale/lo.js",
+        "node_modules/moment/src/locale/lt.js",
+        "node_modules/moment/src/locale/lv.js",
+        "node_modules/moment/src/locale/me.js",
+        "node_modules/moment/src/locale/mi.js",
+        "node_modules/moment/src/locale/mk.js",
+        "node_modules/moment/src/locale/ml.js",
+        "node_modules/moment/src/locale/mr.js",
+        "node_modules/moment/src/locale/ms-my.js",
+        "node_modules/moment/src/locale/ms.js",
+        "node_modules/moment/src/locale/my.js",
+        "node_modules/moment/src/locale/nb.js",
+        "node_modules/moment/src/locale/ne.js",
+        "node_modules/moment/src/locale/nl-be.js",
+        "node_modules/moment/src/locale/nl.js",
+        "node_modules/moment/src/locale/nn.js",
+        "node_modules/moment/src/locale/pa-in.js",
+        "node_modules/moment/src/locale/pl.js",
+        "node_modules/moment/src/locale/pt-br.js",
+        "node_modules/moment/src/locale/pt.js",
+        "node_modules/moment/src/locale/ro.js",
+        "node_modules/moment/src/locale/ru.js",
+        "node_modules/moment/src/locale/sd.js",
+        "node_modules/moment/src/locale/se.js",
+        "node_modules/moment/src/locale/si.js",
+        "node_modules/moment/src/locale/sk.js",
+        "node_modules/moment/src/locale/sl.js",
+        "node_modules/moment/src/locale/sq.js",
+        "node_modules/moment/src/locale/sr-cyrl.js",
+        "node_modules/moment/src/locale/sr.js",
+        "node_modules/moment/src/locale/ss.js",
+        "node_modules/moment/src/locale/sv.js",
+        "node_modules/moment/src/locale/sw.js",
+        "node_modules/moment/src/locale/ta.js",
+        "node_modules/moment/src/locale/te.js",
+        "node_modules/moment/src/locale/tet.js",
+        "node_modules/moment/src/locale/th.js",
+        "node_modules/moment/src/locale/tl-ph.js",
+        "node_modules/moment/src/locale/tlh.js",
+        "node_modules/moment/src/locale/tr.js",
+        "node_modules/moment/src/locale/tzl.js",
+        "node_modules/moment/src/locale/tzm-latn.js",
+        "node_modules/moment/src/locale/tzm.js",
+        "node_modules/moment/src/locale/uk.js",
+        "node_modules/moment/src/locale/ur.js",
+        "node_modules/moment/src/locale/uz-latn.js",
+        "node_modules/moment/src/locale/uz.js",
+        "node_modules/moment/src/locale/vi.js",
+        "node_modules/moment/src/locale/x-pseudo.js",
+        "node_modules/moment/src/locale/yo.js",
+        "node_modules/moment/src/locale/zh-cn.js",
+        "node_modules/moment/src/locale/zh-hk.js",
+        "node_modules/moment/src/locale/zh-tw.js",
+        "node_modules/moment/src/moment.js",
+        "node_modules/normalize-package-data/lib/extract_description.js",
+        "node_modules/normalize-package-data/lib/fixer.js",
+        "node_modules/normalize-package-data/lib/make_warning.js",
+        "node_modules/normalize-package-data/lib/normalize.js",
+        "node_modules/normalize-package-data/lib/safe_format.js",
+        "node_modules/number-is-nan/index.js",
+        "node_modules/once/once.js",
+        "node_modules/open/lib/open.js",
+        "node_modules/os-locale/index.js",
+        "node_modules/os-tmpdir/index.js",
+        "node_modules/parse-json/index.js",
+        "node_modules/parse-json/vendor/parse.js",
+        "node_modules/parse-json/vendor/unicode.js",
+        "node_modules/path-exists/index.js",
+        "node_modules/path-is-absolute/index.js",
+        "node_modules/path-type/index.js",
+        "node_modules/pify/index.js",
+        "node_modules/pinkie/index.js",
+        "node_modules/pinkie-promise/index.js",
+        "node_modules/querystring/decode.js",
+        "node_modules/querystring/encode.js",
+        "node_modules/querystring/index.js",
+        "node_modules/read-pkg/index.js",
+        "node_modules/read-pkg-up/index.js",
+        "node_modules/require-directory/index.js",
+        "node_modules/require-main-filename/index.js",
+        "node_modules/require-main-filename/test.js",
+        "node_modules/rimraf/bin.js",
+        "node_modules/rimraf/rimraf.js",
+        "node_modules/semver/semver.js",
+        "node_modules/set-blocking/index.js",
+        "node_modules/spdx-correct/index.js",
+        "node_modules/spdx-expression-parse/index.js",
+        "node_modules/spdx-expression-parse/parser.js",
+        "node_modules/string-width/index.js",
+        "node_modules/strip-ansi/index.js",
+        "node_modules/strip-bom/index.js",
+        "node_modules/temp/examples/grepcount.js",
+        "node_modules/temp/examples/pdfcreator.js",
+        "node_modules/temp/lib/temp.js",
+        "node_modules/temp/no_cleanup.js",
+        "node_modules/temp/no_cleanup_on_exit.js",
+        "node_modules/temp/no_cleanup_on_exit.spec.js",
+        "node_modules/temp/node_modules/rimraf/bin.js",
+        "node_modules/temp/node_modules/rimraf/rimraf.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/validate-npm-package-license/index.js",
+        "node_modules/which-module/index.js",
+        "node_modules/wrap-ansi/index.js",
+        "node_modules/wrappy/wrappy.js",
+        "node_modules/y18n/index.js",
+        "node_modules/yargs/index.js",
+        "node_modules/yargs/lib/assign.js",
+        "node_modules/yargs/lib/command.js",
+        "node_modules/yargs/lib/completion.js",
+        "node_modules/yargs/lib/levenshtein.js",
+        "node_modules/yargs/lib/obj-filter.js",
+        "node_modules/yargs/lib/usage.js",
+        "node_modules/yargs/lib/validation.js",
+        "node_modules/yargs/yargs.js",
+        "node_modules/yargs-parser/index.js",
+        "node_modules/yargs-parser/lib/tokenize-arg-string.js"
+      ],
+      ".json": [
+        "node_modules/ansi-regex/package.json",
+        "node_modules/async/package.json",
+        "node_modules/balanced-match/package.json",
+        "node_modules/blueimp-md5/package.json",
+        "node_modules/brace-expansion/package.json",
+        "node_modules/builtin-modules/builtin-modules.json",
+        "node_modules/builtin-modules/package.json",
+        "node_modules/camelcase/package.json",
+        "node_modules/cliui/package.json",
+        "node_modules/code-point-at/package.json",
+        "node_modules/concat-map/package.json",
+        "node_modules/decamelize/package.json",
+        "node_modules/email-validator/package.json",
+        "node_modules/error-ex/package.json",
+        "node_modules/find-up/package.json",
+        "node_modules/fs-plus/package.json",
+        "node_modules/fs.realpath/package.json",
+        "node_modules/get-caller-file/package.json",
+        "node_modules/glob/package.json",
+        "node_modules/graceful-fs/package.json",
+        "node_modules/gravatar/package.json",
+        "node_modules/hosted-git-info/package.json",
+        "node_modules/inflight/package.json",
+        "node_modules/inherits/package.json",
+        "node_modules/invert-kv/package.json",
+        "node_modules/is-arrayish/package.json",
+        "node_modules/is-builtin-module/package.json",
+        "node_modules/is-fullwidth-code-point/package.json",
+        "node_modules/is-utf8/package.json",
+        "node_modules/lcid/lcid.json",
+        "node_modules/lcid/package.json",
+        "node_modules/load-json-file/package.json",
+        "node_modules/minimatch/package.json",
+        "node_modules/minimist/package.json",
+        "node_modules/mkdirp/package.json",
+        "node_modules/moment/package.json",
+        "node_modules/normalize-package-data/lib/typos.json",
+        "node_modules/normalize-package-data/lib/warning_messages.json",
+        "node_modules/normalize-package-data/package.json",
+        "node_modules/number-is-nan/package.json",
+        "node_modules/once/package.json",
+        "node_modules/open/package.json",
+        "node_modules/os-locale/package.json",
+        "node_modules/os-tmpdir/package.json",
+        "node_modules/parse-json/package.json",
+        "node_modules/path-exists/package.json",
+        "node_modules/path-is-absolute/package.json",
+        "node_modules/path-type/package.json",
+        "node_modules/pify/package.json",
+        "node_modules/pinkie/package.json",
+        "node_modules/pinkie-promise/package.json",
+        "node_modules/querystring/package.json",
+        "node_modules/read-pkg/package.json",
+        "node_modules/read-pkg-up/package.json",
+        "node_modules/require-directory/package.json",
+        "node_modules/require-main-filename/package.json",
+        "node_modules/rimraf/package.json",
+        "node_modules/semver/package.json",
+        "node_modules/set-blocking/package.json",
+        "node_modules/spdx-correct/package.json",
+        "node_modules/spdx-expression-parse/package.json",
+        "node_modules/spdx-license-ids/package.json",
+        "node_modules/spdx-license-ids/spdx-license-ids.json",
+        "node_modules/string-width/package.json",
+        "node_modules/strip-ansi/package.json",
+        "node_modules/strip-bom/package.json",
+        "node_modules/temp/node_modules/rimraf/package.json",
+        "node_modules/temp/package.json",
+        "node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "node_modules/validate-npm-package-license/package.json",
+        "node_modules/which-module/package.json",
+        "node_modules/wrap-ansi/package.json",
+        "node_modules/wrappy/package.json",
+        "node_modules/y18n/package.json",
+        "node_modules/yargs/locales/be.json",
+        "node_modules/yargs/locales/de.json",
+        "node_modules/yargs/locales/en.json",
+        "node_modules/yargs/locales/es.json",
+        "node_modules/yargs/locales/fr.json",
+        "node_modules/yargs/locales/hi.json",
+        "node_modules/yargs/locales/hu.json",
+        "node_modules/yargs/locales/id.json",
+        "node_modules/yargs/locales/it.json",
+        "node_modules/yargs/locales/ja.json",
+        "node_modules/yargs/locales/ko.json",
+        "node_modules/yargs/locales/nb.json",
+        "node_modules/yargs/locales/nl.json",
+        "node_modules/yargs/locales/pirate.json",
+        "node_modules/yargs/locales/pl.json",
+        "node_modules/yargs/locales/pt.json",
+        "node_modules/yargs/locales/pt_BR.json",
+        "node_modules/yargs/locales/ru.json",
+        "node_modules/yargs/locales/th.json",
+        "node_modules/yargs/locales/tr.json",
+        "node_modules/yargs/locales/zh_CN.json",
+        "node_modules/yargs/package.json",
+        "node_modules/yargs-parser/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "lib/config",
+          "lib/utils",
+          "",
+          "spec",
+          "spec/fixtures/working-dir"
+        ],
+        "dependencies": {
+          "fs-plus": "^3.0.1",
+          "gravatar": "^1.6.0",
+          "moment": "^2.18.1",
+          "open": "0.0.5",
+          "temp": "^0.8.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^1.0.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cliui"
+        ],
+        "dependencies": {
+          "string-width": "^1.0.1",
+          "strip-ansi": "^3.0.1",
+          "wrap-ansi": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/error-ex"
+        ],
+        "dependencies": {
+          "is-arrayish": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/find-up"
+        ],
+        "dependencies": {
+          "path-exists": "^2.0.0",
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "async": "^1.5.2",
+          "mkdirp": "^0.5.1",
+          "rimraf": "^2.5.2",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob"
+        ],
+        "dependencies": {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/gravatar",
+          "node_modules/gravatar/lib",
+          "node_modules/gravatar/test"
+        ],
+        "dependencies": {
+          "blueimp-md5": "^2.3.0",
+          "email-validator": "^1.0.7",
+          "querystring": "0.2.0",
+          "yargs": "^6.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/is-builtin-module"
+        ],
+        "dependencies": {
+          "builtin-modules": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/is-fullwidth-code-point"
+        ],
+        "dependencies": {
+          "number-is-nan": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lcid"
+        ],
+        "dependencies": {
+          "invert-kv": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/load-json-file"
+        ],
+        "dependencies": {
+          "graceful-fs": "^4.1.2",
+          "parse-json": "^2.2.0",
+          "pify": "^2.0.0",
+          "pinkie-promise": "^2.0.0",
+          "strip-bom": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.1.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mkdirp/bin",
+          "node_modules/mkdirp/examples",
+          "node_modules/mkdirp",
+          "node_modules/mkdirp/test"
+        ],
+        "dependencies": {
+          "minimist": "0.0.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/normalize-package-data/lib",
+          "node_modules/normalize-package-data"
+        ],
+        "dependencies": {
+          "hosted-git-info": "^2.1.4",
+          "is-builtin-module": "^1.0.0",
+          "semver": "2 || 3 || 4 || 5",
+          "validate-npm-package-license": "^3.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/os-locale"
+        ],
+        "dependencies": {
+          "lcid": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/parse-json",
+          "node_modules/parse-json/vendor"
+        ],
+        "dependencies": {
+          "error-ex": "^1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/path-exists"
+        ],
+        "dependencies": {
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/path-type"
+        ],
+        "dependencies": {
+          "graceful-fs": "^4.1.2",
+          "pify": "^2.0.0",
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/pinkie-promise"
+        ],
+        "dependencies": {
+          "pinkie": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/read-pkg"
+        ],
+        "dependencies": {
+          "load-json-file": "^1.0.0",
+          "normalize-package-data": "^2.3.2",
+          "path-type": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/read-pkg-up"
+        ],
+        "dependencies": {
+          "find-up": "^1.0.0",
+          "read-pkg": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/rimraf"
+        ],
+        "dependencies": {
+          "glob": "^7.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/spdx-correct"
+        ],
+        "dependencies": {
+          "spdx-license-ids": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/string-width"
+        ],
+        "dependencies": {
+          "code-point-at": "^1.0.0",
+          "is-fullwidth-code-point": "^1.0.0",
+          "strip-ansi": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-bom"
+        ],
+        "dependencies": {
+          "is-utf8": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/temp/examples",
+          "node_modules/temp/lib",
+          "node_modules/temp",
+          "node_modules/temp/test"
+        ],
+        "dependencies": {
+          "os-tmpdir": "^1.0.0",
+          "rimraf": "~2.2.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/validate-npm-package-license"
+        ],
+        "dependencies": {
+          "spdx-correct": "~1.0.0",
+          "spdx-expression-parse": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/wrap-ansi"
+        ],
+        "dependencies": {
+          "string-width": "^1.0.1",
+          "strip-ansi": "^3.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/yargs",
+          "node_modules/yargs/lib",
+          "node_modules/yargs/locales"
+        ],
+        "dependencies": {
+          "camelcase": "^3.0.0",
+          "cliui": "^3.2.0",
+          "decamelize": "^1.1.1",
+          "get-caller-file": "^1.0.1",
+          "os-locale": "^1.4.0",
+          "read-pkg-up": "^1.0.1",
+          "require-directory": "^2.1.1",
+          "require-main-filename": "^1.0.1",
+          "set-blocking": "^2.0.0",
+          "string-width": "^1.0.2",
+          "which-module": "^1.0.0",
+          "y18n": "^3.2.1",
+          "yargs-parser": "^4.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/yargs-parser",
+          "node_modules/yargs-parser/lib"
+        ],
+        "dependencies": {
+          "camelcase": "^3.0.0"
+        }
+      }
+    ]
+  }
+}
