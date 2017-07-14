@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117223-13704-hjj0z2/package.tgz",
+        "raw": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117223-13704-hjj0z2/package.tgz",
-        "spec": "/tmp/d-117223-13704-hjj0z2/package.tgz",
+        "rawSpec": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
+        "spec": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117223-13704-1tr3izg"
+      "/tmp/apm-install-dir-117530-24483-nqvm81.02m0m86w29"
     ]
   ],
-  "_from": "../d-117223-13704-hjj0z2/package.tgz",
-  "_id": "highlight-column@0.5.2",
+  "_from": "../d-117530-24483-klh74i.6hhavvaemi/package.tgz",
+  "_id": "highlight-column@0.5.4",
   "_inCache": true,
-  "_installable": true,
   "_location": "/highlight-column",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117223-13704-hjj0z2/package.tgz",
+    "raw": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117223-13704-hjj0z2/package.tgz",
-    "spec": "/tmp/d-117223-13704-hjj0z2/package.tgz",
+    "rawSpec": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
+    "spec": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117223-13704-hjj0z2/package.tgz",
-  "_shasum": "9b6c6811d6ca69d56b034b0f3b19dc7616bc2679",
+  "_resolved": "file:../d-117530-24483-klh74i.6hhavvaemi/package.tgz",
+  "_shasum": "5bf566bdaa256bd47ad125e09b9295900aeccd45",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117223-13704-hjj0z2/package.tgz",
-  "_where": "/tmp/apm-install-dir-117223-13704-1tr3izg",
+  "_spec": "/tmp/d-117530-24483-klh74i.6hhavvaemi/package.tgz",
+  "_where": "/tmp/apm-install-dir-117530-24483-nqvm81.02m0m86w29",
   "bugs": {
     "url": "https://github.com/tony612/highlight-column/issues"
   },
@@ -56,5 +55,19 @@
     "type": "git",
     "url": "git+https://github.com/tony612/highlight-column.git"
   },
-  "version": "0.5.2"
+  "version": "0.5.4",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/highlight-column-element.coffee",
+        "lib/main.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }

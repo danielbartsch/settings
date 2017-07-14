@@ -9,7 +9,7 @@ class HighlightColumnView extends HTMLDivElement
     this
 
   attachToLines: ->
-    lines = @editorElement.rootElement?.querySelector?('.lines')
+    lines = @editorElement.querySelector('.lines')
     lines?.appendChild(@)
 
   handleEvents: ->
@@ -52,6 +52,8 @@ class HighlightColumnView extends HTMLDivElement
   updateHighlight: ->
     if @isEnabled()
       rect = @highlightRect()
+      return if !rect
+
       width = rect.width
       width = 1 if @isLineMode()
       @style.left = "#{rect.left}px"
@@ -73,8 +75,9 @@ class HighlightColumnView extends HTMLDivElement
 
   highlightRect: ->
     rect = @_cursorPixelRect()
-    rect.width = @editor.getDefaultCharWidth() if !rect.width or rect.width is 0
+    return if !rect
 
+    rect.width = @editor.getDefaultCharWidth() if !rect.width or rect.width is 0
     # FIXME: remove conditional as soon as the tiled editor is released.
     rect.left -= @editorElement.getScrollLeft() if @editorElement.hasTiledRendering
     rect
@@ -82,8 +85,15 @@ class HighlightColumnView extends HTMLDivElement
   _cursorPixelRect: ->
     {row, column} = @cursor.getScreenPosition()
     screenRange = new Range(new Point(row, column), new Point(row, column + 1))
-    rect = @editorElement.pixelRectForScreenRange(screenRange)
-    range = @editorElement.pixelRangeForScreenRange(screenRange)
+    return if @editorElement.component == null
+
+    try
+      rect = @editorElement.pixelRectForScreenRange(screenRange)
+      range = @editorElement.pixelRangeForScreenRange(screenRange)
+    catch error
+      console.error error
+
+    return if !rect or !range
     rect.left = range.start.left
     rect.right = range.end.left
     rect
