@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+        "spec": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117610-6519-yvi2rt.en45p6tj4i"
+    ]
+  ],
+  "_from": "../d-117610-6519-1ehciio.r37gory66r/package.tgz",
+  "_id": "tab-foldername-index@3.0.0",
+  "_inCache": true,
+  "_location": "/tab-foldername-index",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+    "spec": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117610-6519-1ehciio.r37gory66r/package.tgz",
+  "_shasum": "d17c3ea3e8b633c266cb2eb06a10731408c4c0b5",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117610-6519-1ehciio.r37gory66r/package.tgz",
+  "_where": "/tmp/apm-install-dir-117610-6519-yvi2rt.en45p6tj4i",
+  "bugs": {
+    "url": "https://github.com/Connormiha/atom-tab-foldername-index/issues"
+  },
+  "dependencies": {},
+  "description": "Plugin replaces tab's title if opened index.* file for more readability",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.17.0"
+  },
+  "homepage": "https://github.com/Connormiha/atom-tab-foldername-index#readme",
+  "keywords": [
+    "index",
+    "tabs",
+    "foldername"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "tab-foldername-index",
+  "optionalDependencies": {},
+  "readme": "# tab-foldername-index package\n\n![tab with index.* filename](https://cloud.githubusercontent.com/assets/4091305/15377903/32cc2c1e-1d70-11e6-8ffc-4d6f8e8fa67f.png)\n\n## Why?\nWhen you open several files with name `index.js`, you see many equal tabs with title `index.js` for different folders. It complicates the navigation.  \nThis extension fixes tab view if opened `index.*` file. Tab with `index` filename has double title (folder's name + file's name).  \nAlso it supports `__init__.py`, `__init__.php` files.  \n\n![tab with __init__.py filename](https://cloud.githubusercontent.com/assets/4091305/15450136/2cca3d56-1fa5-11e6-8a19-51c84d63fd5c.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Connormiha/atom-tab-foldername-index.git"
+  },
+  "version": "3.0.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "lib/main.js",
+        "lib/mapNames.js",
+        "lib/tab.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
