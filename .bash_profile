@@ -154,7 +154,7 @@ function pop {
   if [ -z $@ ]; then
     git stash pop;
   else
-    git stash pop stash@{"$@"};
+    git stash pop stash@{$@};
   fi
 }
 function stash {
@@ -171,14 +171,14 @@ function viewstash {
   if [ -z $@ ]; then
     git stash show -p;
   else
-    git stash show -p stash@{"$@"};
+    git stash show -p stash@{$@};
   fi
 }
 function dropstash {
   if [ -z $@ ]; then
-    git stash drop stash@{"$@"};
+    git stash drop;
   else
-    git stash drop
+    git stash drop stash@{$@};
   fi
 }
 
