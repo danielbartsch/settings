@@ -4,21 +4,41 @@
 import { CompositeDisposable } from 'atom';
 import MinimapLinterBinding from './minimap-linter-binding';
 
-const bindings = new Map();
+const messagePath = message =>
+  (message.version === 1 ? message.filePath : message.location.file);
+const messageRange = message =>
+  (message.version === 1 ? message.range : message.location.position);
+const goodMessage = (message, filePath) =>
+  (messagePath(message) === filePath && messageRange(message));
 
 export default {
   // Atom package lifecycle events start
   activate() {
-    require('atom-package-deps').install('minimap-linter');
+    this.bindings = new Map();
+    this.idleCallbacks = new Set();
+    let depsCallbackID;
+    const installMinimapLinterDeps = () => {
+      this.idleCallbacks.delete(depsCallbackID);
+      if (!atom.inSpecMode()) {
+        require('atom-package-deps').install('minimap-linter');
+      }
+    };
+    depsCallbackID = window.requestIdleCallback(installMinimapLinterDeps);
+    this.idleCallbacks.add(depsCallbackID);
+
     this.subscriptions = new CompositeDisposable();
+    this.messageCache = new Set();
   },
 
   deactivate() {
+    this.idleCallbacks.forEach(callbackID => window.cancelIdleCallback(callbackID));
+    this.idleCallbacks.clear();
     if (!this.minimapProvider) {
       return;
     }
     this.minimapProvider.unregisterPlugin('linter');
     this.minimapProvider = null;
+    this.messageCache.clear();
   },
   // Atom package lifecycle events end
 
@@ -31,15 +51,36 @@ export default {
 
   // LinterUI (for messages)
   provideUI() {
+    const minimapBindings = this.bindings;
+    const messageCache = this.messageCache;
     return {
       name: 'minimap-linter',
       render(messagePatch) {
-        bindings.forEach(binding => binding.renderDecorations(messagePatch));
+        // Parse out what messages have been added/removed
+        const added = new Set();
+        const removed = new Set();
+        minimapBindings.forEach((binding, minimap) => {
+          const filePath = minimap.getTextEditor().getPath();
+          messagePatch.added.forEach((message) => {
+            if (goodMessage(message, filePath)) {
+              added.add(message);
+              binding.addMessage(message);
+            }
+          });
+          messagePatch.removed.forEach((message) => {
+            removed.add(message);
+            if (binding.hasMessage(message)) {
+              binding.removeMessage(message);
+            }
+          });
+        });
+        added.forEach(message => messageCache.add(message));
+        removed.forEach(message => messageCache.delete(message));
       },
       didBeginLinting() {},
       didFinishLinting() {},
       dispose() {
-        bindings.forEach(binding => binding.removeMessages());
+        minimapBindings.forEach(binding => binding.removeMessages());
       },
     };
   },
@@ -62,15 +103,28 @@ export default {
     // Handle each minimap
     this.minimapsSubscription = this.minimapProvider.observeMinimaps((minimap) => {
       const binding = new MinimapLinterBinding(minimap);
-      bindings.set(minimap, binding);
+      this.bindings.set(minimap, binding);
       const subscription = minimap.onDidDestroy(() => {
         binding.destroy();
         this.subscriptions.remove(subscription);
         subscription.dispose();
-        bindings.delete(minimap);
+        this.bindings.delete(minimap);
       });
-
       this.subscriptions.add(subscription);
+
+      // Force rendering of old messages after a small delay
+      let oldMsgCallbackID;
+      const renderOldMessages = () => {
+        this.idleCallbacks.delete(oldMsgCallbackID);
+        const filePath = minimap.getTextEditor().getPath();
+        this.messageCache.forEach((message) => {
+          if (goodMessage(message, filePath)) {
+            binding.addMessage(message);
+          }
+        });
+      };
+      oldMsgCallbackID = window.requestIdleCallback(renderOldMessages);
+      this.idleCallbacks.add(oldMsgCallbackID);
     });
   },
 
@@ -78,9 +132,9 @@ export default {
     if (!this.active) {
       return;
     }
-    bindings.forEach((binding, minimap) => {
+    this.bindings.forEach((binding, minimap) => {
       binding.destroy();
-      bindings.delete(minimap);
+      this.bindings.delete(minimap);
     });
     this.minimapsSubscription.dispose();
     this.subscriptions.dispose();
