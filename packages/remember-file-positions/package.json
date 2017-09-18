@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+        "spec": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117620-9729-1a80qo2.6875bfbt9"
+    ]
+  ],
+  "_from": "../d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+  "_id": "remember-file-positions@0.2.3",
+  "_inCache": true,
+  "_location": "/remember-file-positions",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+    "spec": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+  "_shasum": "1aacc6bcdff89506a1eba8d8a54f24554d08eea0",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117620-9729-1c9owpv.4p9zfr/package.tgz",
+  "_where": "/tmp/apm-install-dir-117620-9729-1a80qo2.6875bfbt9",
+  "bugs": {
+    "url": "https://github.com/tmunro/remember-file-positions/issues"
+  },
+  "dependencies": {},
+  "description": "Remembers the last position a file was open at even if that file has since been closed. Inspired by Vim's file marks.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.1.0 <2.0.0"
+  },
+  "homepage": "https://github.com/tmunro/remember-file-positions#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/remember-file-positions",
+  "name": "remember-file-positions",
+  "optionalDependencies": {},
+  "readme": "# remember-file-positions\n\nStores last cursor position for any file and restores it when that file is re-opened. Very useful for reminding you of your previous editing context, even if you haven't edited that file in many sessions.\n\n![gif](https://raw.githubusercontent.com/tmunro/tmunro/324cd3fd26dfc0520af4ead024f6a7d5c99ae3e6/img/remember-file-positions-readme.gif)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmunro/remember-file-positions.git"
+  },
+  "version": "0.2.3",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "lib/remember-file-positions.coffee"
+      ]
+    },
+    "folders": []
+  }
+}
