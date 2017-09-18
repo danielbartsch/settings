@@ -1,3 +1,5 @@
+
+@import "ui-variables";
 /*
  * Your Stylesheet
  *
@@ -43,4 +45,28 @@ atom-panel.modal {
     box-shadow: 0px 0px 200px black;
     display: block;
     margin-top: 100px;
+}
+
+.cursor-indicator {
+  color: orangered;
+  text-shadow: 0 0 5px orangered;
+}
+
+.tree-view .directory {
+  & > .list-item:before {
+    visibility: hidden; // hide arrows
+  }
+  .selected > .header.list-item ~ .entries.list-tree {
+    background: linear-gradient(to right, transparent 24px, lighten(@base-background-color, 10%) 24px, lighten(@base-background-color, 10%) 25px, transparent 25px);
+  }
+  .header.list-item:hover ~ .entries.list-tree {
+    background: linear-gradient(to right, transparent 24px, @text-color-subtle 24px, @text-color-subtle 25px, transparent 25px);
+  }
+  .header.list-item ~ .entries.list-tree {
+    background: linear-gradient(to right, transparent 24px, darken(@text-color-subtle, 30%) 24px, darken(@text-color-subtle, 30%) 25px, transparent 25px);
+  }
+}
+
+atom-overlay atom-text-editor:not([hidden]){
+    min-width: 60vw;
 }
