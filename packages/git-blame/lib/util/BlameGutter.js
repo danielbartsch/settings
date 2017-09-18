@@ -90,6 +90,7 @@ export default class BlameGutter {
 
   updateLineMarkers(filePath) {
     const showOnlyLastNames = atom.config.get('git-blame.showOnlyLastNames');
+    const showHash = atom.config.get('git-blame.showHash');
     return repositoryForEditorPath(filePath)
       .then(repo => {
         const blamer = new Blamer(repo);
@@ -126,6 +127,7 @@ export default class BlameGutter {
             className,
             viewCommitUrl,
             showOnlyLastNames,
+            showHash,
           };
 
           // adding one marker to the first line
@@ -146,6 +148,7 @@ export default class BlameGutter {
 
   removeLineMarkers() {
     this.disposables.dispose();
+    this.disposables = new CompositeDisposable();
     this.lineDecorations.forEach(decoration => {
       decoration.destroy();
     });
@@ -185,6 +188,9 @@ export default class BlameGutter {
   }
 
   onResizeMove(e) {
+    if (!this.resizeStartX) {
+      return;
+    }
     const delta = e.pageX - this.resizeStartX;
     this.updateGutterWidth(this.resizeStartWidth + delta);
   }
