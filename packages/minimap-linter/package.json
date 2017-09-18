@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
+        "raw": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
-        "spec": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
+        "rawSpec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+        "spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117614-26386-13tcy7w.kpipqwu3di"
+      "/tmp/apm-install-dir-117617-7723-e0bi9h.b1hs87u8fr"
     ]
   ],
-  "_from": "../d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
-  "_id": "minimap-linter@2.0.1",
+  "_from": "../d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+  "_id": "minimap-linter@2.0.2",
   "_inCache": true,
   "_location": "/minimap-linter",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
+    "raw": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
-    "spec": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
+    "rawSpec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+    "spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
-  "_shasum": "9624d08bb4c77d20f74e57f3a6497aeb6cdfab40",
+  "_resolved": "file:../d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+  "_shasum": "1d35085fd7903a280360a6ab7f9e2be2fd5a5eb2",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117614-26386-1mhnpee.1snwx6flxr/package.tgz",
-  "_where": "/tmp/apm-install-dir-117614-26386-13tcy7w.kpipqwu3di",
+  "_spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+  "_where": "/tmp/apm-install-dir-117617-7723-e0bi9h.b1hs87u8fr",
   "bugs": {
     "url": "https://github.com/AtomLinter/atom-minimap-linter/issues"
   },
@@ -120,7 +120,7 @@
     "type": "git",
     "url": "git+https://github.com/AtomLinter/atom-minimap-linter.git"
   },
-  "version": "2.0.1",
+  "version": "2.0.2",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
