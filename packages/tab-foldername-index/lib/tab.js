@@ -15,13 +15,28 @@ function div(params) {
     return item;
 }
 
+const iconClassNameRegExp = /^(\w+-)?icon$/;
+const mediumClassNameRegExp = /^medium-\w+$/;
+
+function removeNotIconsClasses(classes) {
+    let result = '';
+
+    for (let item of classes.split(' ')) {
+        if (iconClassNameRegExp.test(item) || mediumClassNameRegExp.test(item)) {
+            result+= `${item} `;
+        }
+    }
+
+    return result.slice(0, -1);
+}
+
 /**
  * Generates DOM element
  * @param {String} folder
  * @param {String} file
  * @return {HTMLElement}
  */
-function generateTabTitle(folder, file) {
+function generateTabTitle(folder, file, initialClasses) {
     let $block = div({
         className: CLASS_NAME
     });
@@ -33,13 +48,17 @@ function generateTabTitle(folder, file) {
         className: `${CLASS_NAME}__file`,
         textContent: file
     });
-    let $wrapper = div({
-        className: `${CLASS_NAME}__wrapper`
+    let $textWrapper = div({
+        className: `${CLASS_NAME}__text-wrapper`
+    });
+    let $flexWrapper = div({
+        className: `${CLASS_NAME}__flex-wrapper ${removeNotIconsClasses(initialClasses)}`
     });
 
-    $wrapper.appendChild($folderBlock);
-    $wrapper.appendChild($fileBlock);
-    $block.appendChild($wrapper);
+    $textWrapper.appendChild($folderBlock);
+    $textWrapper.appendChild($fileBlock);
+    $flexWrapper.appendChild($textWrapper);
+    $block.appendChild($flexWrapper);
     return $block;
 }
 
@@ -149,17 +168,19 @@ class Tab {
         }
 
         let folder = this.pane.getPath().split('/');
-        folder = folder[folder.length - 2];
+        const numOfFolders = atom.config.get('tab-foldername-index.numberOfFolders');
+        folder = folder.slice(folder.length - numOfFolders - 1, -1).join('/');
 
         for (let $element of this.$elements) {
-            let $tabWrapper = generateTabTitle(folder, name);
+            const $title = $element.querySelector('.title');
+
+            let $tabWrapper = generateTabTitle(folder, name, $title.className);
             let $oldTabWrapper = $element.querySelector(`.${CLASS_NAME}`);
 
             if ($oldTabWrapper) {
                 $oldTabWrapper.remove();
             }
 
-            const $title = $element.querySelector('.title');
             $title.parentNode.appendChild($tabWrapper);
 
             $title.classList.add(`${CLASS_NAME}__original`);

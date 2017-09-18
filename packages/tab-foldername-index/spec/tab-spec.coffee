@@ -5,6 +5,7 @@ pkg = require("../package.json").name
 mapNames = require("../lib/mapNames")
 
 htmlTabMock = '<li is="tabs-tab"><div class="title">package.json</div></li>'
+htmlFileIconTabMock = '<li is="tabs-tab"><div class="title temp js-icon icon medium-blue foo">package.json</div></li>'
 mochPaneInvalid =
     onDidChangePath: () ->
     getTitle: -> "notIndexFileName"
@@ -21,11 +22,18 @@ createMochHTMLtab = ->
   item = item.firstElementChild
   return item
 
+createMochFileIconHTMLtab = ->
+  item = document.createElement "div"
+  item.innerHTML = htmlFileIconTabMock
+  item = item.firstElementChild
+  return item
+
 $element = null
 
 describe "tab-foldername-index", ->
   beforeEach ->
     atom.config.set('tab-foldername-index.equalsNamesEnabled', true)
+    atom.config.set('tab-foldername-index.numberOfFolders', 1)
 
   afterEach ->
     mapNames.clear()
@@ -125,6 +133,15 @@ describe "tab-foldername-index", ->
     tab = new Tab tmpMock, [$element]
     tab.setEnabled()
     expectExist $element.querySelector ".#{pkg}", $element.querySelector ".#{pkg}__original"
+
+  it "should render __init__.php with file icons", ->
+    $element = createMochFileIconHTMLtab()
+    tmpMock = Object.assign {}, mochPaneValid
+    tmpMock.getTitle = -> "__init__.php"
+    tab = new Tab tmpMock, [$element]
+    tab.setEnabled()
+    expectExist $element.querySelector ".#{pkg}", $element.querySelector ".#{pkg}__original"
+    expect($element.querySelector(".#{pkg}__flex-wrapper").className).toBe("#{pkg}__flex-wrapper js-icon icon medium-blue")
 
   it "shouldn't render valid filename before setEnabled", ->
     $element = createMochHTMLtab()
@@ -284,3 +301,38 @@ describe "tab-foldername-index", ->
 
     tab = new Tab mochPaneInvalid
     expect(tab).toBeInstanceOf Tab
+
+
+  it "should render only one folder name", ->
+    $element = createMochHTMLtab()
+
+    tab = new Tab mochPaneValid, [$element]
+    tab.setEnabled()
+
+    expect(tab.$elements[0]).toBe $element
+    expect($element.querySelector(".tab-foldername-index__folder").textContent).toBe "work"
+
+  it "should render two folder names", ->
+    atom.config.set('tab-foldername-index.numberOfFolders', 2)
+    $element = createMochHTMLtab()
+
+    tab = new Tab mochPaneValid, [$element]
+    tab.setEnabled()
+
+    expect(tab.$elements[0]).toBe $element
+    expect($element.querySelector(".tab-foldername-index__folder").textContent).toBe "Users/work"
+
+  it "should render many folder names", ->
+    atom.config.set('tab-foldername-index.numberOfFolders', 5)
+    $element = createMochHTMLtab()
+
+    mochPaneValidLangPath =
+        onDidChangePath: () ->
+        getTitle: -> "index.js"
+        getPath: -> "/Users/work/folders1/folders2/folders3/folders4/folders5/folders6/index.js"
+
+    tab = new Tab mochPaneValidLangPath, [$element]
+    tab.setEnabled()
+
+    expect(tab.$elements[0]).toBe $element
+    expect($element.querySelector(".tab-foldername-index__folder").textContent).toBe "folders2/folders3/folders4/folders5/folders6"
