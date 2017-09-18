@@ -15,6 +15,7 @@ describe('Status Bar Blame', () => {
   const blameEl = () => workspaceElement.querySelector('status-bar-blame');
 
   beforeEach(() => {
+    jasmine.useRealClock();
     workspaceElement = atom.views.getView(atom.workspace);
     spyOn(window, 'setImmediate').andCallFake(fn => fn());
 
@@ -147,29 +148,21 @@ describe('Status Bar Blame', () => {
 
       describe('when a modified line is restored to the HEAD version contents', () => {
         it('renders the commit information', () => {
-          waitsFor(() => renderSpy.callCount > 0);
-
-          runs(() => {
-            expect(blameEl().innerHTML).toEqual(COMMIT_MESSAGE);
-          });
+          waitsFor(() => blameEl().innerHTML === COMMIT_MESSAGE);
 
           runs(() => {
             editor.insertText('a');
             advanceClock(editor.getBuffer().stoppedChangingDelay);
           });
 
-          waitsFor(() => renderSpy.callCount > 1);
-
-          runs(() => {
-            expect(blameEl().innerHTML).toEqual('Unsaved');
-          });
+          waitsFor(() => blameEl().innerHTML === 'Unsaved');
 
           runs(() => {
             editor.backspace();
             advanceClock(editor.getBuffer().stoppedChangingDelay);
           });
 
-          waitsFor(() => renderSpy.callCount > 2);
+          waitsFor(() => blameEl().innerHTML !== 'Unsaved');
 
           runs(() => {
             expect(blameEl().innerHTML).toEqual(COMMIT_MESSAGE);
@@ -182,7 +175,21 @@ describe('Status Bar Blame', () => {
       describe('when element is clicked', () => {
         describe('when url is known', () => {
           it('opens the url', () => {
+            spyOn(utils, 'getCommitLink').andReturn('http://foo.bar');
+            const openSpy = spyOn(utils, 'open').andReturn();
+            waitsForPromise(() => atom.workspace.open(path.join(projectPath, 'sample.js')));
+            waitsFor(() => renderSpy.callCount > 0);
 
+            runs(() => {
+              const event = new Event('click');
+              blameEl().dispatchEvent(event);
+            });
+
+            waitsFor(() => openSpy.callCount > 0);
+
+            runs(() => {
+              expect(openSpy).toHaveBeenCalledWith('http://foo.bar');
+            });
           });
         });
 

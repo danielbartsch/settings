@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+        "raw": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
-        "spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+        "rawSpec": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
+        "spec": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11763-7993-178bhd2.fo7pj02j4i"
+      "/tmp/apm-install-dir-117811-10879-hkxh8m.5tffq7iudi"
     ]
   ],
-  "_from": "../d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
-  "_id": "status-bar-blame@2.0.0",
+  "_from": "../d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
+  "_id": "status-bar-blame@2.0.1",
   "_inCache": true,
   "_location": "/status-bar-blame",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+    "raw": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
-    "spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
+    "rawSpec": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
+    "spec": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
-  "_shasum": "fc0ee7cf138ed2511738b564a4728b6229cc8783",
+  "_resolved": "file:../d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
+  "_shasum": "74150b5c511df2be92b39fdfcb374df8f824f90e",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11763-7993-t35w5d.yow9jp2e29/package.tgz",
-  "_where": "/tmp/apm-install-dir-11763-7993-178bhd2.fo7pj02j4i",
+  "_spec": "/tmp/d-117811-10879-ypz4xm.yt3mw5qaor/package.tgz",
+  "_where": "/tmp/apm-install-dir-117811-10879-hkxh8m.5tffq7iudi",
   "author": {
     "name": "Baldur Helgason",
     "email": "baldur.helgason@gmail.com"
@@ -82,7 +82,7 @@
     "type": "git",
     "url": "git+https://github.com/baldurh/atom-status-bar-blame.git"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -103,7 +103,7 @@
       },
       {
         "name": "blueimp-md5",
-        "version": "2.7.0",
+        "version": "2.10.0",
         "path": "node_modules/blueimp-md5/js/md5.js"
       },
       {
@@ -143,7 +143,7 @@
       },
       {
         "name": "email-validator",
-        "version": "1.0.7",
+        "version": "1.1.1",
         "path": "node_modules/email-validator/index.js"
       },
       {
@@ -353,7 +353,7 @@
       },
       {
         "name": "semver",
-        "version": "5.3.0",
+        "version": "5.4.1",
         "path": "node_modules/semver/semver.js"
       },
       {
