@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
+        "raw": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
-        "spec": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
+        "rawSpec": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
+        "spec": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117521-8822-1f7wvmi.pubn2vs4i"
+      "/tmp/apm-install-dir-117818-9260-148iqcw.ylp5o8ncdi"
     ]
   ],
-  "_from": "../d-117521-8822-19wewpn.jrp4b49529/package.tgz",
-  "_id": "linter-ui-default@1.6.2",
+  "_from": "../d-117818-9260-1endivw.es284obt9/package.tgz",
+  "_id": "linter-ui-default@1.6.10",
   "_inCache": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
+    "raw": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
-    "spec": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
+    "rawSpec": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
+    "spec": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117521-8822-19wewpn.jrp4b49529/package.tgz",
-  "_shasum": "2cd669df4bd1740382364347ea8f429401e9dcd0",
+  "_resolved": "file:../d-117818-9260-1endivw.es284obt9/package.tgz",
+  "_shasum": "032008e7df39bb3f54de72c98e58a166f7638d47",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117521-8822-19wewpn.jrp4b49529/package.tgz",
-  "_where": "/tmp/apm-install-dir-117521-8822-1f7wvmi.pubn2vs4i",
+  "_spec": "/tmp/d-117818-9260-1endivw.es284obt9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117818-9260-148iqcw.ylp5o8ncdi",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -187,12 +187,12 @@
   "description": "Default UI for the Linter package",
   "devDependencies": {
     "eslint-config-steelbrain": "^3.0.0",
-    "flow-bin": "^0.46.0",
+    "flow-bin": "^0.52.0",
     "jasmine-fix": "^1.0.1",
     "rimraf": "^2.5.4"
   },
   "engines": {
-    "atom": ">=1.17.0 <2.0.0"
+    "atom": ">=1.19.0 <2.0.0"
   },
   "homepage": "https://github.com/steelbrain/linter-ui-default#readme",
   "keywords": [
@@ -228,13 +228,13 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.6.2",
+  "version": "1.6.10",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "asap",
-        "version": "2.0.5",
+        "version": "2.0.6",
         "path": "node_modules/asap/asap.js"
       },
       {
@@ -274,12 +274,12 @@
       },
       {
         "name": "fbjs",
-        "version": "0.8.12",
+        "version": "0.8.15",
         "path": "node_modules/fbjs/index.js"
       },
       {
         "name": "iconv-lite",
-        "version": "0.4.18",
+        "version": "0.4.19",
         "path": "node_modules/iconv-lite/lib/index.js"
       },
       {
@@ -299,7 +299,7 @@
       },
       {
         "name": "js-tokens",
-        "version": "3.0.1",
+        "version": "3.0.2",
         "path": "node_modules/js-tokens/index.js"
       },
       {
@@ -319,7 +319,7 @@
       },
       {
         "name": "node-fetch",
-        "version": "1.7.1",
+        "version": "1.7.3",
         "path": "node_modules/node-fetch/index.js"
       },
       {
@@ -394,7 +394,7 @@
       },
       {
         "name": "semver",
-        "version": "5.3.0",
+        "version": "5.4.1",
         "path": "node_modules/semver/semver.js"
       },
       {
@@ -409,7 +409,7 @@
       },
       {
         "name": "ua-parser-js",
-        "version": "0.7.12",
+        "version": "0.7.14",
         "path": "node_modules/ua-parser-js/src/ua-parser.js"
       },
       {
@@ -478,8 +478,8 @@
         "node_modules/strip-bom-buf/package.json",
         "node_modules/ua-parser-js/bower.json",
         "node_modules/ua-parser-js/package.json",
-        "node_modules/ua-parser-js/ua-parser-js.jquery.json",
         "node_modules/whatwg-fetch/package.json",
+        "package-lock.json",
         "package.json"
       ],
       ".js": [
