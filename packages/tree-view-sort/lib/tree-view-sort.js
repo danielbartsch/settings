@@ -14,6 +14,12 @@ const getFileExtension = (filename) => {
   return filename.slice((filename.lastIndexOf('.') - 1 >>> 0) + 2);
 };
 
+const getFileGroup = (filename) => {
+  const groups = filename.split('.');
+
+  return groups.length < 3 ? getFileExtension(filename) : groups[groups.length - 2];
+};
+
 const isDir = (obj) => {
   if (obj && obj.constructor) {
     return (obj.constructor.name === 'Directory' || obj.__sort__dir === true);
@@ -93,6 +99,19 @@ const sort = (first, second, firstName, secondName) => {
 
     case 7:
       return compareStats('birthtime', first, second, firstName, secondName) * descending;
+
+    case 8: {
+      const firstGroupName = getFileGroup(firstName);
+      const secondGroupName = getFileGroup(secondName);
+      const result = compareString(firstGroupName, secondGroupName);
+
+      if (result == 0) {
+        return compareString(firstName, secondName) * descending;
+      }
+      else {
+        return result * descending;
+      }
+    }
   }
 };
 
