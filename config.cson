@@ -4,6 +4,19 @@
     refreshInterval: 1
   "atom-ctags":
     autoBuildTagsWhenActive: true
+  "atom-material-ui":
+    colors:
+      abaseColor: "#6765ed"
+      paintCursor: true
+    tabs:
+      compactTabs: true
+      noTabMinWidth: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "atom-package-deps":
+    ignored: []
+  "atom-storybook": {}
   "atom-ternjs":
     caseInsensitive: false
     guess: false
@@ -14,9 +27,14 @@
     ]
     webpack: true
     webpackConfigFilename: "web-app/internals/webpack/webpack.config.development.js"
-  "autocomplete-plus":
-    confirmCompletion: "tab always, enter when suggestion explicitly selected"
-    maxVisibleSuggestions: 30
+  "autocomplete-plus": {}
+  "color-picker":
+    abbreviateValues: true
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
+  "color-tabs":
+    backgroundStyle: "none"
+    borderStyle: "bottom"
   core:
     customFileTypes:
       "source.ini": [
@@ -34,6 +52,7 @@
     disabledPackages: [
       "symbols-view"
       "language-gfm"
+      "spell-check"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -41,39 +60,63 @@
       "es-identifier-highlight"
       "markdown-preview-plus"
       "clipboard-history"
+      "color-picker"
     ]
     reopenProjectMenuCount: 45
     telemetryConsent: "no"
     warnOnLargeFileLimit: 20
+  "coverage-gutter":
+    basePath: "/home/adv/adverity/web-app/"
+    pathToLCOV: "/home/adv/adverity/web-app/coverage/lcov.info"
+  "cursor-indicator": {}
   "double-tag": {}
   editor:
+    fontSize: 13
     invisibles: {}
     lineHeight: 1.05
-    preferredLineLength: 120
+    preferredLineLength: 140
     scrollPastEnd: true
+    scrollSensitivity: 100
     showIndentGuide: true
     tabLength: 4
     undoGroupingInterval: 200
+    zoomFontWhenCtrlScrolling: false
   "es-identifier-highlight":
     minimapLine: false
   "exception-reporting":
     userId: "14290ab0-5dc1-86ae-5dd5-ed0be4044d11"
+  "file-icons": {}
+  "find-and-replace":
+    projectSearchResultsPaneSplitDirection: "right"
+    scrollToResultOnLiveSearch: true
+  firacode:
+    fontWeight: "regular"
+    scopes: [
+      "*"
+    ]
   "flow-ide":
-    executablePath: "flow"
+    executablePath: "/home/adv/adverity/web-app/node_modules/flow-bin/cli.js"
+    hyperclickPriority: 7
+  "fold-functions": {}
   "foldername-tabs": {}
   "fuzzy-finder":
     preserveLastSearch: true
   "git-blame":
-    columnWidth: 311
+    columnWidth: 153
+    dateFormatString: "DD.MM.YYYY"
     ignoreWhiteSpaceDiffs: true
+    showHash: false
     showOnlyLastNames: true
   "git-diff": {}
   "git-log": {}
-  github:
-    filesystemEventDiagnostics: true
-    gitDiagnostics: true
-    performanceToConsole: true
+  github: {}
   "github-issues": {}
+  hasklig:
+    fontWeight: "extra-light"
+    scopes: [
+      "*"
+    ]
+  "hey-pane": {}
   "highlight-column":
     opacity: 0.05
   "highlight-selected":
@@ -88,13 +131,17 @@
       ".node"
     ]
     jumpToImport: true
+    usePendingPanes: true
+  "language-babel": {}
+  "lcov-info":
+    highlightType: "gutter"
   linter: {}
   "linter-eslint":
     fixOnSave: true
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
     hidePanelWhenEmpty: true
-    panelHeight: 69
+    panelHeight: 54
     panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
@@ -111,7 +158,12 @@
     minimapScrollIndicator: false
     moveCursorOnMinimapClick: true
     plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
     scrollAnimation: true
     scrollAnimationDuration: 100
     textOpacity: 1
@@ -121,6 +173,13 @@
   "minimap-git-diff":
     useGutterDecoration: true
   "minimap-linter": {}
+  "minimap-plus":
+    absoluteMode: true
+    charHeight: 1
+    charWidth: 0.707106781
+    displayPluginsControls: false
+    redrawDelay: 400
+    scrollAnimationDuration: 400
   "nav-panel":
     sort: false
   "number-slider":
@@ -128,6 +187,8 @@
   "one-dark-ui":
     tabSizing: "Even"
   "open-recent": {}
+  pigments:
+    extendAutocompleteToColorValue: true
   "pinned-tabs":
     animated: true
     closeUnpinned: true
@@ -137,8 +198,12 @@
     printWidth: 120
     singleQuote: true
     tabWidth: 4
+  "quick-scroll": {}
   react:
     enabledForAllJavascriptFiles: true
+  "slim-dark-ui":
+    layoutMode: "Compact"
+  "spell-check": {}
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -146,8 +211,10 @@
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
+  "status-bar-blame": {}
   "svg-preview":
     openPreviewAutomatically: true
+  "tab-foldername-index": {}
   "terminal-plus":
     core:
       workingDirectory: "Active File"
@@ -159,6 +226,7 @@
   "tree-view":
     alwaysOpenExisting: true
     autoReveal: true
+    focusOnReveal: false
     squashDirectoryNames: true
   "tree-view-auto-fold":
     hideAllExceptModifiedFiles: false
@@ -235,9 +303,9 @@
     tabLength: 4
 ".js.jsx.source":
   editor:
-    autoIndentOnPaste: false
+    autoIndentOnPaste: true
     preferredLineLength: 120
-    scrollPastEnd: false
+    scrollPastEnd: true
     showIndentGuide: true
     softWrap: false
     tabLength: 4
