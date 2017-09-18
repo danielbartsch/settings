@@ -2,45 +2,45 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
+        "raw": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
-        "spec": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
+        "rawSpec": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
+        "spec": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11756-11922-e8fgv1.lmg9vvlsor"
+      "/tmp/apm-install-dir-117716-29912-1ex5hjo.u05wi885mi"
     ]
   ],
-  "_from": "../d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
-  "_id": "tree-view-autoresize@2.1.0",
+  "_from": "../d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
+  "_id": "tree-view-autoresize@2.2.0",
   "_inCache": true,
-  "_installable": true,
   "_location": "/tree-view-autoresize",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
+    "raw": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
-    "spec": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
+    "rawSpec": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
+    "spec": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
-  "_shasum": "9990391b9d54361cad4e0621498e93189fc47205",
+  "_resolved": "file:../d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
+  "_shasum": "05e1589cdbbcd97668d5c73d94873d2c17bcdc81",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11756-11922-l4mzes.2p3mqgp66r/package.tgz",
-  "_where": "/tmp/apm-install-dir-11756-11922-e8fgv1.lmg9vvlsor",
+  "_spec": "/tmp/d-117716-29912-1omorpb.rf5bqpvi/package.tgz",
+  "_where": "/tmp/apm-install-dir-117716-29912-1ex5hjo.u05wi885mi",
   "bugs": {
     "url": "https://github.com/lexcast/tree-view-autoresize/issues"
   },
   "dependencies": {
-    "atom-utils": "^0.9.2"
+    "atom-utils": "^0.9.2",
+    "scrollbar-width": "^3.1.1"
   },
   "description": "Autoresize the tree view when open/close folders",
   "devDependencies": {},
@@ -62,7 +62,7 @@
     "type": "git",
     "url": "git+https://github.com/lexcast/tree-view-autoresize.git"
   },
-  "version": "2.1.0",
+  "version": "2.2.0",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -83,7 +83,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.23",
+        "version": "0.10.27",
         "path": "node_modules/es5-ext/index.js"
       },
       {
@@ -147,6 +147,11 @@
         "path": "node_modules/property-accessors/lib/property-accessors.js"
       },
       {
+        "name": "scrollbar-width",
+        "version": "3.1.1",
+        "path": "node_modules/scrollbar-width/scrollbar-width.js"
+      },
+      {
         "name": "underscore",
         "version": "1.6.0",
         "path": "node_modules/underscore/underscore.js"
@@ -159,7 +164,8 @@
     ],
     "extensions": {
       ".coffee": [
-        "lib/tree-view-autoresize.coffee"
+        "lib/tree-view-autoresize.coffee",
+        "node_modules/scrollbar-width/scrollbar-width.coffee"
       ],
       ".js": [
         "node_modules/atom-utils/lib/atom-utils.js",
@@ -452,6 +458,7 @@
         "node_modules/es5-ext/object/copy.js",
         "node_modules/es5-ext/object/count.js",
         "node_modules/es5-ext/object/create.js",
+        "node_modules/es5-ext/object/ensure-finite-number.js",
         "node_modules/es5-ext/object/ensure-natural-number-value.js",
         "node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/es5-ext/object/ensure-promise.js",
@@ -470,6 +477,7 @@
         "node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/es5-ext/object/is-copy.js",
         "node_modules/es5-ext/object/is-empty.js",
+        "node_modules/es5-ext/object/is-finite-number.js",
         "node_modules/es5-ext/object/is-number-value.js",
         "node_modules/es5-ext/object/is-object.js",
         "node_modules/es5-ext/object/is-plain-object.js",
@@ -503,6 +511,7 @@
         "node_modules/es5-ext/object/validate-array-like.js",
         "node_modules/es5-ext/object/validate-stringifiable-value.js",
         "node_modules/es5-ext/object/validate-stringifiable.js",
+        "node_modules/es5-ext/optional-chaining.js",
         "node_modules/es5-ext/reg-exp/#/index.js",
         "node_modules/es5-ext/reg-exp/#/is-sticky.js",
         "node_modules/es5-ext/reg-exp/#/is-unicode.js",
@@ -621,6 +630,8 @@
         "node_modules/grim/node_modules/event-kit/lib/event-kit.js",
         "node_modules/mixto/lib/mixin.js",
         "node_modules/property-accessors/lib/property-accessors.js",
+        "node_modules/scrollbar-width/scrollbar-width.js",
+        "node_modules/scrollbar-width/scrollbar-width.min.js",
         "node_modules/underscore/underscore-min.js",
         "node_modules/underscore/underscore.js",
         "node_modules/underscore-plus/lib/underscore-plus.js"
@@ -644,6 +655,8 @@
         "node_modules/grim/package.json",
         "node_modules/mixto/package.json",
         "node_modules/property-accessors/package.json",
+        "node_modules/scrollbar-width/bower.json",
+        "node_modules/scrollbar-width/package.json",
         "node_modules/underscore/package.json",
         "node_modules/underscore-plus/package.json",
         "package.json"
@@ -656,7 +669,8 @@
           ""
         ],
         "dependencies": {
-          "atom-utils": "^0.9.2"
+          "atom-utils": "^0.9.2",
+          "scrollbar-width": "^3.1.1"
         }
       },
       {
