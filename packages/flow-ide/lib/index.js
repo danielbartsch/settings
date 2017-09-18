@@ -1,7 +1,7 @@
 /* @flow */
 
 import Path from 'path'
-import { CompositeDisposable, TextEditor } from 'atom'
+import { CompositeDisposable, Range, TextEditor } from 'atom'
 import { exec, findCached, findCachedAsync } from 'atom-linter'
 import { shouldTriggerAutocomplete } from 'atom-autocomplete'
 import {
@@ -17,6 +17,7 @@ import type { CoverageObject } from './types'
 
 const spawnedServers: Set<string> = new Set()
 const defaultFlowFile = Path.resolve(__dirname, '..', 'vendor', '.flowconfig')
+const defaultFlowBinLocation = 'node_modules/.bin/flow'
 
 export default {
   activate() {
@@ -29,6 +30,24 @@ export default {
     }))
     this.subscriptions.add(atom.config.observe('flow-ide.onlyIfAppropriate', (onlyIfAppropriate) => {
       this.onlyIfAppropriate = onlyIfAppropriate
+    }))
+
+    this.hyperclickPriority = null
+    let restartNotification
+    this.subscriptions.add(atom.config.observe('flow-ide.hyperclickPriority', (hyperclickPriority) => {
+      if (this.hyperclickPriority != null) {
+        if (hyperclickPriority !== this.hyperclickPriority && restartNotification === undefined) {
+          restartNotification = atom.notifications.addSuccess('Restart atom to update flow-ide priority?', {
+            dismissable: true,
+            buttons: [{
+              text: 'Restart',
+              onDidClick: () => atom.restartApplication(),
+            }],
+          })
+          restartNotification.onDidDismiss(() => { restartNotification = undefined })
+        }
+      }
+      this.hyperclickPriority = hyperclickPriority
     }))
     this.subscriptions.add(atom.config.observe('flow-ide.showUncovered', (showUncovered) => {
       this.showUncovered = showUncovered
@@ -54,8 +73,8 @@ export default {
 
   async getExecutablePath(fileDirectory: string): Promise<string> {
     return (
-      await findCachedAsync(fileDirectory, 'node_modules/.bin/flow') ||
       this.executablePath ||
+      await findCachedAsync(fileDirectory, defaultFlowBinLocation) ||
       'flow'
     )
   },
@@ -63,7 +82,7 @@ export default {
   deactivate() {
     this.subscriptions.dispose()
     spawnedServers.forEach((rootDirectory) => {
-      const executable = findCached(rootDirectory, 'node_modules/.bin/flow') || this.executablePath || 'flow'
+      const executable = this.executablePath || findCached(rootDirectory, defaultFlowBinLocation) || 'flow'
       exec(executable, ['stop'], {
         cwd: rootDirectory,
         timeout: 60 * 1000,
@@ -241,6 +260,69 @@ export default {
         }
 
         return toAutocompleteSuggestions(result, prefix)
+      },
+    }
+    return provider
+  },
+
+  provideHyperclick(): HyperclickProvider {
+    const provider = {
+      priority: this.hyperclickPriority,
+      grammarScopes: ['source.js', 'source.js.jsx'],
+      getSuggestionForWord: async (textEditor: TextEditor, text: string, range: Range): Promise<?HyperclickSuggestion> => {
+        const filePath = textEditor.getPath()
+        if (!filePath) {
+          return null
+        }
+
+        const fileDirectory = Path.dirname(filePath)
+        const configFile = await findCachedAsync(fileDirectory, '.flowconfig')
+        if (!configFile) {
+          return null
+        }
+
+        const flowOptions = [
+          'get-def',
+          '--json',
+          filePath,
+          range.start.row + 1,
+          range.start.column + 1,
+        ]
+
+        let result
+        try {
+          result = await exec(await this.getExecutablePath(fileDirectory), flowOptions, {
+            cwd: fileDirectory,
+            ignoreExitCode: true,
+            timeout: 60 * 1000,
+            uniqueKey: 'flow-ide-hyperclick',
+          })
+          if (result === null) {
+            return null
+          }
+        } catch (error) {
+          if (error.message.indexOf(INIT_MESSAGE) !== -1 && configFile) {
+            spawnedServers.add(Path.dirname(configFile))
+          }
+          if (error.message.indexOf(INIT_MESSAGE) !== -1 || error.message.indexOf(RECHECKING_MESSAGE) !== -1) {
+            return provider.getSuggestionForWord(textEditor, text, range)
+          }
+          throw error
+        }
+        const jsonResult = JSON.parse(result)
+
+        if (!jsonResult.path) {
+          return null
+        }
+
+        return {
+          range,
+          callback() {
+            atom.workspace.open(jsonResult.path, { searchAllPanes: true }).then((editor) => {
+              editor.setCursorBufferPosition([jsonResult.line - 1, jsonResult.start - 1])
+            })
+          },
+        }
       },
     }
     return provider

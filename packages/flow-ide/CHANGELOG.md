@@ -1,3 +1,21 @@
+#### 1.8.1
+
+- Hide coverage view instead of emptying to fix extra padding
+
+#### 1.8.0
+
+- Add linting in flow support
+- Show a restart notification after `hyperclickPriority` is updated
+
+#### 1.7.0
+
+- Change search order of `flow` executable (_Executable Path_ setting > `node_modules/.bin/flow` > global `flow`)
+
+#### 1.6.0
+
+- Add "jump to definition" via `hyperclick`
+- Show the complete flow error message as error description
+
 #### 1.5.0
 
 - Add option to show uncovered code
