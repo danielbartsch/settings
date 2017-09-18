@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+        "spec": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117625-16331-1bny230.isemblc8fr"
+    ]
+  ],
+  "_from": "../d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+  "_id": "cursor-indicator@1.2.8",
+  "_inCache": true,
+  "_location": "/cursor-indicator",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+    "spec": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+  "_shasum": "ccdafe5f1ef6e0e62615892e9cec39cca15c1717",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117625-16331-rkuasi.311w7e3ik9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117625-16331-1bny230.isemblc8fr",
+  "bugs": {
+    "url": "https://github.com/lexicalunit/cursor-indicator/issues"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "dependencies": {},
+  "description": "Indicates the current number of cursors in the active editor via the Atom status bar.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.194.0 <2.0.0"
+  },
+  "homepage": "https://github.com/lexicalunit/cursor-indicator#readme",
+  "keywords": [
+    "cursors",
+    "indicator",
+    "status-bar"
+  ],
+  "license": "MIT",
+  "main": "./lib/cursor-indicator",
+  "name": "cursor-indicator",
+  "optionalDependencies": {},
+  "readme": "# Cursor Indicator\n\n[![apm package][apm-ver-link]][releases]\n[![travis-ci][travis-ci-badge]][travis-ci]\n[![appveyor][appveyor-badge]][appveyor]\n[![circle-ci][circle-ci-badge]][circle-ci]\n[![david][david-badge]][david]\n[![download][dl-badge]][apm-pkg-link]\n[![mit][mit-badge]][mit]\n\nIndicates the current number of cursors in the active editor via the Atom status bar.\n\n![cursors][img_cursors]\n\n## Styling\n\nAdd and tweak to your liking the following code to your personal Atom Stylesheet.\n\n```less\n.cursor-indicator {\n  color: orangered;\n  text-shadow: 0 0 5px orangered;\n}\n```\n\nYou can open your Stylesheet using the Command Palette.\n\n```\nCommand Palette ➔ Application: Open Your Stylesheet\n```\n\n## Future Work\n\n- Why do spec tests fail on Windows?\n- Improved documentation.\n\n---\n\n[MIT][mit] © [lexicalunit][author] et [al][contributors]\n\n[mit]:              http://opensource.org/licenses/MIT\n[author]:           http://github.com/lexicalunit\n[contributors]:     https://github.com/lexicalunit/cursor-indicator/graphs/contributors\n[releases]:         https://github.com/lexicalunit/cursor-indicator/releases\n[mit-badge]:        https://img.shields.io/apm/l/cursor-indicator.svg\n[apm-pkg-link]:     https://atom.io/packages/cursor-indicator\n[apm-ver-link]:     https://img.shields.io/apm/v/cursor-indicator.svg\n[dl-badge]:         http://img.shields.io/apm/dm/cursor-indicator.svg\n[travis-ci-badge]:  https://travis-ci.org/lexicalunit/cursor-indicator.svg?branch=master\n[travis-ci]:        https://travis-ci.org/lexicalunit/cursor-indicator\n[appveyor]:         https://ci.appveyor.com/project/lexicalunit/cursor-indicator?branch=master\n[appveyor-badge]:   https://ci.appveyor.com/api/projects/status/y2tjco2s2t61evim/branch/master?svg=true\n[circle-ci]:        https://circleci.com/gh/lexicalunit/cursor-indicator/tree/master\n[circle-ci-badge]:  https://circleci.com/gh/lexicalunit/cursor-indicator/tree/master.svg?style=shield\n[david-badge]:      https://david-dm.org/lexicalunit/cursor-indicator.svg\n[david]:            https://david-dm.org/lexicalunit/cursor-indicator\n\n[img_cursors]:      https://cloud.githubusercontent.com/assets/1903876/8216758/212eae80-14fe-11e5-80a6-443a6daf9d95.png\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexicalunit/cursor-indicator.git"
+  },
+  "version": "1.2.8",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "lib/cursor-indicator-view.coffee",
+        "lib/cursor-indicator.coffee"
+      ]
+    },
+    "folders": []
+  }
+}
