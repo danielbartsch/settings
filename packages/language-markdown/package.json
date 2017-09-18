@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
+        "raw": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
-        "spec": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
+        "rawSpec": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
+        "spec": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11757-10357-6c785q.aatznnrk9"
+      "/tmp/apm-install-dir-117617-7741-1xtmbhe.3y49c6jemi"
     ]
   ],
-  "_from": "../d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
-  "_id": "language-markdown@0.23.0",
+  "_from": "../d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
+  "_id": "language-markdown@0.25.1",
   "_inCache": true,
-  "_installable": true,
   "_location": "/language-markdown",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
+    "raw": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
-    "spec": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
+    "rawSpec": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
+    "spec": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
-  "_shasum": "7f5c386ab8debf4858f6f14315054b3dda98f5c4",
+  "_resolved": "file:../d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
+  "_shasum": "c1f0d3aa8a9e7bc183949db008cea0aad0630f0f",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11757-10357-ppv8ps.67zt0ozuxr/package.tgz",
-  "_where": "/tmp/apm-install-dir-11757-10357-6c785q.aatznnrk9",
+  "_spec": "/tmp/d-117617-7741-1ikrrx5.y1zf979zfr/package.tgz",
+  "_where": "/tmp/apm-install-dir-117617-7741-1xtmbhe.3y49c6jemi",
   "bugs": {
     "url": "https://github.com/burodepeper/language-markdown/issues"
   },
@@ -68,7 +67,7 @@
     "r markdown"
   ],
   "license": "MIT",
-  "main": "lib/main.coffee",
+  "main": "lib/main.js",
   "name": "language-markdown",
   "optionalDependencies": {},
   "private": true,
@@ -78,7 +77,7 @@
     "type": "git",
     "url": "git+https://github.com/burodepeper/language-markdown.git"
   },
-  "version": "0.23.0",
+  "version": "0.25.1",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -89,12 +88,12 @@
       },
       {
         "name": "balanced-match",
-        "version": "0.4.2",
+        "version": "1.0.0",
         "path": "node_modules/balanced-match/index.js"
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.7",
+        "version": "1.1.8",
         "path": "node_modules/brace-expansion/index.js"
       },
       {
@@ -221,8 +220,7 @@
     "extensions": {
       ".js": [
         "lib/GrammarCompiler.js",
-        "lib/__main.js",
-        "lib/functions.js",
+        "lib/main.js",
         "node_modules/async/dist/async.js",
         "node_modules/async/dist/async.min.js",
         "node_modules/async/lib/async.js",
@@ -733,11 +731,6 @@
         "node_modules/wordwrap/index.js",
         "node_modules/wrappy/wrappy.js"
       ],
-      ".coffee": [
-        "lib/main.coffee",
-        "node_modules/lib-ass/lib/ass-test.coffee",
-        "node_modules/lib-ass/lib/ass.coffee"
-      ],
       ".json": [
         "node_modules/async/package.json",
         "node_modules/balanced-match/package.json",
@@ -768,6 +761,10 @@
         "node_modules/wordwrap/package.json",
         "node_modules/wrappy/package.json",
         "package.json"
+      ],
+      ".coffee": [
+        "node_modules/lib-ass/lib/ass-test.coffee",
+        "node_modules/lib-ass/lib/ass.coffee"
       ]
     },
     "folders": [
@@ -789,7 +786,7 @@
           "node_modules/brace-expansion"
         ],
         "dependencies": {
-          "balanced-match": "^0.4.1",
+          "balanced-match": "^1.0.0",
           "concat-map": "0.0.1"
         }
       },
