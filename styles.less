@@ -70,3 +70,14 @@ atom-panel.modal {
 atom-overlay atom-text-editor:not([hidden]){
     min-width: 60vw;
 }
+
+.indent-guide-improved {
+  &.indent-guide-stack {
+    background: repeating-linear-gradient(to right, transparent 24px, lighten(@base-background-color, 10%) 24px, lighten(@base-background-color, 10%) 25px, transparent 25px);
+
+    &.indent-guide-active {
+      background: repeating-linear-gradient(to right, transparent 24px, @text-color-subtle 24px, @text-color-subtle 25px, transparent 25px);
+    }
+  }
+  background: repeating-linear-gradient(to right, transparent 24px, darken(@text-color-subtle, 30%) 24px, darken(@text-color-subtle, 30%) 25px, transparent 25px);
+}
