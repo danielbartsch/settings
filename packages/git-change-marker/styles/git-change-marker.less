@@ -5,10 +5,11 @@
 @import "ui-variables";
 
 .git-change-marker-toolbar {
-  box-shadow: 0 0 10px black;
+  background-color: @tool-panel-background-color;
+  border: solid 1px @tool-panel-border-color;
+  box-shadow: 0 0 10px @tool-panel-border-color;
   border-radius: @component-border-radius;
-  padding: 0px;
-  display: flex;
+  padding: @component-padding;
   atom-text-editor {
       .lines > div > div {
           position: static !important;
@@ -19,7 +20,7 @@
 atom-text-editor {
   .gutter .line-number {
     &.git-line-modified, &.git-line-added, &.git-line-removed {
-      cursor: copy;
+      cursor: pointer;
     }
   }
 }
