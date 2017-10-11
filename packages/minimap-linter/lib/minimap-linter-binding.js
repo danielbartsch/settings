@@ -2,9 +2,7 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies, import/extensions
 import { CompositeDisposable } from 'atom';
-
-const messageRange = message =>
-  (message.version === 1 ? message.range : message.location.position);
+import { messageRange, messageSeverity } from './helpers';
 
 export default class MinimapLinterBinding {
   constructor(minimap) {
@@ -24,11 +22,19 @@ export default class MinimapLinterBinding {
     }));
   }
 
+  getMessages() {
+    return Array.from(this.markers.keys());
+  }
+
   hasMessage(message) {
     return this.markers.has(message);
   }
 
   addMessage(message) {
+    if (this.markers.has(message)) {
+      // This message already has a marker, ignore the duplicate request to mark
+      return;
+    }
     const markerRange = messageRange(message);
     const marker = this.markerLayer.markBufferRange(markerRange, { invalidate: 'never' });
     this.markers.set(message, marker);
@@ -40,13 +46,20 @@ export default class MinimapLinterBinding {
     if (marker) {
       marker.destroy();
     }
+    // Delete references to destroyed decorations
+    this.decorations.forEach((decoration) => {
+      if (decoration.destroyed) {
+        this.decorations.delete(decoration);
+      }
+    });
     this.markers.delete(message);
   }
 
   decorateMarker(marker, message) {
+    const severity = messageSeverity(message);
     const minimapMarkerDecoration = this.minimap.decorateMarker(marker, {
       type: this.markerType,
-      class: `.linter-${message.severity}`,
+      class: `.linter-${severity}`,
       plugin: 'linter',
     });
     this.decorations.add(minimapMarkerDecoration);

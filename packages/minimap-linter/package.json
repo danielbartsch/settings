@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+        "raw": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
-        "spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+        "rawSpec": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
+        "spec": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117617-7723-e0bi9h.b1hs87u8fr"
+      "/tmp/apm-install-dir-117825-12596-1jjyc2x.2cpj0s5rk9"
     ]
   ],
-  "_from": "../d-117617-7723-18eahcg.62is7wg66r/package.tgz",
-  "_id": "minimap-linter@2.0.2",
+  "_from": "../d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
+  "_id": "minimap-linter@2.1.1",
   "_inCache": true,
   "_location": "/minimap-linter",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+    "raw": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
-    "spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
+    "rawSpec": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
+    "spec": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117617-7723-18eahcg.62is7wg66r/package.tgz",
-  "_shasum": "1d35085fd7903a280360a6ab7f9e2be2fd5a5eb2",
+  "_resolved": "file:../d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
+  "_shasum": "2feb76cd1ff68294aba05a9d15ed4160d25dec4f",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117617-7723-18eahcg.62is7wg66r/package.tgz",
-  "_where": "/tmp/apm-install-dir-117617-7723-e0bi9h.b1hs87u8fr",
+  "_spec": "/tmp/d-117825-12596-1qi5kfr.t7skmx6r/package.tgz",
+  "_where": "/tmp/apm-install-dir-117825-12596-1jjyc2x.2cpj0s5rk9",
   "bugs": {
     "url": "https://github.com/AtomLinter/atom-minimap-linter/issues"
   },
@@ -57,6 +57,11 @@
       "versions": {
         "1.0.0": "consumeMinimapServiceV1"
       }
+    },
+    "diagnostics-store": {
+      "versions": {
+        "0.3.0": "consumeDiagnosticUpdates"
+      }
     }
   },
   "dependencies": {
@@ -64,9 +69,9 @@
   },
   "description": "Minimap display for Linter messages",
   "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-config-airbnb-base": "^11.1.1",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
     "jasmine-fix": "^1.0.1"
   },
   "engines": {
@@ -120,7 +125,11 @@
     "type": "git",
     "url": "git+https://github.com/AtomLinter/atom-minimap-linter.git"
   },
-  "version": "2.0.2",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "apm test"
+  },
+  "version": "2.1.1",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -181,7 +190,7 @@
       },
       {
         "name": "semver",
-        "version": "5.3.0",
+        "version": "5.4.1",
         "path": "node_modules/semver/semver.js"
       },
       {
@@ -192,6 +201,7 @@
     ],
     "extensions": {
       ".js": [
+        "lib/helpers.js",
         "lib/minimap-linter-binding.js",
         "lib/minimap-linter.js",
         "node_modules/atom-package-deps/lib/helpers.js",
