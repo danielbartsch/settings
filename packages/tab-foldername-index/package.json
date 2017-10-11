@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
+        "raw": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
-        "spec": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
+        "rawSpec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+        "spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11786-15667-m5wk37.21kur3sor"
+      "/tmp/apm-install-dir-117820-10739-1tg233b.hg9bxzuxr"
     ]
   ],
-  "_from": "../d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
-  "_id": "tab-foldername-index@3.2.0",
+  "_from": "../d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+  "_id": "tab-foldername-index@3.2.1",
   "_inCache": true,
   "_location": "/tab-foldername-index",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
+    "raw": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
-    "spec": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
+    "rawSpec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+    "spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
-  "_shasum": "a8386b12b4db85075aff9a4dfe3f67a9b56e9150",
+  "_resolved": "file:../d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+  "_shasum": "6341e781596cd46cf2e19c62b4f82cacdca99796",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11786-15667-1nrflq8.66s8umcxr/package.tgz",
-  "_where": "/tmp/apm-install-dir-11786-15667-m5wk37.21kur3sor",
+  "_spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+  "_where": "/tmp/apm-install-dir-117820-10739-1tg233b.hg9bxzuxr",
   "bugs": {
     "url": "https://github.com/Connormiha/atom-tab-foldername-index/issues"
   },
@@ -60,7 +60,7 @@
     "type": "git",
     "url": "git+https://github.com/Connormiha/atom-tab-foldername-index.git"
   },
-  "version": "3.2.0",
+  "version": "3.2.1",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
