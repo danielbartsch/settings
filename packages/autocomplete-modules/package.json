@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
+        "raw": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
-        "spec": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
+        "rawSpec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+        "spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117723-21378-t2lcst.f1t8s62yb9"
+      "/tmp/apm-install-dir-11792-13553-1hqa986.5i7s4z33di"
     ]
   ],
-  "_from": "../d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
-  "_id": "autocomplete-modules@1.7.0",
+  "_from": "../d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+  "_id": "autocomplete-modules@1.7.2",
   "_inCache": true,
   "_location": "/autocomplete-modules",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
+    "raw": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
-    "spec": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
+    "rawSpec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+    "spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
-  "_shasum": "63d6c71ee55e1fe88a77f7730878bdf7aa550d37",
+  "_resolved": "file:../d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+  "_shasum": "df39e0cacd1b2f22cbb2c8fe1e7b4d3b71207d79",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117723-21378-mg7053.lvx0iqw7b9/package.tgz",
-  "_where": "/tmp/apm-install-dir-117723-21378-t2lcst.f1t8s62yb9",
+  "_spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+  "_where": "/tmp/apm-install-dir-11792-13553-1hqa986.5i7s4z33di",
   "activationHooks": [
     "language-javascript:grammar-used",
     "language-babel:grammar-used",
@@ -92,7 +92,7 @@
     "pretest": "eslint src/",
     "test": "exit 0"
   },
-  "version": "1.7.0",
+  "version": "1.7.2",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
