@@ -182,6 +182,17 @@ function dropstash {
   fi
 }
 
+# Git branch bash completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+    
+  # Add git completion to aliases
+  # __git_complete g __git_main
+  __git_complete to _git_checkout
+  # __git_complete gm __git_merge
+  # __git_complete gp _git_pull
+fi
+
 #work in progress
 #function to {
 #  branchList=($(git branch --list --no-color))
