@@ -40,9 +40,6 @@
     'ctrl-numpad1': 'github:toggle-git-tab'
     'ctrl-numpad2': 'github:toggle-github-tab'
 
-'atom-text-editor atom-workspace atom-text-editor':
-    'ctrl-shift-m': 'markdown-preview-plus:toggle'
-
 'atom-text-editor:not([mini])':
   'ctrl-shift-[': 'editor:fold-current-row'
   'ctrl-shift-]': 'editor:unfold-current-row'
@@ -50,3 +47,6 @@
 'atom-workspace':
   'ctrl-shift-c': 'clipboard-history:copy'
   'ctrl-shift-v': 'clipboard-history:paste'
+
+'.platform-linux atom-text-editor':
+  'ctrl-shift-m': 'bracket-matcher:select-inside-brackets'
