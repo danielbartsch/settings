@@ -125,8 +125,7 @@ alias gp="git push; clear; git status"
 alias gitconf="nano ~/.gitconfig"
 
 alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
-alias npmstart="cd /home/adv/adverity/web-app/; node server.js"
-alias npmi="cd /home/adv/adverity/web-app/; npm i"
+alias npmstart="cd /home/adv/adverity/web-app/; npm start"
 alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
 alias test="cd /home/adv/adverity/web-app/; npm run test:watch"
 
