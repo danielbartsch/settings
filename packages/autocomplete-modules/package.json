@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+        "raw": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
-        "spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+        "rawSpec": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
+        "spec": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11792-13553-1hqa986.5i7s4z33di"
+      "/tmp/apm-install-dir-117916-10706-v8ob47.inf68hncdi"
     ]
   ],
-  "_from": "../d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
-  "_id": "autocomplete-modules@1.7.2",
+  "_from": "../d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
+  "_id": "autocomplete-modules@1.7.3",
   "_inCache": true,
   "_location": "/autocomplete-modules",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+    "raw": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
-    "spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
+    "rawSpec": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
+    "spec": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
-  "_shasum": "df39e0cacd1b2f22cbb2c8fe1e7b4d3b71207d79",
+  "_resolved": "file:../d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
+  "_shasum": "2e45d8d17702378003362ce2db8852918108e8fb",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11792-13553-1vn7kyp.ezem2c5wmi/package.tgz",
-  "_where": "/tmp/apm-install-dir-11792-13553-1hqa986.5i7s4z33di",
+  "_spec": "/tmp/d-117916-10706-1p9wmen.1enh8mpldi/package.tgz",
+  "_where": "/tmp/apm-install-dir-117916-10706-v8ob47.inf68hncdi",
   "activationHooks": [
     "language-javascript:grammar-used",
     "language-babel:grammar-used",
@@ -47,7 +47,7 @@
     "url": "https://github.com/nkt/atom-autocomplete-modules/issues"
   },
   "dependencies": {
-    "bluebird": "3.5.0",
+    "bluebird": "3.5.1",
     "find-babel-config": "1.1.0",
     "fuzzaldrin": "2.1.0",
     "lodash.escaperegexp": "4.1.2",
@@ -92,13 +92,13 @@
     "pretest": "eslint src/",
     "test": "exit 0"
   },
-  "version": "1.7.2",
+  "version": "1.7.3",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "bluebird",
-        "version": "3.5.0",
+        "version": "3.5.1",
         "path": "node_modules/bluebird/js/release/bluebird.js"
       },
       {
@@ -210,7 +210,7 @@
           "src/utils"
         ],
         "dependencies": {
-          "bluebird": "3.5.0",
+          "bluebird": "3.5.1",
           "find-babel-config": "1.1.0",
           "fuzzaldrin": "2.1.0",
           "lodash.escaperegexp": "4.1.2",
