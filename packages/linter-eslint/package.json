@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
+        "raw": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
-        "spec": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
+        "rawSpec": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
+        "spec": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117818-29381-19ub9za.5rfr7tx1or"
+      "/tmp/apm-install-dir-117919-10695-fu5bip.r5oji6n7b9"
     ]
   ],
-  "_from": "../d-117818-29381-zwg7x2.5dish5mi/package.tgz",
-  "_id": "linter-eslint@8.3.2",
+  "_from": "../d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
+  "_id": "linter-eslint@8.4.0",
   "_inCache": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
+    "raw": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
-    "spec": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
+    "rawSpec": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
+    "spec": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117818-29381-zwg7x2.5dish5mi/package.tgz",
-  "_shasum": "1c5bf9db52171d71870464597143cf64f0a663ec",
+  "_resolved": "file:../d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
+  "_shasum": "8ec91f3154137a4495d57089bbab58be203f2b78",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117818-29381-zwg7x2.5dish5mi/package.tgz",
-  "_where": "/tmp/apm-install-dir-117818-29381-19ub9za.5rfr7tx1or",
+  "_spec": "/tmp/d-117919-10695-t25pki.6xce2n8kt9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117919-10695-fu5bip.r5oji6n7b9",
   "atomTranspilers": [
     {
       "glob": "{src,spec}/*.js",
@@ -98,11 +98,14 @@
       "type": "string",
       "default": ""
     },
-    "eslintRulesDir": {
-      "title": "ESLint Rules Dir",
-      "description": "Specify a directory for ESLint to load rules from",
-      "type": "string",
-      "default": ""
+    "eslintRulesDirs": {
+      "title": "ESLint Rules Directories",
+      "description": "Specify a comma separated list of directories for ESLint to load rules from.",
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
     },
     "disableEslintIgnore": {
       "title": "Don't use .eslintignore files",
@@ -167,17 +170,18 @@
     "babel-preset-node5": "^12.0.0",
     "consistent-path": "^2.0.1",
     "crypto-random-string": "^1.0.0",
-    "eslint": "^4.6.0",
+    "eslint": "^4.9.0",
     "eslint-rule-documentation": "^1.0.18",
+    "fs-plus": "^3.0.1",
     "resolve-env": "^1.0.0",
     "user-home": "^2.0.0"
   },
   "description": "Lint JavaScript on the fly, using ESLint",
   "devDependencies": {
-    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.7.0",
-    "jasmine-fix": "^1.3.0",
-    "rimraf": "^2.5.4"
+    "jasmine-fix": "^1.3.1",
+    "rimraf": "^2.6.2"
   },
   "engines": {
     "atom": ">=1.13.0 <2.0.0"
@@ -249,7 +253,7 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "8.3.2",
+  "version": "8.4.0",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -270,17 +274,17 @@
       },
       {
         "name": "ajv",
-        "version": "5.2.2",
+        "version": "5.2.3",
         "path": "node_modules/ajv/lib/ajv.js"
       },
       {
         "name": "ajv-keywords",
-        "version": "1.5.1",
+        "version": "2.1.0",
         "path": "node_modules/ajv-keywords/index.js"
       },
       {
         "name": "ansi-escapes",
-        "version": "2.0.0",
+        "version": "3.0.0",
         "path": "node_modules/ansi-escapes/index.js"
       },
       {
@@ -312,6 +316,11 @@
         "name": "arrify",
         "version": "1.0.1",
         "path": "node_modules/arrify/index.js"
+      },
+      {
+        "name": "async",
+        "version": "1.5.2",
+        "path": "node_modules/async/lib/async.js"
       },
       {
         "name": "atom-babel6-transpiler",
@@ -590,7 +599,7 @@
       },
       {
         "name": "debug",
-        "version": "2.6.8",
+        "version": "2.6.9",
         "path": "node_modules/debug/src/index.js"
       },
       {
@@ -620,7 +629,7 @@
       },
       {
         "name": "eslint",
-        "version": "4.7.0",
+        "version": "4.9.0",
         "path": "node_modules/eslint/lib/api.js"
       },
       {
@@ -635,12 +644,12 @@
       },
       {
         "name": "chalk",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "path": "node_modules/eslint/node_modules/chalk/index.js"
       },
       {
         "name": "debug",
-        "version": "3.0.1",
+        "version": "3.1.0",
         "path": "node_modules/eslint/node_modules/debug/src/index.js"
       },
       {
@@ -650,7 +659,7 @@
       },
       {
         "name": "supports-color",
-        "version": "4.4.0",
+        "version": "4.5.0",
         "path": "node_modules/eslint/node_modules/supports-color/index.js"
       },
       {
@@ -695,13 +704,8 @@
       },
       {
         "name": "external-editor",
-        "version": "2.0.4",
+        "version": "2.0.5",
         "path": "node_modules/external-editor/main/index.js"
-      },
-      {
-        "name": "tmp",
-        "version": "0.0.31",
-        "path": "node_modules/external-editor/node_modules/tmp/lib/tmp.js"
       },
       {
         "name": "fast-deep-equal",
@@ -725,8 +729,13 @@
       },
       {
         "name": "flat-cache",
-        "version": "1.2.2",
+        "version": "1.3.0",
         "path": "node_modules/flat-cache/cache.js"
+      },
+      {
+        "name": "fs-plus",
+        "version": "3.0.1",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
       },
       {
         "name": "fs.realpath",
@@ -800,7 +809,7 @@
       },
       {
         "name": "inquirer",
-        "version": "3.2.3",
+        "version": "3.3.0",
         "path": "node_modules/inquirer/lib/inquirer.js"
       },
       {
@@ -815,7 +824,7 @@
       },
       {
         "name": "chalk",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "path": "node_modules/inquirer/node_modules/chalk/index.js"
       },
       {
@@ -825,7 +834,7 @@
       },
       {
         "name": "supports-color",
-        "version": "4.4.0",
+        "version": "4.5.0",
         "path": "node_modules/inquirer/node_modules/supports-color/index.js"
       },
       {
@@ -1060,7 +1069,7 @@
       },
       {
         "name": "private",
-        "version": "0.1.7",
+        "version": "0.1.8",
         "path": "node_modules/private/private.js"
       },
       {
@@ -1085,7 +1094,7 @@
       },
       {
         "name": "regenerate",
-        "version": "1.3.2",
+        "version": "1.3.3",
         "path": "node_modules/regenerate/regenerate.js"
       },
       {
@@ -1220,7 +1229,7 @@
       },
       {
         "name": "slice-ansi",
-        "version": "0.0.4",
+        "version": "1.0.0",
         "path": "node_modules/slice-ansi/index.js"
       },
       {
@@ -1280,13 +1289,23 @@
       },
       {
         "name": "table",
-        "version": "4.0.1",
+        "version": "4.0.2",
         "path": "node_modules/table/dist/index.js"
       },
       {
-        "name": "ajv",
-        "version": "4.11.8",
-        "path": "node_modules/table/node_modules/ajv/lib/ajv.js"
+        "name": "ansi-styles",
+        "version": "3.2.0",
+        "path": "node_modules/table/node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "2.2.0",
+        "path": "node_modules/table/node_modules/chalk/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "4.5.0",
+        "path": "node_modules/table/node_modules/supports-color/index.js"
       },
       {
         "name": "text-table",
@@ -1327,6 +1346,16 @@
         "name": "typedarray",
         "version": "0.0.6",
         "path": "node_modules/typedarray/index.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
       },
       {
         "name": "user-home",
@@ -1458,6 +1487,7 @@
         "node_modules/ajv/scripts/compile-dots.js",
         "node_modules/ajv-keywords/index.js",
         "node_modules/ajv-keywords/keywords/_formatLimit.js",
+        "node_modules/ajv-keywords/keywords/_util.js",
         "node_modules/ajv-keywords/keywords/deepProperties.js",
         "node_modules/ajv-keywords/keywords/deepRequired.js",
         "node_modules/ajv-keywords/keywords/dotjs/_formatLimit.js",
@@ -1471,11 +1501,12 @@
         "node_modules/ajv-keywords/keywords/instanceof.js",
         "node_modules/ajv-keywords/keywords/patternRequired.js",
         "node_modules/ajv-keywords/keywords/prohibited.js",
-        "node_modules/ajv-keywords/keywords/propertyNames.js",
         "node_modules/ajv-keywords/keywords/range.js",
         "node_modules/ajv-keywords/keywords/regexp.js",
+        "node_modules/ajv-keywords/keywords/select.js",
         "node_modules/ajv-keywords/keywords/switch.js",
         "node_modules/ajv-keywords/keywords/typeof.js",
+        "node_modules/ajv-keywords/keywords/uniqueItemProperties.js",
         "node_modules/ansi-escapes/index.js",
         "node_modules/ansi-regex/index.js",
         "node_modules/ansi-styles/index.js",
@@ -1505,6 +1536,9 @@
         "node_modules/array-union/index.js",
         "node_modules/array-uniq/index.js",
         "node_modules/arrify/index.js",
+        "node_modules/async/dist/async.js",
+        "node_modules/async/dist/async.min.js",
+        "node_modules/async/lib/async.js",
         "node_modules/atom-babel6-transpiler/lib/index.js",
         "node_modules/atom-linter/lib/helpers.js",
         "node_modules/atom-linter/lib/index.js",
@@ -3386,6 +3420,7 @@
         "node_modules/debug/src/browser.js",
         "node_modules/debug/src/debug.js",
         "node_modules/debug/src/index.js",
+        "node_modules/debug/src/inspector-log.js",
         "node_modules/debug/src/node.js",
         "node_modules/deep-is/example/cmp.js",
         "node_modules/deep-is/index.js",
@@ -3497,6 +3532,7 @@
         "node_modules/eslint/lib/rules/linebreak-style.js",
         "node_modules/eslint/lib/rules/lines-around-comment.js",
         "node_modules/eslint/lib/rules/lines-around-directive.js",
+        "node_modules/eslint/lib/rules/lines-between-class-members.js",
         "node_modules/eslint/lib/rules/max-depth.js",
         "node_modules/eslint/lib/rules/max-len.js",
         "node_modules/eslint/lib/rules/max-lines.js",
@@ -3504,6 +3540,7 @@
         "node_modules/eslint/lib/rules/max-params.js",
         "node_modules/eslint/lib/rules/max-statements-per-line.js",
         "node_modules/eslint/lib/rules/max-statements.js",
+        "node_modules/eslint/lib/rules/multiline-comment-style.js",
         "node_modules/eslint/lib/rules/multiline-ternary.js",
         "node_modules/eslint/lib/rules/new-cap.js",
         "node_modules/eslint/lib/rules/new-parens.js",
@@ -3727,6 +3764,7 @@
         "node_modules/eslint/lib/util/path-util.js",
         "node_modules/eslint/lib/util/patterns/letters.js",
         "node_modules/eslint/lib/util/rule-fixer.js",
+        "node_modules/eslint/lib/util/safe-emitter.js",
         "node_modules/eslint/lib/util/source-code-fixer.js",
         "node_modules/eslint/lib/util/source-code-util.js",
         "node_modules/eslint/lib/util/source-code.js",
@@ -3780,7 +3818,6 @@
         "node_modules/external-editor/main/errors/ReadFileError.js",
         "node_modules/external-editor/main/errors/RemoveFileError.js",
         "node_modules/external-editor/main/index.js",
-        "node_modules/external-editor/node_modules/tmp/lib/tmp.js",
         "node_modules/fast-deep-equal/benchmark/index.js",
         "node_modules/fast-deep-equal/index.js",
         "node_modules/fast-levenshtein/levenshtein.js",
@@ -3788,6 +3825,7 @@
         "node_modules/file-entry-cache/cache.js",
         "node_modules/flat-cache/cache.js",
         "node_modules/flat-cache/utils.js",
+        "node_modules/fs-plus/lib/fs-plus.js",
         "node_modules/fs.realpath/index.js",
         "node_modules/fs.realpath/old.js",
         "node_modules/functional-red-black-tree/bench/test.js",
@@ -5165,52 +5203,11 @@
         "node_modules/table/dist/validateTableData.js",
         "node_modules/table/dist/wrapString.js",
         "node_modules/table/dist/wrapWord.js",
-        "node_modules/table/node_modules/ajv/.tonic_example.js",
-        "node_modules/table/node_modules/ajv/dist/ajv.bundle.js",
-        "node_modules/table/node_modules/ajv/dist/ajv.min.js",
-        "node_modules/table/node_modules/ajv/dist/nodent.min.js",
-        "node_modules/table/node_modules/ajv/dist/regenerator.min.js",
-        "node_modules/table/node_modules/ajv/lib/ajv.js",
-        "node_modules/table/node_modules/ajv/lib/async.js",
-        "node_modules/table/node_modules/ajv/lib/cache.js",
-        "node_modules/table/node_modules/ajv/lib/compile/_rules.js",
-        "node_modules/table/node_modules/ajv/lib/compile/equal.js",
-        "node_modules/table/node_modules/ajv/lib/compile/formats.js",
-        "node_modules/table/node_modules/ajv/lib/compile/index.js",
-        "node_modules/table/node_modules/ajv/lib/compile/resolve.js",
-        "node_modules/table/node_modules/ajv/lib/compile/rules.js",
-        "node_modules/table/node_modules/ajv/lib/compile/schema_obj.js",
-        "node_modules/table/node_modules/ajv/lib/compile/ucs2length.js",
-        "node_modules/table/node_modules/ajv/lib/compile/util.js",
-        "node_modules/table/node_modules/ajv/lib/compile/validation_error.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/_formatLimit.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/_limit.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/_limitItems.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/_limitLength.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/_limitProperties.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/allOf.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/anyOf.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/constant.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/custom.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/dependencies.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/enum.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/format.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/items.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/multipleOf.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/not.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/oneOf.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/pattern.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/patternRequired.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/properties.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/ref.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/required.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/switch.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/uniqueItems.js",
-        "node_modules/table/node_modules/ajv/lib/dotjs/validate.js",
-        "node_modules/table/node_modules/ajv/lib/keyword.js",
-        "node_modules/table/node_modules/ajv/lib/v5.js",
-        "node_modules/table/node_modules/ajv/scripts/bundle.js",
-        "node_modules/table/node_modules/ajv/scripts/compile-dots.js",
+        "node_modules/table/node_modules/ansi-styles/index.js",
+        "node_modules/table/node_modules/chalk/index.js",
+        "node_modules/table/node_modules/chalk/templates.js",
+        "node_modules/table/node_modules/supports-color/browser.js",
+        "node_modules/table/node_modules/supports-color/index.js",
         "node_modules/text-table/example/align.js",
         "node_modules/text-table/example/center.js",
         "node_modules/text-table/example/dotalign.js",
@@ -5227,6 +5224,9 @@
         "node_modules/type-check/lib/parse-type.js",
         "node_modules/typedarray/example/tarray.js",
         "node_modules/typedarray/index.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
         "node_modules/user-home/index.js",
         "node_modules/util-deprecate/browser.js",
         "node_modules/util-deprecate/node.js",
@@ -5261,6 +5261,7 @@
         "node_modules/array-union/package.json",
         "node_modules/array-uniq/package.json",
         "node_modules/arrify/package.json",
+        "node_modules/async/package.json",
         "node_modules/atom-babel6-transpiler/package.json",
         "node_modules/atom-linter/.eslintrc.json",
         "node_modules/atom-linter/package.json",
@@ -5345,7 +5346,6 @@
         "node_modules/eslint/node_modules/ansi-regex/package.json",
         "node_modules/eslint/node_modules/ansi-styles/package.json",
         "node_modules/eslint/node_modules/chalk/package.json",
-        "node_modules/eslint/node_modules/debug/component.json",
         "node_modules/eslint/node_modules/debug/package.json",
         "node_modules/eslint/node_modules/strip-ansi/package.json",
         "node_modules/eslint/node_modules/supports-color/package.json",
@@ -5360,13 +5360,13 @@
         "node_modules/esrecurse/package.json",
         "node_modules/estraverse/package.json",
         "node_modules/esutils/package.json",
-        "node_modules/external-editor/node_modules/tmp/package.json",
         "node_modules/external-editor/package.json",
         "node_modules/fast-deep-equal/package.json",
         "node_modules/fast-levenshtein/package.json",
         "node_modules/figures/package.json",
         "node_modules/file-entry-cache/package.json",
         "node_modules/flat-cache/package.json",
+        "node_modules/fs-plus/package.json",
         "node_modules/fs.realpath/package.json",
         "node_modules/functional-red-black-tree/package.json",
         "node_modules/glob/package.json",
@@ -5496,9 +5496,9 @@
         "node_modules/supports-color/package.json",
         "node_modules/table/dist/schemas/config.json",
         "node_modules/table/dist/schemas/streamConfig.json",
-        "node_modules/table/node_modules/ajv/lib/refs/json-schema-draft-04.json",
-        "node_modules/table/node_modules/ajv/lib/refs/json-schema-v5.json",
-        "node_modules/table/node_modules/ajv/package.json",
+        "node_modules/table/node_modules/ansi-styles/package.json",
+        "node_modules/table/node_modules/chalk/package.json",
+        "node_modules/table/node_modules/supports-color/package.json",
         "node_modules/table/package.json",
         "node_modules/text-table/package.json",
         "node_modules/through/package.json",
@@ -5508,6 +5508,8 @@
         "node_modules/tryit/package.json",
         "node_modules/type-check/package.json",
         "node_modules/typedarray/package.json",
+        "node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
         "node_modules/user-home/package.json",
         "node_modules/util-deprecate/package.json",
         "node_modules/which/package.json",
@@ -5555,8 +5557,9 @@
           "babel-preset-node5": "^12.0.0",
           "consistent-path": "^2.0.1",
           "crypto-random-string": "^1.0.0",
-          "eslint": "^4.6.0",
+          "eslint": "^4.9.0",
           "eslint-rule-documentation": "^1.0.18",
+          "fs-plus": "^3.0.1",
           "resolve-env": "^1.0.0",
           "user-home": "^2.0.0"
         }
@@ -6291,16 +6294,7 @@
         "dependencies": {
           "iconv-lite": "^0.4.17",
           "jschardet": "^1.4.2",
-          "tmp": "^0.0.31"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/external-editor/node_modules/tmp/lib",
-          "node_modules/external-editor/node_modules/tmp"
-        ],
-        "dependencies": {
-          "os-tmpdir": "~1.0.1"
+          "tmp": "^0.0.33"
         }
       },
       {
@@ -6329,6 +6323,18 @@
           "del": "^2.0.2",
           "graceful-fs": "^4.1.2",
           "write": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "async": "^1.5.2",
+          "mkdirp": "^0.5.1",
+          "rimraf": "^2.5.2",
+          "underscore-plus": "1.x"
         }
       },
       {
@@ -6393,7 +6399,7 @@
           "node_modules/inquirer"
         ],
         "dependencies": {
-          "ansi-escapes": "^2.0.0",
+          "ansi-escapes": "^3.0.0",
           "chalk": "^2.0.0",
           "cli-cursor": "^2.1.0",
           "cli-width": "^2.0.0",
@@ -6720,6 +6726,14 @@
       },
       {
         "paths": [
+          "node_modules/slice-ansi"
+        ],
+        "dependencies": {
+          "is-fullwidth-code-point": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
           "node_modules/source-map-support"
         ],
         "dependencies": {
@@ -6772,32 +6786,41 @@
         "paths": [
           "node_modules/table/dist",
           "node_modules/table/dist/schemas",
-          "node_modules/table",
-          "node_modules/table/test/README/usage",
-          "node_modules/table/test"
+          "node_modules/table"
         ],
         "dependencies": {
-          "ajv": "^4.7.0",
-          "ajv-keywords": "^1.0.0",
-          "chalk": "^1.1.1",
-          "lodash": "^4.0.0",
-          "slice-ansi": "0.0.4",
-          "string-width": "^2.0.0"
+          "ajv": "^5.2.3",
+          "ajv-keywords": "^2.1.0",
+          "chalk": "^2.1.0",
+          "lodash": "^4.17.4",
+          "slice-ansi": "1.0.0",
+          "string-width": "^2.1.1"
         }
       },
       {
         "paths": [
-          "node_modules/table/node_modules/ajv",
-          "node_modules/table/node_modules/ajv/dist",
-          "node_modules/table/node_modules/ajv/lib",
-          "node_modules/table/node_modules/ajv/lib/compile",
-          "node_modules/table/node_modules/ajv/lib/dotjs",
-          "node_modules/table/node_modules/ajv/lib/refs",
-          "node_modules/table/node_modules/ajv/scripts"
+          "node_modules/table/node_modules/ansi-styles"
         ],
         "dependencies": {
-          "co": "^4.6.0",
-          "json-stable-stringify": "^1.0.1"
+          "color-convert": "^1.9.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/table/node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^3.1.0",
+          "escape-string-regexp": "^1.0.5",
+          "supports-color": "^4.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/table/node_modules/supports-color"
+        ],
+        "dependencies": {
+          "has-flag": "^2.0.0"
         }
       },
       {
@@ -6816,6 +6839,15 @@
         ],
         "dependencies": {
           "prelude-ls": "~1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
         }
       },
       {
