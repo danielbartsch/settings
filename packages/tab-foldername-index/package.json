@@ -2,45 +2,48 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+        "raw": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
-        "spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+        "rawSpec": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
+        "spec": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117820-10739-1tg233b.hg9bxzuxr"
+      "/tmp/apm-install-dir-117925-18732-1etvjxg.6y17vqjjor"
     ]
   ],
-  "_from": "../d-117820-10739-1kbegjo.cil08b0529/package.tgz",
-  "_id": "tab-foldername-index@3.2.1",
+  "_from": "../d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
+  "_id": "tab-foldername-index@3.2.2",
   "_inCache": true,
   "_location": "/tab-foldername-index",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+    "raw": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
-    "spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
+    "rawSpec": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
+    "spec": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117820-10739-1kbegjo.cil08b0529/package.tgz",
-  "_shasum": "6341e781596cd46cf2e19c62b4f82cacdca99796",
+  "_resolved": "file:../d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
+  "_shasum": "74df3521b851ca2cf3bc1e3a548df25350d2d61d",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117820-10739-1kbegjo.cil08b0529/package.tgz",
-  "_where": "/tmp/apm-install-dir-117820-10739-1tg233b.hg9bxzuxr",
+  "_spec": "/tmp/d-117925-18732-hrd4ys.tcq0n3ik9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117925-18732-1etvjxg.6y17vqjjor",
   "bugs": {
     "url": "https://github.com/Connormiha/atom-tab-foldername-index/issues"
   },
   "dependencies": {},
   "description": "Plugin replaces tab's title if opened index.* file for more readability",
-  "devDependencies": {},
+  "devDependencies": {
+    "coffeelint": "^1.16.0",
+    "eslint": "^4.8.0"
+  },
   "engines": {
     "atom": ">=1.17.0"
   },
@@ -60,18 +63,19 @@
     "type": "git",
     "url": "git+https://github.com/Connormiha/atom-tab-foldername-index.git"
   },
-  "version": "3.2.1",
+  "version": "3.2.2",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],
     "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ],
       ".js": [
         "lib/main.js",
         "lib/mapNames.js",
         "lib/tab.js"
-      ],
-      ".json": [
-        "package.json"
       ]
     },
     "folders": []
