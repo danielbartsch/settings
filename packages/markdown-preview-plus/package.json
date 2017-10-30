@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
+        "raw": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
-        "spec": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
+        "rawSpec": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
+        "spec": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11764-10641-zazbwo.vm38dm42t9"
+      "/tmp/apm-install-dir-117925-18718-1w3du8c.mgp3p1ra4i"
     ]
   ],
-  "_from": "../d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
-  "_id": "markdown-preview-plus@2.4.10",
+  "_from": "../d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
+  "_id": "markdown-preview-plus@2.4.16",
   "_inCache": true,
   "_location": "/markdown-preview-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
+    "raw": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
-    "spec": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
+    "rawSpec": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
+    "spec": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
-  "_shasum": "44ba4930af9af204d2c9d0c250a00e93606e91f4",
+  "_resolved": "file:../d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
+  "_shasum": "f6a357434b8cc8f6574bb070aca1d4831585b25d",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11764-10641-1d2zabu.pmdt2o6r/package.tgz",
-  "_where": "/tmp/apm-install-dir-11764-10641-zazbwo.vm38dm42t9",
+  "_spec": "/tmp/d-117925-18718-whup3j.9h8x7mbo6r/package.tgz",
+  "_where": "/tmp/apm-install-dir-117925-18718-1w3du8c.mgp3p1ra4i",
   "bugs": {
     "url": "https://github.com/atom-community/markdown-preview-plus/issues"
   },
@@ -42,14 +42,12 @@
     "MathJax": "https://github.com/atom-community/MathJax/tarball/2.4.0-electron.0.2.0",
     "atom-highlight": "^0.3.0",
     "atom-space-pen-views": "^2.0.0",
-    "cheerio": "0.15.0",
     "fs-plus": "^2.0.0",
     "grim": "^1.2.1",
     "lodash": "^3.10.1",
     "markdown-it": "^5.1.0",
     "markdown-it-lazy-headers": "^0.1.2",
     "markdown-it-math": "https://github.com/atom-community/markdown-it-math/tarball/fix-table-pipe-parse-no-ascii",
-    "pdc": "~0.2.2",
     "season": "^5.3",
     "temp": "^0.8.1",
     "underscore-plus": "^1.0.0",
@@ -84,7 +82,7 @@
     "type": "git",
     "url": "git+https://github.com/atom-community/markdown-preview-plus.git"
   },
-  "version": "2.4.10",
+  "version": "2.4.16",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -119,23 +117,13 @@
         "path": "node_modules/brace-expansion/index.js"
       },
       {
-        "name": "cheerio",
-        "version": "0.15.0",
-        "path": "node_modules/cheerio/index.js"
-      },
-      {
-        "name": "lodash",
-        "version": "2.4.2",
-        "path": "node_modules/cheerio/node_modules/lodash/dist/lodash.js"
-      },
-      {
         "name": "coffee-script",
         "version": "1.9.0",
         "path": "node_modules/coffee-script/lib/coffee-script/coffee-script.js"
       },
       {
         "name": "compare-versions",
-        "version": "3.0.1",
+        "version": "3.1.0",
         "path": "node_modules/compare-versions/index.js"
       },
       {
@@ -144,59 +132,14 @@
         "path": "node_modules/concat-map/index.js"
       },
       {
-        "name": "core-util-is",
-        "version": "1.0.2",
-        "path": "node_modules/core-util-is/lib/util.js"
-      },
-      {
         "name": "cson-parser",
         "version": "1.0.9",
         "path": "node_modules/cson-parser/lib/cson-parser.js"
       },
       {
-        "name": "CSSselect",
-        "version": "0.4.1",
-        "path": "node_modules/CSSselect/index.js"
-      },
-      {
-        "name": "CSSwhat",
-        "version": "0.4.7",
-        "path": "node_modules/CSSwhat/index.js"
-      },
-      {
         "name": "d",
         "version": "0.1.1",
         "path": "node_modules/d/index.js"
-      },
-      {
-        "name": "dom-serializer",
-        "version": "0.1.0",
-        "path": "node_modules/dom-serializer/index.js"
-      },
-      {
-        "name": "domelementtype",
-        "version": "1.1.3",
-        "path": "node_modules/dom-serializer/node_modules/domelementtype/index.js"
-      },
-      {
-        "name": "entities",
-        "version": "1.1.1",
-        "path": "node_modules/dom-serializer/node_modules/entities/index.js"
-      },
-      {
-        "name": "domelementtype",
-        "version": "1.3.0",
-        "path": "node_modules/domelementtype/index.js"
-      },
-      {
-        "name": "domhandler",
-        "version": "2.2.1",
-        "path": "node_modules/domhandler/index.js"
-      },
-      {
-        "name": "domutils",
-        "version": "1.4.3",
-        "path": "node_modules/domutils/index.js"
       },
       {
         "name": "emissary",
@@ -205,12 +148,12 @@
       },
       {
         "name": "entities",
-        "version": "1.0.0",
+        "version": "1.1.1",
         "path": "node_modules/entities/index.js"
       },
       {
         "name": "es5-ext",
-        "version": "0.10.23",
+        "version": "0.10.35",
         "path": "node_modules/es5-ext/index.js"
       },
       {
@@ -220,7 +163,7 @@
       },
       {
         "name": "es6-iterator",
-        "version": "2.0.1",
+        "version": "2.0.3",
         "path": "node_modules/es5-ext/node_modules/es6-iterator/index.js"
       },
       {
@@ -269,16 +212,6 @@
         "path": "node_modules/grim/lib/grim.js"
       },
       {
-        "name": "htmlparser2",
-        "version": "3.7.3",
-        "path": "node_modules/htmlparser2/lib/index.js"
-      },
-      {
-        "name": "domutils",
-        "version": "1.5.1",
-        "path": "node_modules/htmlparser2/node_modules/domutils/index.js"
-      },
-      {
         "name": "inflight",
         "version": "1.0.6",
         "path": "node_modules/inflight/inflight.js"
@@ -287,11 +220,6 @@
         "name": "inherits",
         "version": "2.0.3",
         "path": "node_modules/inherits/inherits.js"
-      },
-      {
-        "name": "isarray",
-        "version": "0.0.1",
-        "path": "node_modules/isarray/index.js"
       },
       {
         "name": "jquery",
@@ -312,11 +240,6 @@
         "name": "markdown-it",
         "version": "5.1.0",
         "path": "node_modules/markdown-it/index.js"
-      },
-      {
-        "name": "entities",
-        "version": "1.1.1",
-        "path": "node_modules/markdown-it/node_modules/entities/index.js"
       },
       {
         "name": "markdown-it-lazy-headers",
@@ -379,23 +302,13 @@
         "path": "node_modules/path-is-absolute/index.js"
       },
       {
-        "name": "pdc",
-        "version": "0.2.3",
-        "path": "node_modules/pdc/pdc.js"
-      },
-      {
         "name": "property-accessors",
         "version": "1.1.3",
         "path": "node_modules/property-accessors/lib/property-accessors.js"
       },
       {
-        "name": "readable-stream",
-        "version": "1.1.14",
-        "path": "node_modules/readable-stream/readable.js"
-      },
-      {
         "name": "rimraf",
-        "version": "2.6.1",
+        "version": "2.6.2",
         "path": "node_modules/rimraf/rimraf.js"
       },
       {
@@ -412,11 +325,6 @@
         "name": "sprintf-js",
         "version": "1.0.3",
         "path": "node_modules/sprintf-js/src/sprintf.js"
-      },
-      {
-        "name": "string_decoder",
-        "version": "0.10.31",
-        "path": "node_modules/string_decoder/index.js"
       },
       {
         "name": "temp",
@@ -462,8 +370,6 @@
     "extensions": {
       ".json": [
         "coffeelint.json",
-        "node_modules/CSSselect/package.json",
-        "node_modules/CSSwhat/package.json",
         "node_modules/MathJax/package.json",
         "node_modules/argparse/package.json",
         "node_modules/async/package.json",
@@ -471,26 +377,13 @@
         "node_modules/atom-space-pen-views/package.json",
         "node_modules/balanced-match/package.json",
         "node_modules/brace-expansion/package.json",
-        "node_modules/cheerio/node_modules/lodash/package.json",
-        "node_modules/cheerio/package.json",
         "node_modules/coffee-script/bower.json",
         "node_modules/coffee-script/package.json",
         "node_modules/compare-versions/bower.json",
         "node_modules/compare-versions/package.json",
         "node_modules/concat-map/package.json",
-        "node_modules/core-util-is/package.json",
         "node_modules/cson-parser/package.json",
         "node_modules/d/package.json",
-        "node_modules/dom-serializer/node_modules/domelementtype/package.json",
-        "node_modules/dom-serializer/node_modules/entities/maps/decode.json",
-        "node_modules/dom-serializer/node_modules/entities/maps/entities.json",
-        "node_modules/dom-serializer/node_modules/entities/maps/legacy.json",
-        "node_modules/dom-serializer/node_modules/entities/maps/xml.json",
-        "node_modules/dom-serializer/node_modules/entities/package.json",
-        "node_modules/dom-serializer/package.json",
-        "node_modules/domelementtype/package.json",
-        "node_modules/domhandler/package.json",
-        "node_modules/domutils/package.json",
         "node_modules/emissary/package.json",
         "node_modules/entities/maps/decode.json",
         "node_modules/entities/maps/entities.json",
@@ -509,21 +402,12 @@
         "node_modules/fuzzaldrin/package.json",
         "node_modules/glob/package.json",
         "node_modules/grim/package.json",
-        "node_modules/htmlparser2/node_modules/domutils/package.json",
-        "node_modules/htmlparser2/package.json",
         "node_modules/inflight/package.json",
         "node_modules/inherits/package.json",
-        "node_modules/isarray/component.json",
-        "node_modules/isarray/package.json",
         "node_modules/jquery/bower.json",
         "node_modules/jquery/package.json",
         "node_modules/linkify-it/package.json",
         "node_modules/lodash/package.json",
-        "node_modules/markdown-it/node_modules/entities/maps/decode.json",
-        "node_modules/markdown-it/node_modules/entities/maps/entities.json",
-        "node_modules/markdown-it/node_modules/entities/maps/legacy.json",
-        "node_modules/markdown-it/node_modules/entities/maps/xml.json",
-        "node_modules/markdown-it/node_modules/entities/package.json",
         "node_modules/markdown-it/package.json",
         "node_modules/markdown-it-lazy-headers/package.json",
         "node_modules/markdown-it-math/bower.json",
@@ -537,16 +421,13 @@
         "node_modules/optimist/package.json",
         "node_modules/os-tmpdir/package.json",
         "node_modules/path-is-absolute/package.json",
-        "node_modules/pdc/package.json",
         "node_modules/property-accessors/package.json",
-        "node_modules/readable-stream/package.json",
         "node_modules/rimraf/package.json",
         "node_modules/season/package.json",
         "node_modules/space-pen/api.json",
         "node_modules/space-pen/package.json",
         "node_modules/sprintf-js/bower.json",
         "node_modules/sprintf-js/package.json",
-        "node_modules/string_decoder/package.json",
         "node_modules/temp/node_modules/rimraf/package.json",
         "node_modules/temp/package.json",
         "node_modules/uc.micro/package.json",
@@ -571,16 +452,6 @@
         "lib/wrapped-dom-tree.coffee"
       ],
       ".js": [
-        "node_modules/CSSselect/browser_functions.js",
-        "node_modules/CSSselect/index.js",
-        "node_modules/CSSselect/lib/attributes.js",
-        "node_modules/CSSselect/lib/basefunctions.js",
-        "node_modules/CSSselect/lib/compile.js",
-        "node_modules/CSSselect/lib/general.js",
-        "node_modules/CSSselect/lib/nth-check.js",
-        "node_modules/CSSselect/lib/pseudos.js",
-        "node_modules/CSSselect/lib/sort.js",
-        "node_modules/CSSwhat/index.js",
         "node_modules/MathJax/MathJax.js",
         "node_modules/MathJax/extensions/FontWarnings.js",
         "node_modules/MathJax/extensions/HTML-CSS/handle-floats.js",
@@ -877,23 +748,6 @@
         "node_modules/atom-space-pen-views/lib/text-editor-view.js",
         "node_modules/balanced-match/index.js",
         "node_modules/brace-expansion/index.js",
-        "node_modules/cheerio/index.js",
-        "node_modules/cheerio/lib/api/attributes.js",
-        "node_modules/cheerio/lib/api/css.js",
-        "node_modules/cheerio/lib/api/manipulation.js",
-        "node_modules/cheerio/lib/api/traversing.js",
-        "node_modules/cheerio/lib/cheerio.js",
-        "node_modules/cheerio/lib/parse.js",
-        "node_modules/cheerio/lib/render.js",
-        "node_modules/cheerio/lib/static.js",
-        "node_modules/cheerio/lib/utils.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.compat.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.compat.min.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.min.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.underscore.js",
-        "node_modules/cheerio/node_modules/lodash/dist/lodash.underscore.min.js",
-        "node_modules/cheerio/node_modules/lodash/lodash.js",
         "node_modules/coffee-script/lib/coffee-script/browser.js",
         "node_modules/coffee-script/lib/coffee-script/cake.js",
         "node_modules/coffee-script/lib/coffee-script/coffee-script.js",
@@ -915,31 +769,12 @@
         "node_modules/compare-versions/index.js",
         "node_modules/concat-map/example/map.js",
         "node_modules/concat-map/index.js",
-        "node_modules/core-util-is/lib/util.js",
-        "node_modules/core-util-is/test.js",
         "node_modules/cson-parser/lib/cson-parser.js",
         "node_modules/cson-parser/lib/parse.js",
         "node_modules/cson-parser/lib/stringify.js",
         "node_modules/d/auto-bind.js",
         "node_modules/d/index.js",
         "node_modules/d/lazy.js",
-        "node_modules/dom-serializer/index.js",
-        "node_modules/dom-serializer/node_modules/domelementtype/index.js",
-        "node_modules/dom-serializer/node_modules/entities/index.js",
-        "node_modules/dom-serializer/node_modules/entities/lib/decode.js",
-        "node_modules/dom-serializer/node_modules/entities/lib/decode_codepoint.js",
-        "node_modules/dom-serializer/node_modules/entities/lib/encode.js",
-        "node_modules/domelementtype/index.js",
-        "node_modules/domhandler/index.js",
-        "node_modules/domhandler/lib/element.js",
-        "node_modules/domhandler/lib/node.js",
-        "node_modules/domutils/index.js",
-        "node_modules/domutils/lib/helpers.js",
-        "node_modules/domutils/lib/legacy.js",
-        "node_modules/domutils/lib/manipulation.js",
-        "node_modules/domutils/lib/querying.js",
-        "node_modules/domutils/lib/stringify.js",
-        "node_modules/domutils/lib/traversal.js",
         "node_modules/emissary/lib/behavior.js",
         "node_modules/emissary/lib/emissary.js",
         "node_modules/emissary/lib/emitter.js",
@@ -1001,6 +836,7 @@
         "node_modules/es5-ext/array/#/indexes-of.js",
         "node_modules/es5-ext/array/#/intersection.js",
         "node_modules/es5-ext/array/#/is-copy.js",
+        "node_modules/es5-ext/array/#/is-empty.js",
         "node_modules/es5-ext/array/#/is-uniq.js",
         "node_modules/es5-ext/array/#/keys/implement.js",
         "node_modules/es5-ext/array/#/keys/index.js",
@@ -1217,6 +1053,7 @@
         "node_modules/es5-ext/object/assign/index.js",
         "node_modules/es5-ext/object/assign/is-implemented.js",
         "node_modules/es5-ext/object/assign/shim.js",
+        "node_modules/es5-ext/object/assign-deep.js",
         "node_modules/es5-ext/object/clear.js",
         "node_modules/es5-ext/object/compact.js",
         "node_modules/es5-ext/object/compare.js",
@@ -1224,6 +1061,8 @@
         "node_modules/es5-ext/object/copy.js",
         "node_modules/es5-ext/object/count.js",
         "node_modules/es5-ext/object/create.js",
+        "node_modules/es5-ext/object/ensure-array.js",
+        "node_modules/es5-ext/object/ensure-finite-number.js",
         "node_modules/es5-ext/object/ensure-natural-number-value.js",
         "node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/es5-ext/object/ensure-promise.js",
@@ -1242,8 +1081,10 @@
         "node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/es5-ext/object/is-copy.js",
         "node_modules/es5-ext/object/is-empty.js",
+        "node_modules/es5-ext/object/is-finite-number.js",
         "node_modules/es5-ext/object/is-number-value.js",
         "node_modules/es5-ext/object/is-object.js",
+        "node_modules/es5-ext/object/is-plain-function.js",
         "node_modules/es5-ext/object/is-plain-object.js",
         "node_modules/es5-ext/object/is-promise.js",
         "node_modules/es5-ext/object/is-value.js",
@@ -1275,6 +1116,7 @@
         "node_modules/es5-ext/object/validate-array-like.js",
         "node_modules/es5-ext/object/validate-stringifiable-value.js",
         "node_modules/es5-ext/object/validate-stringifiable.js",
+        "node_modules/es5-ext/optional-chaining.js",
         "node_modules/es5-ext/reg-exp/#/index.js",
         "node_modules/es5-ext/reg-exp/#/is-sticky.js",
         "node_modules/es5-ext/reg-exp/#/is-unicode.js",
@@ -1357,6 +1199,7 @@
         "node_modules/es5-ext/string/raw/index.js",
         "node_modules/es5-ext/string/raw/is-implemented.js",
         "node_modules/es5-ext/string/raw/shim.js",
+        "node_modules/es5-ext/to-short-string-representation.js",
         "node_modules/es6-iterator/#/chain.js",
         "node_modules/es6-iterator/array.js",
         "node_modules/es6-iterator/for-of.js",
@@ -1391,26 +1234,9 @@
         "node_modules/glob/sync.js",
         "node_modules/grim/lib/deprecation.js",
         "node_modules/grim/lib/grim.js",
-        "node_modules/htmlparser2/lib/CollectingHandler.js",
-        "node_modules/htmlparser2/lib/FeedHandler.js",
-        "node_modules/htmlparser2/lib/Parser.js",
-        "node_modules/htmlparser2/lib/ProxyHandler.js",
-        "node_modules/htmlparser2/lib/Stream.js",
-        "node_modules/htmlparser2/lib/Tokenizer.js",
-        "node_modules/htmlparser2/lib/WritableStream.js",
-        "node_modules/htmlparser2/lib/index.js",
-        "node_modules/htmlparser2/node_modules/domutils/index.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/helpers.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/legacy.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/manipulation.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/querying.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/stringify.js",
-        "node_modules/htmlparser2/node_modules/domutils/lib/traversal.js",
         "node_modules/inflight/inflight.js",
         "node_modules/inherits/inherits.js",
         "node_modules/inherits/inherits_browser.js",
-        "node_modules/isarray/build/build.js",
-        "node_modules/isarray/index.js",
         "node_modules/jquery/dist/jquery.js",
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/jquery/src/ajax/jsonp.js",
@@ -1972,10 +1798,6 @@
         "node_modules/markdown-it/lib/rules_inline/text.js",
         "node_modules/markdown-it/lib/rules_inline/text_collapse.js",
         "node_modules/markdown-it/lib/token.js",
-        "node_modules/markdown-it/node_modules/entities/index.js",
-        "node_modules/markdown-it/node_modules/entities/lib/decode.js",
-        "node_modules/markdown-it/node_modules/entities/lib/decode_codepoint.js",
-        "node_modules/markdown-it/node_modules/entities/lib/encode.js",
         "node_modules/markdown-it-lazy-headers/index.js",
         "node_modules/markdown-it-math/dist/markdown-it-math.js",
         "node_modules/markdown-it-math/dist/markdown-it-math.min.js",
@@ -2013,19 +1835,7 @@
         "node_modules/optimist/index.js",
         "node_modules/os-tmpdir/index.js",
         "node_modules/path-is-absolute/index.js",
-        "node_modules/pdc/pdc.js",
-        "node_modules/pdc/test.js",
         "node_modules/property-accessors/lib/property-accessors.js",
-        "node_modules/readable-stream/duplex.js",
-        "node_modules/readable-stream/lib/_stream_duplex.js",
-        "node_modules/readable-stream/lib/_stream_passthrough.js",
-        "node_modules/readable-stream/lib/_stream_readable.js",
-        "node_modules/readable-stream/lib/_stream_transform.js",
-        "node_modules/readable-stream/lib/_stream_writable.js",
-        "node_modules/readable-stream/passthrough.js",
-        "node_modules/readable-stream/readable.js",
-        "node_modules/readable-stream/transform.js",
-        "node_modules/readable-stream/writable.js",
         "node_modules/rimraf/bin.js",
         "node_modules/rimraf/rimraf.js",
         "node_modules/season/lib/cson.js",
@@ -2036,7 +1846,6 @@
         "node_modules/sprintf-js/gruntfile.js",
         "node_modules/sprintf-js/src/angular-sprintf.js",
         "node_modules/sprintf-js/src/sprintf.js",
-        "node_modules/string_decoder/index.js",
         "node_modules/temp/examples/grepcount.js",
         "node_modules/temp/examples/pdfcreator.js",
         "node_modules/temp/lib/temp.js",
@@ -2071,13 +1880,11 @@
         "dependencies": {
           "atom-highlight": "^0.3.0",
           "atom-space-pen-views": "^2.0.0",
-          "cheerio": "0.15.0",
           "fs-plus": "^2.0.0",
           "grim": "^1.2.1",
           "lodash": "^3.10.1",
           "markdown-it": "^5.1.0",
           "markdown-it-lazy-headers": "^0.1.2",
-          "pdc": "~0.2.2",
           "season": "^5.3",
           "temp": "^0.8.1",
           "underscore-plus": "^1.0.0",
@@ -2129,20 +1936,6 @@
       },
       {
         "paths": [
-          "node_modules/cheerio",
-          "node_modules/cheerio/lib/api",
-          "node_modules/cheerio/lib",
-          "node_modules/cheerio/test"
-        ],
-        "dependencies": {
-          "CSSselect": "~0.4.0",
-          "entities": "~1.0.0",
-          "htmlparser2": "~3.7.0",
-          "lodash": "~2.4.1"
-        }
-      },
-      {
-        "paths": [
           "node_modules/cson-parser/lib",
           "node_modules/cson-parser"
         ],
@@ -2152,58 +1945,11 @@
       },
       {
         "paths": [
-          "node_modules/CSSselect",
-          "node_modules/CSSselect/lib",
-          "node_modules/CSSselect/test",
-          "node_modules/CSSselect/test/nwmatcher",
-          "node_modules/CSSselect/test/qwery",
-          "node_modules/CSSselect/test/sizzle/data",
-          "node_modules/CSSselect/test/sizzle",
-          "node_modules/CSSselect/test/tools"
-        ],
-        "dependencies": {
-          "CSSwhat": "0.4",
-          "domutils": "1.4"
-        }
-      },
-      {
-        "paths": [
           "node_modules/d",
           "node_modules/d/test"
         ],
         "dependencies": {
           "es5-ext": "~0.10.2"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/dom-serializer"
-        ],
-        "dependencies": {
-          "domelementtype": "~1.1.1",
-          "entities": "~1.1.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/domhandler",
-          "node_modules/domhandler/lib",
-          "node_modules/domhandler/test/cases",
-          "node_modules/domhandler/test"
-        ],
-        "dependencies": {
-          "domelementtype": "1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/domutils",
-          "node_modules/domutils/lib",
-          "node_modules/domutils/test",
-          "node_modules/domutils/test/tests"
-        ],
-        "dependencies": {
-          "domelementtype": "1"
         }
       },
       {
@@ -2376,8 +2122,8 @@
           "node_modules/es5-ext/test/string/raw"
         ],
         "dependencies": {
-          "es6-iterator": "2",
-          "es6-symbol": "~3.1"
+          "es6-iterator": "~2.0.1",
+          "es6-symbol": "~3.1.1"
         }
       },
       {
@@ -2398,8 +2144,8 @@
         ],
         "dependencies": {
           "d": "1",
-          "es5-ext": "^0.10.14",
-          "es6-symbol": "^3.1"
+          "es5-ext": "^0.10.35",
+          "es6-symbol": "^3.1.1"
         }
       },
       {
@@ -2479,35 +2225,6 @@
         ],
         "dependencies": {
           "emissary": "^1.2.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/htmlparser2/lib",
-          "node_modules/htmlparser2",
-          "node_modules/htmlparser2/test",
-          "node_modules/htmlparser2/test/Events",
-          "node_modules/htmlparser2/test/Feeds",
-          "node_modules/htmlparser2/test/Stream"
-        ],
-        "dependencies": {
-          "domelementtype": "1",
-          "domhandler": "2.2",
-          "domutils": "1.5",
-          "entities": "1.0",
-          "readable-stream": "1.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/htmlparser2/node_modules/domutils",
-          "node_modules/htmlparser2/node_modules/domutils/lib",
-          "node_modules/htmlparser2/node_modules/domutils/test",
-          "node_modules/htmlparser2/node_modules/domutils/test/tests"
-        ],
-        "dependencies": {
-          "dom-serializer": "0",
-          "domelementtype": "1"
         }
       },
       {
@@ -2595,18 +2312,6 @@
         "dependencies": {
           "es6-weak-map": "^0.1.2",
           "mixto": "1.x"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/readable-stream",
-          "node_modules/readable-stream/lib"
-        ],
-        "dependencies": {
-          "core-util-is": "~1.0.0",
-          "inherits": "~2.0.1",
-          "isarray": "0.0.1",
-          "string_decoder": "~0.10.x"
         }
       },
       {

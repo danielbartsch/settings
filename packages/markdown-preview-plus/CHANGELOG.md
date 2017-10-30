@@ -1,3 +1,24 @@
+## 2.4.16
+* Tentative fix for #316
+
+## 2.4.15
+* Remove dependency on cheerio
+* Revert "Properly handle link\/image urlencoding" (problems on Win32)
+* Revert "Undefined\/null-aware en-\/decodeURI" (problems on Win32)
+
+## 2.4.14
+* Add dedicated 'Pandoc Options: Filters' option
+
+## 2.4.13
+* Undefined\/null-aware en-\/decodeURI
+* Properly handle link\/image urlencoding
+
+## 2.4.12
+* Do not break image data URIs
+
+## 2.4.11
+* [Pandoc] Remove dependency on pdc; saner Pandoc error handling
+
 ## 2.4.10
 * Fix image update bug
 * Atom 1.19 compatibility
