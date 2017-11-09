@@ -1,3 +1,25 @@
+### 2.78.0
+  - Support for Babel tranpiler when project is inside a Yarn workspace.
+  - Detect @babel/core and babel-core module types.
+  - Fixes [#450](https://github.com/gandm/language-babel/issues/450), [#453](https://github.com/gandm/language-babel/issues/453).
+
+### 2.77.3
+  - Fix balanced generic regex from terminating on =>. Fixes #449
+
+### 2.77.2
+  - Small regex change.
+
+### 2.77.1
+  - 2.77.0 introduced some bug/regressions in the grammar. This attempts to fix those.
+
+### 2.77.0
+  - Support TC39 stage 3 [async iteration using `for await`](https://github.com/tc39/proposal-async-iteration). [Issue #441](https://github.com/gandm/language-babel/issues/441)
+  - Change scopename for Flow declare class names that use generics - e.g. `class Array<T>`. [Issue #443](https://github.com/gandm/language-babel/issues/443)
+  - Fix Flow declarations where parens were incorrectly treated as function definitions. [Issue #444](https://github.com/gandm/language-babel/issues/444)
+  - Fix incorrect handling of Flow array definitions and destructuring.
+  - Fix incorrect scopes applied to Flow generics that were lowercase - e.g. `Class<this>`
+  - Ensure that the static keyword wasn't parsed as a method name.  
+
 ### 2.76.4
   - Fix flowtype parsing issues #438, #439, #440
 
