@@ -1,25 +1,8 @@
 "*":
-  "atom-clock":
-    dateFormat: "dddd, Do MMMM YYYY, HH:mm:ss"
-    refreshInterval: 1
   "atom-ctags":
     autoBuildTagsWhenActive: true
-  "atom-material-ui":
-    colors:
-      abaseColor: "#6765ed"
-      paintCursor: true
-    tabs:
-      compactTabs: true
-      noTabMinWidth: true
-    ui:
-      panelContrast: true
-      panelShadows: true
   "atom-package-deps":
     ignored: []
-  "atom-storybook": {}
-  "atom-ternjs":
-    caseInsensitive: false
-    guess: false
   "autocomplete-modules":
     babelPluginModuleResolver: true
     vendors: [
@@ -28,13 +11,17 @@
     webpack: true
     webpackConfigFilename: "web-app/internals/webpack/webpack.config.development.js"
   "autocomplete-plus": {}
+  "bracket-matcher":
+    pairsWithExtraNewline: [
+      "()"
+      "[]"
+      "{}"
+      "``"
+    ]
   "color-picker":
     abbreviateValues: true
     preferredFormat: "HEX"
     uppercaseColorValues: true
-  "color-tabs":
-    backgroundStyle: "none"
-    borderStyle: "bottom"
   core:
     customFileTypes:
       "source.ini": [
@@ -113,7 +100,6 @@
     scopes: [
       "*"
     ]
-  "hey-pane": {}
   "highlight-column":
     opacity: 0.05
   "highlight-selected":
@@ -138,7 +124,7 @@
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
     hidePanelWhenEmpty: true
-    panelHeight: 128
+    panelHeight: 32
     panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
