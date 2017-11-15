@@ -122,6 +122,8 @@ function unstage {
 alias branches="git branch"
 
 alias gp="git push; clear; git status"
+alias gmd="git merge develop"
+alias gmu="gd;pb;gmd"
 alias gitconf="nano ~/.gitconfig"
 
 alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
