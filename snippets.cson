@@ -23,17 +23,10 @@
 '.source.js':
   'Console log variable':
     'prefix': 'logv'
-    'body': "console.log('${1:variable name}', ${1:variable name})"
+    'body': "console.log('${1:variable name}', ${1:variable name}) $2"
   'Console log':
     'prefix': 'log'
-    'body': "console.log(${1:text})"
+    'body': "console.log(${1:text}) $2"
   'ActionType':
     'prefix': 'action'
     'body': "export const ${1:actionName}: '${1:actionNameType}' = '${1:actionNameValue}'"
-  'Test case':
-    'prefix': 'it'
-    'body': """
-it('should ${1:do something}', () => {
-    expect(${2:input}).to.eql(${3:expectedResult})
-})
-"""
