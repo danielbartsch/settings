@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117313-16120-18ag7mz/package.tgz",
+        "raw": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117313-16120-18ag7mz/package.tgz",
-        "spec": "/tmp/d-117313-16120-18ag7mz/package.tgz",
+        "rawSpec": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
+        "spec": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117313-16120-13twtzu"
+      "/tmp/apm-install-dir-1171020-30698-1on67h9.55prgrpb9"
     ]
   ],
-  "_from": "../d-117313-16120-18ag7mz/package.tgz",
-  "_id": "svg-preview@0.11.0",
+  "_from": "../d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
+  "_id": "svg-preview@0.12.1",
   "_inCache": true,
-  "_installable": true,
   "_location": "/svg-preview",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117313-16120-18ag7mz/package.tgz",
+    "raw": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117313-16120-18ag7mz/package.tgz",
-    "spec": "/tmp/d-117313-16120-18ag7mz/package.tgz",
+    "rawSpec": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
+    "spec": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117313-16120-18ag7mz/package.tgz",
-  "_shasum": "f454989dc6d046a2ff811c0c58a0d1e70ba577e1",
+  "_resolved": "file:../d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
+  "_shasum": "a5f020bb8334c0e97449a96954f809f836326389",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117313-16120-18ag7mz/package.tgz",
-  "_where": "/tmp/apm-install-dir-117313-16120-13twtzu",
+  "_spec": "/tmp/d-1171020-30698-1ptzjsd.pejufbhuxr/package.tgz",
+  "_where": "/tmp/apm-install-dir-1171020-30698-1on67h9.55prgrpb9",
   "author": {
     "name": "Josa Gesell",
     "email": "josa@gesell.me"
@@ -46,13 +45,19 @@
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
     "debounce": "^1.0.0",
-    "fs-plus": "^2.9.1"
+    "fs-plus": "^3.0.1"
   },
   "description": "Live SVG preview",
   "deserializers": {
     "SvgPreviewView": "deserializeSvgPreviewView"
   },
   "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "temp": "^0.8.3",
     "wrench": "^1.5.9"
   },
@@ -64,7 +69,7 @@
   "main": "./lib/main",
   "name": "svg-preview",
   "optionalDependencies": {},
-  "readme": "# SVG Preview package\n\nShow the rendered SVG to the right of the current editor, refreshed live.\n\n[![Build Status](https://img.shields.io/travis/josa42/atom-svg-preview/master.svg?style=flat-square)](https://travis-ci.org/josa42/atom-svg-preview)\n[![Build Status](https://img.shields.io/appveyor/ci/josa42/atom-svg-preview/master.svg?style=flat-square)](https://ci.appveyor.com/project/josa42/atom-svg-preview)\n[![Plugin installs!](https://img.shields.io/apm/dm/svg-preview.svg?style=flat-square)](https://atom.io/packages/svg-preview)\n[![Package version!](https://img.shields.io/apm/v/svg-preview.svg?style=flat-square)](https://atom.io/packages/svg-preview)\n[![Dependencies!](https://img.shields.io/david/josa42/atom-svg-preview.svg?style=flat-square)](https://david-dm.org/josa42/atom-svg-preview)\n\nIt can be activated from the editor using the `cmd-alt-v` key-binding and is\ncurrently enabled for `.xml` and `.svg` files.\n\n![Demo screenshot](https://cloud.githubusercontent.com/assets/75445/6218729/9d365ac8-b621-11e4-94d2-5378dbb0fa70.png)\n",
+  "readme": "# SVG Preview package\n\nShow the rendered SVG to the right of the current editor, refreshed live.\n\n[![Build Status](https://img.shields.io/travis/josa42/atom-svg-preview/master.svg?style=flat-square)](https://travis-ci.org/josa42/atom-svg-preview)\n[![Build Status](https://img.shields.io/appveyor/ci/josa42/atom-svg-preview/master.svg?style=flat-square)](https://ci.appveyor.com/project/josa42/atom-svg-preview)\n[![Plugin installs!](https://img.shields.io/apm/dm/svg-preview.svg?style=flat-square)](https://atom.io/packages/svg-preview)\n[![Package version!](https://img.shields.io/apm/v/svg-preview.svg?style=flat-square)](https://atom.io/packages/svg-preview)\n[![Dependencies!](https://img.shields.io/david/josa42/atom-svg-preview.svg?style=flat-square)](https://david-dm.org/josa42/atom-svg-preview)\n\nIt can be activated from the editor using the `cmd-alt-v` key-binding and is\ncurrently enabled for `.xml` and `.svg` files.\n\n![](https://raw.githubusercontent.com/josa42/atom-svg-preview/master/screenshot.gif)\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -75,5 +80,5 @@
     "lint:fix": "eslint --fix '**/*.js'",
     "test": "apm test"
   },
-  "version": "0.11.0"
+  "version": "0.12.1"
 }

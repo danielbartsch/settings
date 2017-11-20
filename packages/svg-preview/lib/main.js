@@ -3,40 +3,52 @@
 import { CompositeDisposable } from 'atom'
 import url from 'url'
 
+const { atom } = global
+
 let SvgPreviewView = null
 
-function importSvgPreviewView() {
+function importSvgPreviewView () {
   if (SvgPreviewView == null) {
     SvgPreviewView = require('./svg-preview-view')
   }
 }
 
-function createSvgPreviewView(state) {
+function createSvgPreviewView (state) {
   importSvgPreviewView()
   return new SvgPreviewView(state)
 }
 
-function isSvgPreviewView(object) {
+function isSvgPreviewView (object) {
   importSvgPreviewView()
   return object instanceof SvgPreviewView
 }
 
-function configGet(key) {
+function configGet (key) {
   return atom.config.get(`svg-preview.${key}`)
+}
+
+function configSet (key, value) {
+  return atom.config.set(`svg-preview.${key}`, value)
 }
 
 module.exports = {
 
   config: require('./config'),
 
-  deserializeSvgPreviewView(state) {
+  deserializeSvgPreviewView (state) {
     if (state.constructor === Object) {
       return createSvgPreviewView(state)
     }
   },
 
-  activate() {
-    this.disposables = new CompositeDisposable
+  activate () {
+    this.disposables = new CompositeDisposable()
+
+    // Deprecated config
+    if (configGet('openPreviewInSplitPane') === false) {
+      configSet('openPreviewInPane', '')
+      configSet('openPreviewInSplitPane', undefined)
+    }
 
     this.disposables.add(atom.commands.add('atom-workspace', {
       'svg-preview:toggle': () => this.toggle()
@@ -59,7 +71,7 @@ module.exports = {
     )
   },
 
-  deactivate() {
+  deactivate () {
     atom.workspace.getPaneItems()
       .filter((item) => isSvgPreviewView(item))
       .forEach((item) => this.removePreview(item))
@@ -67,20 +79,20 @@ module.exports = {
     this.disposables.dispose()
   },
 
-  onWillDestroyPaneItem(item) {
+  onWillDestroyPaneItem (item) {
     if (!(
       configGet('closePreviewAutomatically') &&
-      configGet('openPreviewInSplitPane')
+      configGet('openPreviewInPane')
     )) {
       return
     }
     return this.removePreviewForEditor(item)
   },
 
-  onDidChangeActivePaneItem(item) {
+  onDidChangeActivePaneItem (item) {
     if (!(
       configGet('openPreviewAutomatically') &&
-      configGet('openPreviewInSplitPane') &&
+      configGet('openPreviewInPane') &&
       this.isSvgEditor(item)
     )) {
       return
@@ -88,7 +100,7 @@ module.exports = {
     return this.addPreviewForEditor(item)
   },
 
-  onOpenUri(uriToOpen) {
+  onOpenUri (uriToOpen) {
     let protocol, host, filePath
 
     try {
@@ -100,7 +112,6 @@ module.exports = {
 
       if (protocol !== 'svg-preview:') { return }
       if (filePath) { filePath = decodeURI(filePath) }
-
     } catch (error) {
       return
     }
@@ -112,21 +123,21 @@ module.exports = {
     return createSvgPreviewView({ filePath })
   },
 
-  isSvgEditor(item) {
+  isSvgEditor (item) {
     try {
       const grammars = ['text.xml.svg'].concat(configGet('grammars') || [])
       const grammar = item.getGrammar().scopeName
 
       return (
-        ( item.getBuffer && item.getText ) &&
-        ( grammars.indexOf(grammar) >= 0 && item.getText().match(/<svg/) )
+        (item.getBuffer && item.getText) &&
+        (grammars.indexOf(grammar) >= 0 && item.getText().match(/<svg/))
       )
-    } catch(error) {
+    } catch (error) {
       return false
     }
   },
 
-  toggle() {
+  toggle () {
     if (isSvgPreviewView(atom.workspace.getActivePaneItem())) {
       atom.workspace.destroyActivePaneItem()
       return
@@ -145,11 +156,11 @@ module.exports = {
     }
   },
 
-  uriForEditor(editor) {
+  uriForEditor (editor) {
     return `svg-preview://editor/${editor.id}`
   },
 
-  removePreview(previewView) {
+  removePreview (previewView) {
     const uri = `svg-preview://editor/${previewView.editorId}`
     const previewPane = atom.workspace.paneForURI(uri)
 
@@ -161,7 +172,7 @@ module.exports = {
     return false
   },
 
-  removePreviewForEditor(editor) {
+  removePreviewForEditor (editor) {
     const uri = this.uriForEditor(editor)
     const previewPane = atom.workspace.paneForURI(uri)
 
@@ -173,13 +184,13 @@ module.exports = {
     return false
   },
 
-  addPreviewForEditor(editor) {
+  addPreviewForEditor (editor) {
     const uri = this.uriForEditor(editor)
     const previousActivePane = atom.workspace.getActivePane()
     const options = {
       searchAllPanes: true,
       activatePane: false,
-      split: configGet('openPreviewInSplitPane') ? 'right': undefined
+      split: configGet('openPreviewInPane') || undefined
     }
 
     atom.workspace.open(uri, options).then((svgPreviewView) => {
@@ -189,14 +200,13 @@ module.exports = {
     })
   },
 
-  previewFile({ target }) {
+  previewFile ({ target }) {
     const filePath = target.dataset.path
     if (!filePath) { return }
 
     const [ editor ] = atom.workspace.getTextEditors()
     if (editor && editor.getPath() === filePath) {
       this.addPreviewForEditor(editor)
-
     } else {
       atom.workspace.open(`svg-preview://${encodeURI(filePath)}`, {
         searchAllPanes: true
