@@ -12,6 +12,20 @@
     webpackConfigFilename: "web-app/internals/webpack/webpack.config.development.js"
   "autocomplete-plus": {}
   "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "\"\""
+      "''"
+      "``"
+      "“”"
+      "‘’"
+      "«»"
+      "‹›"
+      "<>"
+    ]
+    highlightMatchingLineNumber: true
     pairsWithExtraNewline: [
       "()"
       "[]"
@@ -47,8 +61,11 @@
       "markdown-preview-plus"
       "color-picker"
     ]
-    reopenProjectMenuCount: 45
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
     warnOnLargeFileLimit: 20
   "coverage-gutter":
     basePath: "/home/adv/adverity/web-app/"
@@ -59,6 +76,7 @@
     fontSize: 13
     invisibles: {}
     lineHeight: 1.05
+    maxScreenLineLength: 5000
     preferredLineLength: 120
     scrollPastEnd: true
     scrollSensitivity: 100
@@ -124,7 +142,7 @@
   "linter-ui-default":
     decorateOnTreeView: "Files and Directories"
     hidePanelWhenEmpty: true
-    panelHeight: 32
+    panelHeight: -28
     panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
@@ -167,8 +185,7 @@
     sort: false
   "number-slider":
     enabledByDefault: true
-  "one-dark-ui":
-    tabSizing: "Even"
+  "one-dark-ui": {}
   "open-recent": {}
   pigments:
     extendAutocompleteToColorValue: true
