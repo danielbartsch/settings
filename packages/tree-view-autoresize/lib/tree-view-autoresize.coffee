@@ -116,36 +116,48 @@ module.exports = TreeViewAutoresize =
   generateCss: ->
     css = "
       atom-dock.left  .atom-dock-open .atom-dock-content-wrapper:not(:active),
-      atom-dock.left  .atom-dock-open .atom-dock-mask:not(:active) {
-        transition: width #{@conf['animationMilliseconds']}ms ease-in-out;
+      atom-dock.left  .atom-dock-open .atom-dock-mask:not(:active),
+      atom-dock.right .atom-dock-open .atom-dock-content-wrapper:not(:active),
+      atom-dock.right .atom-dock-open .atom-dock-mask:not(:active) {
+        transition: width #{@conf['animationMilliseconds']}ms linear;
       }
     "
 
     if @conf['minimumWidth'] > 0
       css += "
-        atom-dock.left .atom-dock-open .atom-dock-mask {
+        atom-dock.left .atom-dock-open .atom-dock-mask,
+        atom-dock.right .atom-dock-open .atom-dock-mask {
           min-width: #{@conf['minimumWidth']}px;
         }
-        atom-dock.left  .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper {
+        atom-dock.left  .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper,
+        atom-dock.right .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper {
           min-width: #{@conf['minimumWidth']}px;
         }
       "
 
     if @conf['maximumWidth'] > 0
       css += "
-        atom-dock.left .atom-dock-open .atom-dock-mask {
+        atom-dock.left .atom-dock-open .atom-dock-mask,
+        atom-dock.right .atom-dock-open .atom-dock-mask {
           max-width: #{@conf['maximumWidth']}px;
         }
-        atom-dock.left  .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper {
+        atom-dock.left  .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper,
+        atom-dock.right .atom-dock-open .atom-dock-mask .atom-dock-content-wrapper {
           max-width: #{@conf['maximumWidth']}px;
+        }
+        atom-dock.left .tree-view,
+        atom-dock.right .tree-view {
+            overflow-x: scroll !important;
         }
       "
 
     css += "
-      atom-dock.left  .tree-view .full-menu {
+      atom-dock.left  .tree-view .full-menu,
+      atom-dock.right .tree-view .full-menu {
         padding-right: #{@conf['padding']+@scrollbarWidth}px;
       }
-      atom-dock.left  .tree-view {
+      atom-dock.left  .tree-view,
+      atom-dock.right .tree-view {
         overflow-x: hidden;
       }
     "
