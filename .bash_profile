@@ -129,7 +129,6 @@ alias gitconf="nano ~/.gitconfig"
 alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
 alias npmstart="cd /home/adv/adverity/web-app/; npm start"
 alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
-alias test="cd /home/adv/adverity/web-app/; npm run test:mocha:watch"
 
 alias new="clear; git flow feature start"
 alias pull="git pull"
