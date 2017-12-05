@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
+        "raw": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
-        "spec": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
+        "rawSpec": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
+        "spec": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1171028-16355-196f272.s72jra4i"
+      "/tmp/apm-install-dir-117115-11779-xzqgxb.d7t6pf1or"
     ]
   ],
-  "_from": "../d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
-  "_id": "language-babel@2.80.1",
+  "_from": "../d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
+  "_id": "language-babel@2.80.3",
   "_inCache": true,
   "_location": "/language-babel",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
+    "raw": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
-    "spec": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
+    "rawSpec": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
+    "spec": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
-  "_shasum": "6cb18235fa189700fc1800850a750ffd3f63b535",
+  "_resolved": "file:../d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
+  "_shasum": "9b7035b36a3884f01180217c890641082063735a",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1171028-16355-1mibkbm.dssu6ry66r/package.tgz",
-  "_where": "/tmp/apm-install-dir-1171028-16355-196f272.s72jra4i",
+  "_spec": "/tmp/d-117115-11779-1tzf8r0.va5jqbyb9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117115-11779-xzqgxb.d7t6pf1or",
   "activationCommands": [],
   "bugs": {
     "url": "https://github.com/gandm/language-babel/issues"
@@ -207,5 +207,5 @@
     "type": "git",
     "url": "git+https://github.com/gandm/language-babel.git"
   },
-  "version": "2.80.1"
+  "version": "2.80.3"
 }
