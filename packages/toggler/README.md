@@ -6,6 +6,8 @@
 
 Toggle words and symbols in Atom using a user defined configuration.
 
+An **official** port for VS Code is also available [here](https://marketplace.visualstudio.com/items?itemName=hideoo.toggler).
+
 ![Screenshot of the Toggler Package](http://i.imgur.com/uCltY1U.gif)
 
 [Changelog](https://github.com/HiDeoo/toggler/blob/master/CHANGELOG.md)
@@ -23,7 +25,7 @@ As none of the existing words toggling package were fitting my needs, I decided 
 
 ## Usage
 
-Set your cursor on a word or select a word and press the associated keybinding (<kbd>Ctrl</kbd>+<kbd>r</kbd> by default on macOS and Linux, <kbd>Alt</kbd>+<kbd>r</kbd> on Windows).
+Set your cursor on a word or select a word and press the associated keybinding (<kbd>Ctrl</kbd>+<kbd>r</kbd> by default on macOS, <kbd>Alt</kbd>+<kbd>r</kbd> on Windows and Linux).
 
 You can also use the Atom Command Palette and choose the `Toggler - Toggle` command, or use the `Toggle` action in a context menu or use the application menu `Packages -> Toggler -> Toggle`.
 
