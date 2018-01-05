@@ -1,6 +1,12 @@
+### 2.81.1
+  - Fix names of source file and map file relative URL's when transpiling separate Babel map files. Issue [#462](https://github.com/gandm/language-babel/issues/462)
+
+### 2.81.0
+  - Lazy load some requires - Thanks @hansonw for the [PR#459](https://github.com/gandm/language-babel/issues/459)
+
 ### 2.80.3
   - Fix regression introduced in 2.80.2
-  
+
 ### 2.80.2
   - Fix [#458](https://github.com/gandm/language-babel/issues/458)
 
