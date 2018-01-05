@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
+        "raw": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
-        "spec": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
+        "rawSpec": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
+        "spec": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117721-13185-nxb8ez.gwq871ra4i"
+      "/tmp/apm-install-dir-11804-9486-1g6unl1.521e3a0pb9"
     ]
   ],
-  "_from": "../d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
-  "_id": "tree-view-sort@0.8.1",
+  "_from": "../d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
+  "_id": "tree-view-sort@0.8.2",
   "_inCache": true,
   "_location": "/tree-view-sort",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
+    "raw": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
-    "spec": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
+    "rawSpec": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
+    "spec": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
-  "_shasum": "67006067e2ce9c3ba37d9ddce7c7158a21733166",
+  "_resolved": "file:../d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
+  "_shasum": "b5782038e08e3e210f0a3d5bb66ad4aefae236e0",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117721-13185-1tb9ku2.3uen42huxr/package.tgz",
-  "_where": "/tmp/apm-install-dir-117721-13185-nxb8ez.gwq871ra4i",
+  "_spec": "/tmp/d-11804-9486-k92m4q.l9oif11yvi/package.tgz",
+  "_where": "/tmp/apm-install-dir-11804-9486-1g6unl1.521e3a0pb9",
   "bugs": {
     "url": "https://github.com/hex-ci/atom-tree-view-sort/issues"
   },
@@ -125,261 +125,11 @@
   "main": "./lib/tree-view-sort",
   "name": "tree-view-sort",
   "optionalDependencies": {},
-  "readme": "# tree-view-sort package\n[![Version](https://img.shields.io/apm/v/tree-view-sort.svg?style=flat-square)](https://atom.io/packages/tree-view-sort)\n[![Downloads](https://img.shields.io/apm/dm/tree-view-sort.svg?style=flat-square)](https://atom.io/packages/tree-view-sort)\n\nAdd a sorting feature for the Atom tree-view package.\n\n## Features\n\n### Sort By\n\n*   File name\n*   File extension name\n*   File size\n*   File access time\n*   File change time\n*   File modify time\n*   File creation time\n*   File group name, group mean \"component\", \"directive\" etc, e.g. \"a.component.js\" \"b.component.js\" \"a.directive.js\" \"b.directive.js\"\n\n### Descending Sorting\n\nYou can set descending sorting or ascending sorting.\n\n### Case-Sensitive Sorting\n\nYou can set case-sensitive sorting or case-insensitive sorting.\n\n### Sort Folders Before Files\n\nWhen listing directory items, list subdirectories before listing files.\n",
+  "readme": "# tree-view-sort package\n[![Version](https://img.shields.io/apm/v/tree-view-sort.svg?style=flat-square)](https://atom.io/packages/tree-view-sort)\n[![Downloads](https://img.shields.io/apm/dm/tree-view-sort.svg?style=flat-square)](https://atom.io/packages/tree-view-sort)\n[![Join the chat at https://gitter.im/atom-tree-view-sort/Lobby](https://badges.gitter.im/atom-tree-view-sort/Lobby.svg)](https://gitter.im/atom-tree-view-sort/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\nAdd a sorting feature for the Atom tree-view package.\n\n## Features\n\n### Sort By\n\n*   File name\n*   File extension name\n*   File size\n*   File access time\n*   File change time\n*   File modify time\n*   File creation time\n*   File group name, group mean \"component\", \"directive\" etc, e.g. \"a.component.js\" \"b.component.js\" \"a.directive.js\" \"b.directive.js\"\n\n### Descending Sorting\n\nYou can set descending sorting or ascending sorting.\n\n### Case-Sensitive Sorting\n\nYou can set case-sensitive sorting or case-insensitive sorting.\n\n### Sort Folders Before Files\n\nWhen listing directory items, list subdirectories before listing files.\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hex-ci/atom-tree-view-sort.git"
   },
-  "version": "0.8.1",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [
-      {
-        "name": "async",
-        "version": "1.5.2",
-        "path": "node_modules/async/lib/async.js"
-      },
-      {
-        "name": "balanced-match",
-        "version": "1.0.0",
-        "path": "node_modules/balanced-match/index.js"
-      },
-      {
-        "name": "brace-expansion",
-        "version": "1.1.8",
-        "path": "node_modules/brace-expansion/index.js"
-      },
-      {
-        "name": "concat-map",
-        "version": "0.0.1",
-        "path": "node_modules/concat-map/index.js"
-      },
-      {
-        "name": "fs-plus",
-        "version": "3.0.1",
-        "path": "node_modules/fs-plus/lib/fs-plus.js"
-      },
-      {
-        "name": "fs.realpath",
-        "version": "1.0.0",
-        "path": "node_modules/fs.realpath/index.js"
-      },
-      {
-        "name": "glob",
-        "version": "7.1.2",
-        "path": "node_modules/glob/glob.js"
-      },
-      {
-        "name": "inflight",
-        "version": "1.0.6",
-        "path": "node_modules/inflight/inflight.js"
-      },
-      {
-        "name": "inherits",
-        "version": "2.0.3",
-        "path": "node_modules/inherits/inherits.js"
-      },
-      {
-        "name": "minimatch",
-        "version": "3.0.4",
-        "path": "node_modules/minimatch/minimatch.js"
-      },
-      {
-        "name": "minimist",
-        "version": "0.0.8",
-        "path": "node_modules/minimist/index.js"
-      },
-      {
-        "name": "mkdirp",
-        "version": "0.5.1",
-        "path": "node_modules/mkdirp/index.js"
-      },
-      {
-        "name": "once",
-        "version": "1.4.0",
-        "path": "node_modules/once/once.js"
-      },
-      {
-        "name": "path-is-absolute",
-        "version": "1.0.1",
-        "path": "node_modules/path-is-absolute/index.js"
-      },
-      {
-        "name": "rimraf",
-        "version": "2.6.1",
-        "path": "node_modules/rimraf/rimraf.js"
-      },
-      {
-        "name": "underscore",
-        "version": "1.6.0",
-        "path": "node_modules/underscore/underscore.js"
-      },
-      {
-        "name": "underscore-plus",
-        "version": "1.6.6",
-        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
-      },
-      {
-        "name": "wrappy",
-        "version": "1.0.2",
-        "path": "node_modules/wrappy/wrappy.js"
-      }
-    ],
-    "extensions": {
-      ".js": [
-        "lib/tree-view-sort.js",
-        "node_modules/async/dist/async.js",
-        "node_modules/async/dist/async.min.js",
-        "node_modules/async/lib/async.js",
-        "node_modules/balanced-match/index.js",
-        "node_modules/brace-expansion/index.js",
-        "node_modules/concat-map/example/map.js",
-        "node_modules/concat-map/index.js",
-        "node_modules/fs-plus/lib/fs-plus.js",
-        "node_modules/fs.realpath/index.js",
-        "node_modules/fs.realpath/old.js",
-        "node_modules/glob/common.js",
-        "node_modules/glob/glob.js",
-        "node_modules/glob/sync.js",
-        "node_modules/inflight/inflight.js",
-        "node_modules/inherits/inherits.js",
-        "node_modules/inherits/inherits_browser.js",
-        "node_modules/minimatch/minimatch.js",
-        "node_modules/minimist/example/parse.js",
-        "node_modules/minimist/index.js",
-        "node_modules/mkdirp/bin/cmd.js",
-        "node_modules/mkdirp/examples/pow.js",
-        "node_modules/mkdirp/index.js",
-        "node_modules/once/once.js",
-        "node_modules/path-is-absolute/index.js",
-        "node_modules/rimraf/bin.js",
-        "node_modules/rimraf/rimraf.js",
-        "node_modules/underscore/underscore-min.js",
-        "node_modules/underscore/underscore.js",
-        "node_modules/underscore-plus/lib/underscore-plus.js",
-        "node_modules/wrappy/wrappy.js"
-      ],
-      ".json": [
-        "node_modules/async/package.json",
-        "node_modules/balanced-match/package.json",
-        "node_modules/brace-expansion/package.json",
-        "node_modules/concat-map/package.json",
-        "node_modules/fs-plus/package.json",
-        "node_modules/fs.realpath/package.json",
-        "node_modules/glob/package.json",
-        "node_modules/inflight/package.json",
-        "node_modules/inherits/package.json",
-        "node_modules/minimatch/package.json",
-        "node_modules/minimist/package.json",
-        "node_modules/mkdirp/package.json",
-        "node_modules/once/package.json",
-        "node_modules/path-is-absolute/package.json",
-        "node_modules/rimraf/package.json",
-        "node_modules/underscore/package.json",
-        "node_modules/underscore-plus/package.json",
-        "node_modules/wrappy/package.json",
-        "package.json"
-      ]
-    },
-    "folders": [
-      {
-        "paths": [
-          "lib",
-          "",
-          "spec"
-        ],
-        "dependencies": {
-          "fs-plus": "^3.0.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/brace-expansion"
-        ],
-        "dependencies": {
-          "balanced-match": "^1.0.0",
-          "concat-map": "0.0.1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/fs-plus/lib",
-          "node_modules/fs-plus"
-        ],
-        "dependencies": {
-          "async": "^1.5.2",
-          "mkdirp": "^0.5.1",
-          "rimraf": "^2.5.2",
-          "underscore-plus": "1.x"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/glob"
-        ],
-        "dependencies": {
-          "fs.realpath": "^1.0.0",
-          "inflight": "^1.0.4",
-          "inherits": "2",
-          "minimatch": "^3.0.4",
-          "once": "^1.3.0",
-          "path-is-absolute": "^1.0.0"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/inflight"
-        ],
-        "dependencies": {
-          "once": "^1.3.0",
-          "wrappy": "1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/minimatch"
-        ],
-        "dependencies": {
-          "brace-expansion": "^1.1.7"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/mkdirp/bin",
-          "node_modules/mkdirp/examples",
-          "node_modules/mkdirp",
-          "node_modules/mkdirp/test"
-        ],
-        "dependencies": {
-          "minimist": "0.0.8"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/once"
-        ],
-        "dependencies": {
-          "wrappy": "1"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/rimraf"
-        ],
-        "dependencies": {
-          "glob": "^7.0.5"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/underscore-plus/lib",
-          "node_modules/underscore-plus"
-        ],
-        "dependencies": {
-          "underscore": "~1.6.0"
-        }
-      }
-    ]
-  }
+  "version": "0.8.2"
 }
