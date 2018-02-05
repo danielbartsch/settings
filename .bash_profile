@@ -62,7 +62,7 @@ alias qgs="clear; git status"
 function gadd {
   clear;
   if [ -z $@ ]; then
-    git add /home/adv/adverity/;
+    git add $(git rev-parse --show-toplevel);
   else
     git add "$@";
   fi
@@ -73,7 +73,7 @@ function gcn { clear; git commit -mn "$@"; git status; }
 function discard {
   clear;
   if [ -z $@ ]; then
-    git checkout -- /home/adv/adverity/;
+    git checkout -- $(git rev-parse --show-toplevel);
   else
     git checkout -- "$@";
   fi
@@ -92,6 +92,10 @@ function to {
   branches=$(git branch --no-color | grep "$@")
   git checkout ${branches[0]};
   git pull;
+}
+
+function gdfc {
+  git diff $@^ $@;
 }
 
 # previous n branches or direct previous branch
@@ -125,6 +129,14 @@ alias gp="git push; clear; git status"
 alias gmd="git merge develop"
 alias gmu="gd;pb;gmd"
 alias gitconf="nano ~/.gitconfig"
+
+function gnc {
+  git log --reverse --pretty=%H master | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
+}
+
+function gpc {
+  git checkout HEAD^1
+}
 
 alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
 alias npmstart="cd /home/adv/adverity/web-app/; npm start"
