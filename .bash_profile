@@ -50,6 +50,7 @@ alias gdf="clear; git diff"
 alias gcdf="clear; git diff --staged"
 function gdfn { clear; git diff HEAD~"$@" HEAD; }
 
+#git status + command history
 function gs {
   clear;
   git status;
@@ -59,6 +60,8 @@ function gs {
   history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
 }
 alias qgs="clear; git status"
+
+# git add + git add all
 function gadd {
   clear;
   if [ -z $@ ]; then
@@ -68,8 +71,14 @@ function gadd {
   fi
   git status;
 }
+
+# git commit prepared for message
 function gc { clear; git commit -m "$@"; git status; }
+
+# git commit prepared for message ignoring evaluation
 function gcn { clear; git commit -mn "$@"; git status; }
+
+# discarding unstaged file changes
 function discard {
   clear;
   if [ -z $@ ]; then
@@ -79,6 +88,7 @@ function discard {
   fi
   git status;
 }
+
 function cts {
   clear;
   if [ -z $@ ]; then
@@ -88,14 +98,26 @@ function cts {
   fi
   git status;
 }
+
+# switch to branch with grep search of all branches
 function to {
   branches=$(git branch --no-color | grep "$@")
   git checkout ${branches[0]};
   git pull;
 }
 
+# git diff of one commit
 function gdfc {
   git diff $@^ $@;
+}
+
+# git diff of current branch with specified base branch
+function gdfb {
+  if [ -z $@ ]; then
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop`;
+  else
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@`;
+  fi
 }
 
 # previous n branches or direct previous branch
@@ -117,10 +139,15 @@ function spb {
   fi
 }
 
+# removing specified files or folders from staged area
 function unstage {
   clear;
-  git reset HEAD "$@";
-  git status;
+  if [ -z $@ ]; then
+    git reset -- $(git rev-parse --show-toplevel);
+  else
+    git reset -- "$@";
+  fi
+  git status;                  
 }
 
 alias branches="git branch"
@@ -130,10 +157,12 @@ alias gmd="git merge develop"
 alias gmu="gd;pb;gmd"
 alias gitconf="nano ~/.gitconfig"
 
+# go to next commit
 function gnc {
   git log --reverse --pretty=%H master | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
 }
 
+# go to previous commit
 function gpc {
   git checkout HEAD^1
 }
@@ -146,7 +175,9 @@ alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
 alias fetch="git fetch"
-function cms { # last n commit messages
+
+# show last n commit messages
+function cms {
     clear;
     git status;
     printf "\n"
@@ -161,6 +192,7 @@ function cms { # last n commit messages
 
 alias sh="history | grep"
 
+# git stash pop (last or specified number)
 function pop {
   clear;
   if [ -z $@ ]; then
@@ -169,6 +201,8 @@ function pop {
     git stash pop stash@{$@};
   fi
 }
+
+# git stash
 function stash {
   clear;
   git status;
@@ -179,6 +213,8 @@ function stash {
   fi
 }
 alias stashlist="clear; git status; git stash list"
+
+# view diff of HEAD and content of last or specified stash
 function viewstash {
   if [ -z $@ ]; then
     git stash show -p;
@@ -186,6 +222,8 @@ function viewstash {
     git stash show -p stash@{$@};
   fi
 }
+
+# drop stash (last or specified)
 function dropstash {
   if [ -z $@ ]; then
     git stash drop;
