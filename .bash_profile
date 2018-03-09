@@ -46,9 +46,7 @@ alias loadbash="source ~/.atom/.bash_profile"
 alias g="git"
 alias gd="git checkout develop; git pull"
 
-alias gdf="clear; git diff"
-alias gcdf="clear; git diff --staged"
-function gdfn { clear; git diff HEAD~"$@" HEAD; }
+function gdfn { git diff HEAD~"$@" HEAD; }
 
 #git status + command history
 function gs {
@@ -73,10 +71,10 @@ function gadd {
 }
 
 # git commit prepared for message
-function gc { clear; git commit -m "$@"; git status; }
+function gc { git commit -m "$@"; git status; }
 
 # git commit prepared for message ignoring evaluation
-function gcn { clear; git commit -mn "$@"; git status; }
+function gcn { git commit -mn "$@"; git status; }
 
 # discarding unstaged file changes
 function discard {
