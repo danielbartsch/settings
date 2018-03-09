@@ -40,7 +40,7 @@ alias js="cd /home/adv/adverity/web-app/js; clear; git status;"
 alias dot="cd ~/.atom; clear; git status;"
 
 # Shortcuts
-alias bashconf="nano ~/.atom/.bash_profile"
+alias bashconf="vim ~/.atom/.bash_profile"
 alias loadbash="source ~/.atom/.bash_profile"
 
 alias g="git"
