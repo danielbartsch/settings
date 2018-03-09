@@ -205,13 +205,25 @@ function pop {
 # git stash
 function stash {
   clear;
-  git status;
   if [ -z $@ ]; then
     git stash;
   else
     git stash save "$@";
   fi
+  git status;
 }
+
+# git stash file/path
+function stashf {
+  clear;
+  if [ -z $@ ]; then
+    git stash;
+  else
+    git stash push -- $@;
+  fi
+  git status;
+}
+
 alias stashlist="clear; git status; git stash list"
 
 # view diff of HEAD and content of last or specified stash
