@@ -46,7 +46,9 @@ alias loadbash="source ~/.atom/.bash_profile"
 alias g="git"
 alias gd="git checkout develop; git pull"
 
-function gdfn { git diff HEAD~"$@" HEAD; }
+alias gdf="git diff --ignore-space-change"
+alias gcdf="git diff --staged --ignore-space-change"
+function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change; }
 
 #git status + command history
 function gs {
@@ -106,15 +108,15 @@ function to {
 
 # git diff of one commit
 function gdfc {
-  git diff $@^ $@;
+  git diff $@^ $@ --ignore-space-change;
 }
 
 # git diff of current branch with specified base branch
 function gdfb {
   if [ -z $@ ]; then
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop`;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change;
   else
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@`;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change;
   fi
 }
 
