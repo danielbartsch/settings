@@ -219,7 +219,7 @@ function stashf {
   if [ -z $@ ]; then
     git stash;
   else
-    git stash push -- $@;
+    git stash push --include-untracked -- $@;
   fi
   git status;
 }
