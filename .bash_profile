@@ -37,11 +37,11 @@ alias .....="cd ../../../..; clear; git status"
 alias -- -="cd -"
 alias adverity="cd /home/adv/adverity;"
 alias js="cd /home/adv/adverity/web-app/js; clear; git status;"
-alias dot="cd ~/.atom; clear; git status;"
+alias dot="cd ~/settings; clear; git status;"
 
 # Shortcuts
-alias bashconf="vim ~/.atom/.bash_profile"
-alias loadbash="source ~/.atom/.bash_profile"
+alias bashconf="vim ~/settings/.bash_profile"
+alias loadbash="source ~/settings/.bash_profile"
 
 alias g="git"
 alias gd="git checkout develop; git pull"
