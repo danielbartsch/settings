@@ -1,0 +1,58 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "down",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible && editorTextFocus"
+    },
+    {
+        "key": "up",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible && editorTextFocus"
+    },
+    {
+        "key": "enter",
+        "command": "git.stageSelectedRanges",
+        "when": "textCompareEditorVisible && editorHasSelection && editorTextFocus"
+    },
+    {
+        "key": "backspace",
+        "command": "git.unstageSelectedRanges",
+        "when": "textCompareEditorVisible && editorHasSelection && editorTextFocus"
+    },
+    {
+        "key": "delete",
+        "command": "git.revertSelectedRanges",
+        "when": "textCompareEditorVisible && editorHasSelection && editorTextFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "subwordNavigation.cursorSubwordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "subwordNavigation.cursorSubwordRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+left",
+        "command": "subwordNavigation.cursorSubwordLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+right",
+        "command": "subwordNavigation.cursorSubwordRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "subwordNavigation.deleteSubwordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+delete",
+        "command": "subwordNavigation.deleteSubwordRight",
+        "when": "editorTextFocus"
+    }
+]

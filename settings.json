@@ -1,0 +1,29 @@
+{
+    "flow.pathToFlow": "/home/adv/adverity/web-app/node_modules/flow-bin/cli.js",
+    "flow.runOnAllFiles": true,
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false,
+    "eslint.autoFixOnSave": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "editor.rulers": [120],
+    "explorer.confirmDelete": false,
+    "editor.insertSpaces": false,
+    "workbench.editor.enablePreview": false,
+    "problems.decorations.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.minimap.showSlider": "always",
+    "editor.snippetSuggestions": "top",
+    "vsicons.dontShowNewVersionMessage": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.keymap": "alternate"
+}
