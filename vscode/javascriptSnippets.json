@@ -23,5 +23,10 @@
 	"prefix": "logv",
 	"body": ["console.log('${1:variable name}', ${1:variable name}) $2"],
 	"description": "Log variable to console"
+},
+"Named Import": {
+	"prefix": "imp",
+	"body": ["import { ${1:namedImport} } from '${2:moduleOrPath}'"],
+	"description": "Import from a module or a path"
 }
 }
