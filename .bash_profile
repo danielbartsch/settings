@@ -46,9 +46,9 @@ alias loadbash="source ~/settings/.bash_profile"
 alias g="git"
 alias gd="git checkout develop; git pull"
 
-alias gdf="git diff --ignore-space-change"
-alias gcdf="git diff --staged --ignore-space-change"
-function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change; }
+alias gdf="git diff --ignore-space-change --color-moved"
+alias gcdf="git diff --staged --ignore-space-change --color-moved"
+function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved; }
 
 #git status + command history
 function gs {
@@ -108,15 +108,15 @@ function to {
 
 # git diff of one commit
 function gdfc {
-  git diff $@^ $@ --ignore-space-change;
+  git diff $@^ $@ --ignore-space-change --color-moved;
 }
 
 # git diff of current branch with specified base branch
 function gdfb {
   if [ -z $@ ]; then
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved;
   else
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change --color-moved;
   fi
 }
 
