@@ -20,10 +20,14 @@
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
-	old = red bold
+	# 1 = maroon
+	old = 1 bold
 	new = green bold
-	newMoved = green bold reverse
-	oldMoved = red bold reverse
+	newMoved = green reverse
+	oldMoved = 1 reverse
+	# 10 = lime
+	newMovedAlternative = 10 reverse
+	oldMovedAlternative = red reverse
 [color "status"]
 	added = yellow
 	changed = green
