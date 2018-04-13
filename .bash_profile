@@ -46,9 +46,9 @@ alias loadbash="source ~/settings/.bash_profile"
 alias g="git"
 alias gd="git checkout develop; git pull"
 
-alias gdf="git diff --ignore-space-change --color-moved"
-alias gcdf="git diff --staged --ignore-space-change --color-moved"
-function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved; }
+alias gdf="git diff --ignore-space-change --color-moved --patch-with-stat"
+alias gcdf="git diff --staged --ignore-space-change --color-moved --patch-with-stat"
+function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --patch-with-stat; }
 
 #git status + command history
 function gs {
@@ -108,15 +108,15 @@ function to {
 
 # git diff of one commit
 function gdfc {
-  git diff $@^ $@ --ignore-space-change --color-moved;
+  git diff $@^ $@ --ignore-space-change --color-moved --patch-with-stat;
 }
 
 # git diff of current branch with specified base branch
 function gdfb {
   if [ -z $@ ]; then
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved --patch-with-stat;
   else
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change --color-moved;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change --color-moved --patch-with-stat;
   fi
 }
 
@@ -229,9 +229,9 @@ alias stashlist="clear; git status; git stash list"
 # view diff of HEAD and content of last or specified stash
 function viewstash {
   if [ -z $@ ]; then
-    git stash show -p;
+    git stash show -p --ignore-space-change --color-moved --patch-with-stat;
   else
-    git stash show -p stash@{$@};
+    git stash show -p stash@{$@} --ignore-space-change --color-moved --patch-with-stat;
   fi
 }
 
