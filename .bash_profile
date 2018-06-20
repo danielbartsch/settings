@@ -89,6 +89,7 @@ function discard {
   git status;
 }
 
+# n commits to staged
 function cts {
   clear;
   if [ -z $@ ]; then
@@ -99,7 +100,7 @@ function cts {
   git status;
 }
 
-# switch to branch with grep search of all branches
+# switch to branch with grep search of all branches (only works with branches you've already been on)
 function to {
   branches=$(git branch --no-color | grep "$@")
   git checkout ${branches[0]};
@@ -111,7 +112,7 @@ function gdfc {
   git diff $@^ $@ --ignore-space-change --color-moved --patch-with-stat;
 }
 
-# git diff of current branch with specified base branch
+# git diff of current branch with specified base branch (default is develop)
 function gdfb {
   if [ -z $@ ]; then
     git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved --patch-with-stat;
@@ -120,7 +121,7 @@ function gdfb {
   fi
 }
 
-# previous n branches or direct previous branch
+# go to n-th previous branch or direct previous branch
 function pb {
   if [ -z $@ ]; then
     git checkout @{-1}
