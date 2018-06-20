@@ -12,6 +12,7 @@
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
         "suppressResultsExplorerNotice": true,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
@@ -25,5 +26,12 @@
     "editor.snippetSuggestions": "top",
     "vsicons.dontShowNewVersionMessage": true,
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.keymap": "alternate"
+    "gitlens.keymap": "alternate",
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.gitExplorer.files.layout": "auto",
+    "keyboard.dispatch": "keyCode",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.exclude": {
+        "**/.git": false
+    }
 }
