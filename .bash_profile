@@ -36,7 +36,7 @@ alias ....="cd ../../..; clear; git status"
 alias .....="cd ../../../..; clear; git status"
 alias -- -="cd -"
 alias adverity="cd /home/adv/adverity;"
-alias js="cd /home/adv/adverity/web-app/js; clear; git status;"
+alias js="cd /home/adv/adverity-insights/web-app/js; clear; git status;"
 alias dot="cd ~/settings; clear; git status;"
 
 # Shortcuts
@@ -168,9 +168,7 @@ function gpc {
   git checkout HEAD^1
 }
 
-alias grailsstart="cd /home/adv/adverity/; grails run-app -reloading"
-alias npmstart="cd /home/adv/adverity/web-app/; npm start"
-alias storybook="cd /home/adv/adverity/web-app/; npm run storybook"
+alias storybook="cd /home/adv/adverity-insights/web-app/; npm run storybook"
 
 alias new="clear; git flow feature start"
 alias pull="git pull"
