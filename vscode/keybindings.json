@@ -26,6 +26,16 @@
         "when": "textCompareEditorVisible && editorHasSelection && editorTextFocus"
     },
     {
+        "key": "pagedown",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "pageup",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus",
+    },
+    {
         "key": "alt+left",
         "command": "subwordNavigation.cursorSubwordLeft",
         "when": "editorTextFocus"
