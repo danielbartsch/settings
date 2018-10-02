@@ -1,37 +1,71 @@
 {
-    "flow.pathToFlow": "/home/adv/adverity/web-app/node_modules/flow-bin/cli.js",
-    "flow.runOnAllFiles": true,
-    "javascript.validate.enable": false,
-    "typescript.validate.enable": false,
-    "eslint.autoFixOnSave": true,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": true,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    },
-    "editor.rulers": [120],
-    "explorer.confirmDelete": false,
-    "editor.insertSpaces": false,
-    "workbench.editor.enablePreview": false,
-    "problems.decorations.enabled": true,
-    "editor.minimap.enabled": false,
-    "editor.minimap.showSlider": "always",
-    "editor.snippetSuggestions": "top",
-    "vsicons.dontShowNewVersionMessage": true,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.keymap": "alternate",
-    "gitlens.historyExplorer.enabled": true,
-    "gitlens.gitExplorer.files.layout": "auto",
-    "keyboard.dispatch": "keyCode",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "files.exclude": {
-        "**/.git": false
+  "flow.pathToFlow": "/home/adv/adverity/web-app/node_modules/flow-bin/cli.js",
+  "flow.runOnAllFiles": true,
+  "javascript.validate.enable": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "rules": {
+      "no-debugger": "off"
     }
+  },
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    { "language": "javascriptreact", "autoFix": true },
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true },
+    { "language": "html", "autoFix": true }
+  ],
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "editor.rulers": [120],
+  "explorer.confirmDelete": false,
+  "editor.insertSpaces": true,
+  "workbench.editor.enablePreview": false,
+  "problems.decorations.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.showSlider": "always",
+  "editor.snippetSuggestions": "top",
+  "vsicons.dontShowNewVersionMessage": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.keymap": "alternate",
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.gitExplorer.files.layout": "auto",
+  "keyboard.dispatch": "keyCode",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "files.exclude": {
+    "**/.git": false,
+    "local": true
+  },
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    "<>",
+    ["Gold", "Orchid", "#f87f1c"],
+    "Red"
+  ],
+  "window.zoomLevel": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "gitlens.codeLens.enabled": false,
+  "editor.autoClosingBrackets": "never",
+  "workbench.iconTheme": "minimalistic-icons",
+  "editor.formatOnSave": true,
+  // "indentRainbow.colors": [ // for light theme, comment out if dark theme
+  //     "rgba(191,191,239,0.3)",
+  //     "rgba(223,191,223,0.3)",
+  //     "rgba(191,223,191,0.3)",
+  //     "rgba(239,207,207,0.3)"
+  // ]
 }
