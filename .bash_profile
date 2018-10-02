@@ -191,6 +191,16 @@ function cms {
     fi
 }
 
+# copy last n commit hashes to clipboard
+function ccm {
+  if [ -z $@ ]; then
+    messages=$(git log -1 --pretty=format:"%h");
+  else
+    messages=$(git log -"$@" --pretty=format:"%h");
+  fi
+  echo "$messages" | xclip -selection c;
+}
+
 alias sh="history | grep"
 
 # git stash pop (last or specified number)
