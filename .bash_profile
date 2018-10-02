@@ -255,6 +255,10 @@ function dropstash {
   fi
 }
 
+# gnome shell on the fly color change
+alias light="echo -ne '\e]11;#ddd\a'"
+alias dark="echo -ne '\e]11;#222\a'"
+
 # Git branch bash completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
