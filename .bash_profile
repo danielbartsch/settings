@@ -80,13 +80,17 @@ function gcn { git commit -mn "$@"; git status; }
 
 # discarding unstaged file changes
 function discard {
-  clear;
+  read -p "Are you sure you want to delete all unstaged changes? (y/n)" -n 1 -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
   if [ -z $@ ]; then
     git checkout -- $(git rev-parse --show-toplevel);
   else
     git checkout -- "$@";
   fi
   git status;
+  fi
 }
 
 # n commits to staged
