@@ -215,6 +215,18 @@ function pop {
   fi
 }
 
+# switch projects/repos
+function workon {
+  if [ "$@" = "datatap" ]; then
+    cd ~/adverity-datatap/;
+    virtualenv .;
+    source bin/activate;
+    pip install -r requirements.txt -r requirements-dev.txt;
+    python datatap/manage.py migrate;
+    npm run backend;
+  fi
+}
+
 # git stash
 function stash {
   clear;
