@@ -62,6 +62,11 @@
   "editor.autoClosingBrackets": "never",
   "workbench.iconTheme": "minimalistic-icons",
   "editor.formatOnSave": true,
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "breadcrumbs.enabled": true,
+  "editor.accessibilitySupport": "off",
   // "indentRainbow.colors": [ // for light theme, comment out if dark theme
   //     "rgba(191,191,239,0.3)",
   //     "rgba(223,191,223,0.3)",
