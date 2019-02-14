@@ -67,6 +67,8 @@
   "gitlens.views.lineHistory.enabled": true,
   "breadcrumbs.enabled": true,
   "editor.accessibilitySupport": "off",
+  "window.titleBarStyle": "native",
+  "workbench.tree.indent": 10,
   // "indentRainbow.colors": [ // for light theme, comment out if dark theme
   //     "rgba(191,191,239,0.3)",
   //     "rgba(223,191,223,0.3)",
