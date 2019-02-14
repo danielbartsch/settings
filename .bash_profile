@@ -84,12 +84,12 @@ function discard {
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
-  if [ -z $@ ]; then
-    git checkout -- $(git rev-parse --show-toplevel);
-  else
-    git checkout -- "$@";
-  fi
-  git status;
+    if [ -z $@ ]; then
+      git checkout -- $(git rev-parse --show-toplevel);
+    else
+      git checkout -- "$@";
+    fi
+    git status;
   fi
 }
 
@@ -513,6 +513,8 @@ fi
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
+
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Puts date in front of history of commands
 HISTTIMEFORMAT="%d.%m.%Y %T "
