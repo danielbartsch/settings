@@ -121,7 +121,7 @@ function gdfb {
   if [ -z $@ ]; then
     git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved --patch-with-stat;
   else
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $@` --ignore-space-change --color-moved --patch-with-stat;
+    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $1` --ignore-space-change --color-moved --patch-with-stat $2;
   fi
 }
 
