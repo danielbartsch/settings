@@ -35,13 +35,13 @@ alias ...="cd ../..; clear; git status"
 alias ....="cd ../../..; clear; git status"
 alias .....="cd ../../../..; clear; git status"
 alias -- -="cd -"
-alias adverity="cd /home/adv/adverity;"
-alias js="cd /home/adv/adverity-insights/web-app/js; clear; git status;"
-alias dot="cd ~/settings; clear; git status;"
+alias adverity="cd /home/danielbartsch/projects/insights;"
+alias js="cd /home/danielbartsch/projects/insights/web-app/js; clear; git status;"
+alias dot="cd /home/danielbartsch/projects/settings; clear; git status;"
 
 # Shortcuts
-alias bashconf="vim ~/settings/.bash_profile"
-alias loadbash="source ~/settings/.bash_profile"
+alias bashconf="vim ~/projects/settings/.bash_profile"
+alias loadbash="source ~/projects/settings/.bash_profile"
 
 alias g="git"
 alias gd="git checkout develop; git pull"
@@ -54,10 +54,10 @@ function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --pa
 function gs {
   clear;
   git status;
-  printf "Amount of Commands: " > /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep -c "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-  printf "\nCommands: \n" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep "$(date +%d.%m.%Y)" >> /home/adv/commandsPerDay/"$(date +%Y-%m-%d)";
+  printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
 }
 alias qgs="clear; git status"
 
@@ -172,8 +172,6 @@ function gpc {
   git checkout HEAD^1
 }
 
-alias storybook="cd /home/adv/adverity-insights/web-app/; npm run storybook"
-
 alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
@@ -218,7 +216,7 @@ function pop {
 # switch projects/repos
 function workon {
   if [ "$@" = "datatap" ]; then
-    cd ~/adverity-datatap/;
+    cd ~/projects/datatap/;
     virtualenv .;
     source bin/activate;
     pip install -r requirements.txt -r requirements-dev.txt;
