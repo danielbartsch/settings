@@ -1,19 +1,33 @@
 {
-  "flow.pathToFlow": "/home/adv/adverity/web-app/node_modules/flow-bin/cli.js",
+  "flow.pathToFlow": "${workspaceFolder}/web-app/node_modules/flow-bin/cli.js",
   "flow.runOnAllFiles": true,
   "javascript.validate.enable": false,
-  "eslint.autoFixOnSave": true,
   "eslint.options": {
     "rules": {
       "no-debugger": "off"
     }
   },
   "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true },
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true },
-    { "language": "html", "autoFix": true }
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    }
   ],
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -27,7 +41,9 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "explorer.confirmDelete": false,
   "editor.insertSpaces": true,
   "workbench.editor.enablePreview": false,
@@ -35,11 +51,8 @@
   "editor.minimap.enabled": false,
   "editor.minimap.showSlider": "always",
   "editor.snippetSuggestions": "top",
-  "vsicons.dontShowNewVersionMessage": true,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.keymap": "alternate",
-  "gitlens.historyExplorer.enabled": true,
-  "gitlens.gitExplorer.files.layout": "auto",
   "keyboard.dispatch": "keyCode",
   "diffEditor.ignoreTrimWhitespace": true,
   "files.exclude": {
@@ -51,7 +64,11 @@
     "[]",
     "{}",
     "<>",
-    ["Gold", "Orchid", "#f87f1c"],
+    [
+      "Gold",
+      "Orchid",
+      "#f87f1c"
+    ],
     "Red"
   ],
   "window.zoomLevel": 0,
@@ -60,8 +77,6 @@
   "git.confirmSync": false,
   "gitlens.codeLens.enabled": false,
   "editor.autoClosingBrackets": "never",
-  "workbench.iconTheme": "minimalistic-icons",
-  "editor.formatOnSave": true,
   "gitlens.views.repositories.files.layout": "auto",
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
@@ -69,10 +84,27 @@
   "editor.accessibilitySupport": "off",
   "window.titleBarStyle": "native",
   "workbench.tree.indent": 10,
+  "flow.useLSP": false,
+  "flow.useNPMPackagedFlow": true,
+  "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true,
+  "editor.multiCursorModifier": "ctrlCmd",
   // "indentRainbow.colors": [ // for light theme, comment out if dark theme
   //     "rgba(191,191,239,0.3)",
   //     "rgba(223,191,223,0.3)",
   //     "rgba(191,223,191,0.3)",
   //     "rgba(239,207,207,0.3)"
   // ]
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+      "editor.formatOnSave": true
+  },
+  // ${workspaceFolder}/web-app/.prettierignore
+  "prettier.ignorePath": "/home/danielbartsch/projects/insights/web-app/.prettierignore",
+  "gitlens.views.repositories.location": "gitlens",
+  "gitlens.views.fileHistory.location": "gitlens",
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens"
 }
