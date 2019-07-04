@@ -38,9 +38,10 @@ alias -- -="cd -"
 alias adverity="cd /home/danielbartsch/projects/insights;"
 alias js="cd /home/danielbartsch/projects/insights/web-app/js; clear; git status;"
 alias dot="cd /home/danielbartsch/projects/settings; clear; git status;"
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Shortcuts
-alias bashconf="vim ~/projects/settings/.bash_profile"
+alias bashconf="code ~/projects/settings/.bash_profile"
 alias loadbash="source ~/projects/settings/.bash_profile"
 
 alias g="git"
@@ -160,7 +161,8 @@ alias branches="git branch"
 alias gp="git push; clear; git status"
 alias gmd="git merge develop"
 alias gmu="gd;pb;gmd"
-alias gitconf="nano ~/.gitconfig"
+alias gitconf="code ~/.gitconfig"
+alias insights-db="psql --cluster 10/main -Upmedia adverity-db"
 
 # go to next commit
 function gnc {
@@ -175,7 +177,6 @@ function gpc {
 alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
-alias fetch="git fetch"
 
 # show last n commit messages
 function cms {
