@@ -212,6 +212,25 @@ function pop {
   fi
 }
 
+# git stash pop (last or specified number) + file/path
+function popf {
+  clear;
+  if [ -z $@ ]; then
+    git stash pop;
+  else
+    if [[ ${1} =~ ^[0-9]+$ ]]; then
+      # has no second parameter (no file/path)
+      if [ -z ${2} ]; then
+        git stash pop stash@{$@};
+      else
+        git diff stash@{${1}}^1 stash@{${1}} -- ${2} | git apply
+      fi
+    else
+      git diff stash@{0}^1 stash@{0} -- $@ | git apply
+    fi
+  fi
+}
+
 # switch projects/repos
 function workon {
   if [ "$@" = "datatap" ]; then
