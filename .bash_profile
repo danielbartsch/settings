@@ -63,10 +63,6 @@ function workon {
   fi
 }
 
-# gnome shell on the fly color change
-alias light="echo -ne '\e]11;#ddd\a'"
-alias dark="echo -ne '\e]11;#222\a'"
-
 # Git branch bash completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -78,77 +74,17 @@ if [ -f ~/.git-completion.bash ]; then
   # __git_complete gp _git_pull
 fi
 
-#work in progress
-#function to {
-#  branchList=($(git branch --list --no-color))
-#  echo "${branchList[*]}"
-#  for (( index=0; index<${#branchList[@]}; index++ ));
-#  do
-#    branchList[index]="${branchList[index]/\*/''}";
-#  done
-#  filteredBranches=($($branchList | grep --no-filename $@));
-#  resultCount=$($filteredBranches | grep --no-filename -c $@);
-#  echo "length: $resultCount";
-#  if [ -z $filteredBranches ];
-#  then
-#    echo "no branches found";
-#  else
-#    if [ $resultCount -eq 1 ];
-#    then
-#      fixedBranchName="${${filteredBranches[0]}/\*/''}";
-#      git checkout ${fixedBranchName};
-#      git pull;
-#    else
-#      echo "found branches:";
-#      for (( index=0; index<$resultCount; index++ ));
-#      do
-#        fixedBranchName="${${filteredBranches[index]}/\*/''}";
-#        echo "$index: ${fixedBranchName}";
-#      done;
-#    fi;
-#  fi;
-#}
-
 alias ll='ls -al'
-alias l='less'
 alias mv='mv -i'
 alias cp='cp -i -p'
 alias ls='ls -abp --color=auto'
 alias grep='grep --color=auto'
 
-# Color LS
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-else # OS X `ls`
-	colorflag="-G"
-fi
-alias ls="command ls ${colorflag}"
-alias l="ls -lF ${colorflag}" # all files, in long format
-alias la="ls -laF ${colorflag}" # all files inc dotfiles, in long format
-alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
-
-
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Gzip-enabled `curl`
-alias gurl='curl --compressed'
-
-# Get week number
-alias week='date +%V'
-
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
-##############################################################################
-# 03. FUNCTIONS                                                              #
-##############################################################################
-
-# Create a new directory and enter it
-function mkd() {
-	mkdir -p "$@" && cd "$@"
-}
 
 ##############################################################################
 # 04. PROMPT COLORS                                                          #
