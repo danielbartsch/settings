@@ -30,206 +30,26 @@ export MANPAGER="less -X"
 ##############################################################################
 
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd ..; clear; git status"
-alias ...="cd ../..; clear; git status"
-alias ....="cd ../../..; clear; git status"
-alias .....="cd ../../../..; clear; git status"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias -- -="cd -"
-alias adverity="cd /home/danielbartsch/projects/insights;"
-alias js="cd /home/danielbartsch/projects/insights/web-app/js; clear; git status;"
-alias dot="cd /home/danielbartsch/projects/settings; clear; git status;"
+alias dot="cd /home/danielbartsch/projects/settings;"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Shortcuts
 alias bashconf="code ~/projects/settings/.bash_profile"
 alias loadbash="source ~/projects/settings/.bash_profile"
 
-alias g="git"
-alias gd="git checkout develop; git pull"
-
-alias gdf="git diff --ignore-space-change --color-moved --patch-with-stat"
-alias gcdf="git diff --staged --ignore-space-change --color-moved --patch-with-stat"
-function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --patch-with-stat; }
-
-#git status + command history
-function gs {
-  clear;
-  git status;
-  printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-}
-alias qgs="clear; git status"
-
-# git add + git add all
-function gadd {
-  clear;
-  if [ -z $@ ]; then
-    git add $(git rev-parse --show-toplevel);
-  else
-    git add "$@";
-  fi
-  git status;
-}
-
-# git commit prepared for message
-function gc { git commit -m "$@"; git status; }
-
-# git commit prepared for message ignoring evaluation
-function gcn { git commit -mn "$@"; git status; }
-
-# discarding unstaged file changes
-function discard {
-  read -p "Are you sure you want to delete all unstaged changes? (y/n)" -n 1 -r
-  echo
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
-    if [ -z $@ ]; then
-      git checkout -- $(git rev-parse --show-toplevel);
-    else
-      git checkout -- "$@";
-    fi
-    git status;
-  fi
-}
-
-# n commits to staged
-function cts {
-  clear;
-  if [ -z $@ ]; then
-    git reset --soft HEAD~1
-  else
-    git reset --soft HEAD~$@
-  fi
-  git status;
-}
-
-# switch to branch with grep search of all branches (only works with branches you've already been on)
-function to {
-  branches=$(git branch --no-color | grep "$@")
-  git checkout ${branches[0]};
-  git pull;
-}
-
-# git diff of one commit
-function gdfc {
-  git diff $@^ $@ --ignore-space-change --color-moved --patch-with-stat;
-}
-
-# git diff of current branch with specified base branch (default is develop)
-function gdfb {
-  if [ -z $@ ]; then
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) develop` --ignore-space-change --color-moved --patch-with-stat;
-  else
-    git diff `git merge-base $(git rev-parse --abbrev-ref HEAD) $1` --ignore-space-change --color-moved --patch-with-stat $2;
-  fi
-}
-
-# go to n-th previous branch or direct previous branch
-function pb {
-  if [ -z $@ ]; then
-    git checkout @{-1}
-  else
-    git checkout @{-$@}
-  fi
-  git pull;
-}
-
-# show previous n branches or direct previous branch
-function spb {
-  if [ -z $@ ]; then
-    git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print $3 }' | awk ' !x[$0]++' | head -n1;
-  else
-    git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print $3 }' | awk ' !x[$0]++' | head -n$@;
-  fi
-}
-
-# removing specified files or folders from staged area
-function unstage {
-  clear;
-  if [ -z $@ ]; then
-    git reset -- $(git rev-parse --show-toplevel);
-  else
-    git reset -- "$@";
-  fi
-  git status;                  
-}
-
-alias branches="git branch"
-
-alias gp="git push; clear; git status"
 alias gmd="git merge develop"
 alias gmu="gd;pb;gmd"
 alias gitconf="code ~/.gitconfig"
 alias insights-db="psql --cluster 10/main -Upmedia adverity-db"
 
-# go to next commit
-function gnc {
-  git log --reverse --pretty=%H master | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
-}
-
-# go to previous commit
-function gpc {
-  git checkout HEAD^1
-}
-
 alias new="clear; git flow feature start"
 alias pull="git pull"
 alias push="git push"
-
-# show last n commit messages
-function cms {
-    clear;
-    git status;
-    printf "\n"
-    if [ -z $@ ]; then
-        #git log -1 --pretty=format:"%h %an %s";
-        git log -1 --pretty=format:"%h %s";
-    else
-        #git log -"$@" --pretty=format:"%h %an %s";
-        git log -"$@" --pretty=format:"%h %s";
-    fi
-}
-
-# copy last n commit hashes to clipboard
-function ccm {
-  if [ -z $@ ]; then
-    messages=$(git log -1 --pretty=format:"%h");
-  else
-    messages=$(git log -"$@" --pretty=format:"%h");
-  fi
-  echo "$messages" | xclip -selection c;
-}
-
-# git stash pop (last or specified number)
-function pop {
-  clear;
-  if [ -z $@ ]; then
-    git stash pop;
-  else
-    git stash pop stash@{$@};
-  fi
-}
-
-# git stash pop (last or specified number) + file/path
-function popf {
-  clear;
-  if [ -z $@ ]; then
-    git stash pop;
-  else
-    if [[ ${1} =~ ^[0-9]+$ ]]; then
-      # has no second parameter (no file/path)
-      if [ -z ${2} ]; then
-        git stash pop stash@{$@};
-      else
-        git diff stash@{${1}}^1 stash@{${1}} -- ${2} | git apply
-      fi
-    else
-      git diff stash@{0}^1 stash@{0} -- $@ | git apply
-    fi
-  fi
-}
 
 # switch projects/repos
 function workon {
@@ -240,48 +60,6 @@ function workon {
     pip install -r requirements.txt -r requirements-dev.txt;
     python datatap/manage.py migrate;
     npm run backend;
-  fi
-}
-
-# git stash
-function stash {
-  clear;
-  if [ -z $@ ]; then
-    git stash;
-  else
-    git stash save "$@";
-  fi
-  git status;
-}
-
-# git stash file/path
-function stashf {
-  clear;
-  if [ -z $@ ]; then
-    git stash;
-  else
-    git stash push --include-untracked -- $@;
-  fi
-  git status;
-}
-
-alias stashlist="clear; git status; git stash list"
-
-# view diff of HEAD and content of last or specified stash
-function viewstash {
-  if [ -z $@ ]; then
-    git stash show -p --ignore-space-change --color-moved --patch-with-stat;
-  else
-    git stash show -p stash@{$@} --ignore-space-change --color-moved --patch-with-stat;
-  fi
-}
-
-# drop stash (last or specified)
-function dropstash {
-  if [ -z $@ ]; then
-    git stash drop;
-  else
-    git stash drop stash@{$@};
   fi
 }
 
@@ -529,6 +307,8 @@ fi
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
+
+[[ -s "./.gitShortcuts" ]] &&  source "./.gitShortcuts"
 
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
