@@ -27,6 +27,9 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# Log commands to files when git status (gs) is called
+export LOG_COMMANDS_TO_FILE=1
+
 ##############################################################################
 # 02. ALIASES                                                                #
 ##############################################################################

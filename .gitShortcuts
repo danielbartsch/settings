@@ -13,10 +13,12 @@ function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --pa
 function gs {
   clear;
   git status;
-  printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  if [ $LOG_COMMANDS_TO_FILE -eq 1 ]; then
+    printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  fi
 }
 
 # git add + git add all
