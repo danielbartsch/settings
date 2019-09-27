@@ -145,7 +145,7 @@ function cms {
 }
 
 # copy last n commit hashes to clipboard
-function ccm {
+function ccms {
   if [ -z $@ ]; then
     messages=$(git log -1 --pretty=format:"%h");
   else
