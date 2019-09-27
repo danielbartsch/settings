@@ -185,14 +185,14 @@ prompt_git() {
 #fi;
 
 # Highlight the user name when logged in as root.
-if [[ "${USER}" == "root" ]]; then
+if [ "${USER}" == "root" ]; then
 	userStyle="${red}";
 else
 	userStyle="${orange}";
 fi;
 
 # Highlight the hostname when connected via SSH.
-if [[ "${SSH_TTY}" ]]; then
+if [ "${SSH_TTY}" ]; then
 	hostStyle="${bold}${red}";
 else
 	hostStyle="${yellow}";
@@ -245,13 +245,13 @@ fi
 
 [ -f ~/.extra ] && source ~/.extra
 
-if [[ -a ~/.localrc ]]; then
+if [ -a ~/.localrc ]; then
     source ~/.localrc
 fi
 
-[[ -s ~/projects/settings/.gitShortcuts ]] &&  source ~/projects/settings/.gitShortcuts
+[ -s ~/projects/settings/.gitShortcuts ] &&  source ~/projects/settings/.gitShortcuts
 
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Puts date in front of history of commands
 HISTTIMEFORMAT="%d.%m.%Y %T "
