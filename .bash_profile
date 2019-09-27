@@ -1,3 +1,5 @@
+#!/bin/sh
+
 alias nano="nano --smooth --constantshow --autoindent --softwrap"
 
 ##############################################################################

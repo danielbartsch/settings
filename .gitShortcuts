@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # alias to fix common accidental 'close less pager and then do a git status'
 alias qgs="clear; git status"
 
