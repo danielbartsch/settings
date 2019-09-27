@@ -5,8 +5,13 @@ alias qgs="clear; git status"
 
 alias gd="git checkout develop; git pull"
 
+# git diff
 alias gdf="git diff --ignore-space-change --color-moved --patch-with-stat"
+
+# git diff, but staged files
 alias gcdf="git diff --staged --ignore-space-change --color-moved --patch-with-stat"
+
+# git diff, but n previous commits
 function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --patch-with-stat; }
 
 #git status + command history
