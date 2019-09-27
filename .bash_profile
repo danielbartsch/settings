@@ -39,7 +39,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias -- -="cd -"
+alias npmi='nvm use; npm i'
 alias dot="cd /home/danielbartsch/projects/settings;"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
