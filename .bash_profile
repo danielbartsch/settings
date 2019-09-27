@@ -1,3 +1,5 @@
+#!/bin/sh
+
 alias nano="nano --smooth --constantshow --autoindent --softwrap"
 
 ##############################################################################
@@ -25,6 +27,9 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# Log commands to files when git status (gs) is called
+export LOG_COMMANDS_TO_FILE=1
+
 ##############################################################################
 # 02. ALIASES                                                                #
 ##############################################################################
@@ -34,7 +39,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias -- -="cd -"
+alias npmi='nvm use; npm i'
 alias dot="cd /home/danielbartsch/projects/settings;"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
@@ -180,14 +185,14 @@ prompt_git() {
 #fi;
 
 # Highlight the user name when logged in as root.
-if [[ "${USER}" == "root" ]]; then
+if [ "${USER}" == "root" ]; then
 	userStyle="${red}";
 else
 	userStyle="${orange}";
 fi;
 
 # Highlight the hostname when connected via SSH.
-if [[ "${SSH_TTY}" ]]; then
+if [ "${SSH_TTY}" ]; then
 	hostStyle="${bold}${red}";
 else
 	hostStyle="${yellow}";
@@ -241,13 +246,13 @@ fi
 
 [ -f ~/.extra ] && source ~/.extra
 
-if [[ -a ~/.localrc ]]; then
+if [ -a ~/.localrc ]; then
     source ~/.localrc
 fi
 
-[[ -s "./.gitShortcuts" ]] &&  source "./.gitShortcuts"
+[ -s ~/projects/settings/.gitShortcuts ] &&  source ~/projects/settings/.gitShortcuts
 
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Puts date in front of history of commands
 HISTTIMEFORMAT="%d.%m.%Y %T "

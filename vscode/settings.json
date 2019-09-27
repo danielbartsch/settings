@@ -1,7 +1,34 @@
 {
-  "flow.pathToFlow": "${workspaceFolder}/web-app/node_modules/flow-bin/cli.js",
-  "flow.runOnAllFiles": true,
-  "javascript.validate.enable": false,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }, // Enable per-language
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    "<>",
+    [
+      "Gold",
+      "Orchid",
+      "#f87f1c"
+    ],
+    "Red"
+  ],
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "never",
+  "editor.formatOnSave": false,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.showSlider": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.rulers": [
+    120
+  ],
+  "editor.snippetSuggestions": "top",
+  "eslint.autoFixOnSave": true,
   "eslint.options": {
     "rules": {
       "no-debugger": "off"
@@ -29,6 +56,18 @@
       "autoFix": true
     }
   ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.git": false,
+    "local": true
+  },
+  "flow.logLevel": "error",
+  "flow.pathToFlow": "${workspaceFolder}/web-app/node_modules/.bin/flow",
+  "flow.useBundledFlow": false,
+  "flow.useLSP": false,
+  "flow.useNPMPackagedFlow": true,
+  "git.confirmSync": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -41,71 +80,33 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
-  "editor.rulers": [
-    120
-  ],
-  "explorer.confirmDelete": false,
-  "editor.insertSpaces": true,
-  "workbench.editor.enablePreview": false,
-  "problems.decorations.enabled": true,
-  "editor.minimap.enabled": false,
-  "editor.minimap.showSlider": "always",
-  "editor.snippetSuggestions": "top",
+  "gitlens.codeLens.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.keymap": "alternate",
-  "keyboard.dispatch": "keyCode",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "files.exclude": {
-    "**/.git": false,
-    "local": true
-  },
-  "bracketPairColorizer.consecutivePairColors": [
-    "()",
-    "[]",
-    "{}",
-    "<>",
-    [
-      "Gold",
-      "Orchid",
-      "#f87f1c"
-    ],
-    "Red"
-  ],
-  "window.zoomLevel": 0,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false,
-  "gitlens.codeLens.enabled": false,
-  "editor.autoClosingBrackets": "never",
-  "gitlens.views.repositories.files.layout": "auto",
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
-  "breadcrumbs.enabled": true,
-  "editor.accessibilitySupport": "off",
-  "window.titleBarStyle": "native",
-  "workbench.tree.indent": 10,
-  "flow.useLSP": false,
-  "flow.useNPMPackagedFlow": true,
-  "eslint.autoFixOnSave": true,
-  "prettier.eslintIntegration": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  // "indentRainbow.colors": [ // for light theme, comment out if dark theme
-  //     "rgba(191,191,239,0.3)",
-  //     "rgba(223,191,223,0.3)",
-  //     "rgba(191,223,191,0.3)",
-  //     "rgba(239,207,207,0.3)"
-  // ]
-  "editor.formatOnSave": false,
-  // Enable per-language
-  "[javascript]": {
-      "editor.formatOnSave": true
-  },
-  // ${workspaceFolder}/web-app/.prettierignore
-  "prettier.ignorePath": "/home/danielbartsch/projects/insights/web-app/.prettierignore",
-  "gitlens.views.repositories.location": "gitlens",
-  "gitlens.views.fileHistory.location": "gitlens",
-  "gitlens.views.lineHistory.location": "gitlens",
   "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.fileHistory.location": "gitlens",
+  "gitlens.views.lineHistory.enabled": true,
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.repositories.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
-  "workbench.startupEditor": "newUntitledFile"
+  // for light theme, comment out if dark theme
+  // "indentRainbow.colors": [
+  //   "rgba(191,191,239,0.3)",
+  //   "rgba(223,191,223,0.3)",
+  //   "rgba(191,223,191,0.3)",
+  //   "rgba(239,207,207,0.3)"
+  // ], 
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "keyboard.dispatch": "keyCode",
+  // "prettier.ignorePath": ${workspaceFolder}/web-app/.prettierignore
+  "prettier.ignorePath": "/home/danielbartsch/projects/insights/web-app/.prettierignore",
+  "problems.decorations.enabled": true,
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 10,
 }

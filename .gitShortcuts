@@ -1,20 +1,29 @@
+#!/bin/sh
+
 # alias to fix common accidental 'close less pager and then do a git status'
 alias qgs="clear; git status"
 
 alias gd="git checkout develop; git pull"
 
+# git diff
 alias gdf="git diff --ignore-space-change --color-moved --patch-with-stat"
+
+# git diff, but staged files
 alias gcdf="git diff --staged --ignore-space-change --color-moved --patch-with-stat"
+
+# git diff, but n previous commits
 function gdfn { git diff HEAD~"$@" HEAD --ignore-space-change --color-moved --patch-with-stat; }
 
 #git status + command history
 function gs {
   clear;
   git status;
-  printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
-  history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  if [ $LOG_COMMANDS_TO_FILE -eq 1 ]; then
+    printf "Amount of Commands: " > /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep -c "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    printf "\nCommands: \n" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+    history | grep "$(date +%d.%m.%Y)" >> /home/danielbartsch/commandsPerDay/"$(date +%Y-%m-%d)";
+  fi
 }
 
 # git add + git add all
@@ -136,13 +145,18 @@ function cms {
 }
 
 # copy last n commit hashes to clipboard
-function ccm {
+function ccms {
   if [ -z $@ ]; then
     messages=$(git log -1 --pretty=format:"%h");
   else
     messages=$(git log -"$@" --pretty=format:"%h");
   fi
   echo "$messages" | xclip -selection c;
+}
+
+# copy current branch name to clipboard
+function ccb {
+  echo -e "$(git symbolic-ref --quiet --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null || echo '(unknown)')" | xclip -selection c
 }
 
 # git stash pop (last or specified number)
