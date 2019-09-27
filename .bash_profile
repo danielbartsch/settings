@@ -249,7 +249,7 @@ if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
 
-[[ -s "./.gitShortcuts" ]] &&  source "./.gitShortcuts"
+[[ -s ~/projects/settings/.gitShortcuts ]] &&  source ~/projects/settings/.gitShortcuts
 
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &&  source "$HOME/.sdkman/bin/sdkman-init.sh"
 
