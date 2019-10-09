@@ -69,10 +69,14 @@ function cts {
   git status;
 }
 
-# switch to branch with grep search of all branches (only works with branches you've already been on)
+# switch to branch with grep search of all remote branches
 function to {
-  branches=$(git branch --no-color | grep "$@")
-  git checkout ${branches[0]};
+  branchLines=$(git ls-remote --heads -q | grep "$@");
+  branchLine=${branchLines[0]};
+  branchNamePosition=$((6 + $(expr index "$branchLine" "/")));
+  branch=${branchLine:$branchNamePosition};
+
+  git checkout "$branch";
   git pull;
 }
 
