@@ -69,14 +69,28 @@ function cts {
   git status;
 }
 
-# switch to branch with grep search of all remote branches
+# switch to branch with grep search of
+# 1. all local branches
+# 2. all remote branches
 function to {
-  branchLines=$(git ls-remote --heads -q | grep "$@");
-  branchLine=${branchLines[0]};
-  branchNamePosition=$((6 + $(expr index "$branchLine" "/")));
-  branch=${branchLine:$branchNamePosition};
+  branchLinesLocal=$(git branch --no-color | grep "$@");
+  branchLineLocal=${branchLinesLocal[0]};
+  branchLocal=${branchLineLocal:2};
 
-  git checkout "$branch";
+
+  if [ -z $branchLocal ]; then
+    branchLinesRemote=$(git ls-remote --heads -q | grep "$@");
+    branchLineRemote=${branchLinesRemote[0]};
+    branchNamePositionRemote=$((6 + $(expr index "$branchLineRemote" "/")));
+    branchRemote=${branchLineRemote:$branchNamePositionRemote};
+
+    echo "Switching to: $branchRemote"
+    git checkout "$branchRemote";
+  else
+    echo "Switching to: $branchLocal"
+    git checkout "$branchLocal";
+  fi
+
   git pull;
 }
 
