@@ -73,21 +73,26 @@ function cts {
 # 1. all local branches
 # 2. all remote branches
 function to {
-  branchLinesLocal=$(git branch --no-color | grep "$@");
+  matchingLocalBranches=$(git branch --no-color | grep --color=never "$@");
+  IFS=$'\n' branchLinesLocal=($matchingLocalBranches);
   branchLineLocal=${branchLinesLocal[0]};
   branchLocal=${branchLineLocal:2};
 
-
-  if [ -z $branchLocal ]; then
-    branchLinesRemote=$(git ls-remote --heads -q | grep "$@");
+  if [ -z "$branchLocal" ]; then
+    matchingRemoteBranches=$(git ls-remote --heads -q | grep --color=never "$@");
+    IFS=$'\n' branchLinesRemote=($matchingRemoteBranches);
     branchLineRemote=${branchLinesRemote[0]};
     branchNamePositionRemote=$((6 + $(expr index "$branchLineRemote" "/")));
     branchRemote=${branchLineRemote:$branchNamePositionRemote};
 
-    echo "Switching to: $branchRemote"
-    git checkout "$branchRemote";
+    if [ -z "$branchRemote" ]; then
+      echo "No branch with pattern \"$@\" found"
+    else
+      echo "Switching to (remote): $branchRemote"
+      git checkout "$branchRemote";
+    fi
   else
-    echo "Switching to: $branchLocal"
+    echo "Switching to (local): $branchLocal"
     git checkout "$branchLocal";
   fi
 
