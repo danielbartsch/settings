@@ -45,7 +45,7 @@ function gcn { git commit -mn "$@"; git status; }
 
 # discarding unstaged file changes
 function discard {
-  read REPLY\?"Are you sure you want to delete all unstage changes? (y/n)"
+  read REPLY\?"Are you sure you want to delete all unstage changes? (y/n) "
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     if [ -z $@ ]; then
       git checkout -- $(git rev-parse --show-toplevel);
